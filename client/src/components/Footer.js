@@ -23,7 +23,14 @@ const Footer = () => {
         </div>
         <div className='flex flex-col space-y-2'>
           <h1 className='text-xl font-bold color: text-white'>Newsletters</h1>
-          <a className='text-xs text-white text-white' href="/">Enter your Email Address</a>
+          <input
+                    className="required:border-red-500 ..."
+                    id="name"
+                    name="name"
+                    placeholder="Enter Your Email Address" 
+                    type="text"
+                    required 
+                  />
           <a className='text-xs text-white text-white' href="/">Subscribe</a>
           
           
@@ -38,7 +45,8 @@ const Footer = () => {
       </div>
       <div className='w-1/2 m-auto p-5 flex justify-center space-x-10 text-gray-700'>
          
-      <h1 className='text-sl font-bold text-white'>2022 Shop-It.All rights Reserved;</h1>
+      <h1 className='text-sl font-bold text-white'>2022 Shop-It.All rights Reserved</h1>
+      
       </div>
     </footer>
   )

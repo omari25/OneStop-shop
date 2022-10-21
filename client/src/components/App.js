@@ -1,9 +1,12 @@
 import React from "react";
+import Login from "./LoginForm";
+import SignupForm from "./SignupForm";
 
 function App() {
   return (
-    <div className="bg-green-400 w-full h-full">
-      <h1 className="text-red-500">Hello</h1>
+    <div>
+      <SignupForm />
+      <Login />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import pic from "./images/image2.png";
 
-function Login({ onLogin }) {
+function Login({ setUser }) {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -19,8 +19,8 @@ function Login({ onLogin }) {
       body: JSON.stringify({ email, password }),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => onLogin(user));
-        navigate("/home");
+        r.json().then((user) => setUser(user));
+        // navigate("/home");
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
@@ -45,7 +45,6 @@ function Login({ onLogin }) {
                     <input
                     placeholder="johndoe@info.com"
                     type="text" 
-                    id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     />
@@ -55,7 +54,6 @@ function Login({ onLogin }) {
                     <input
                     placeholder="Your password"
                     type="password"
-                    id="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     autoComplete="current-password"

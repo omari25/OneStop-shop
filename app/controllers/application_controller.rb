@@ -1,5 +1,4 @@
-class ApplicationController < ActionController::Base
-    protect_from_forgery with: :null_session
+class ApplicationController < ActionController::API
     include ActionController::Cookies
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
     before_action :authorize

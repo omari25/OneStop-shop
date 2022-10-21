@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import pic from "./images/image2.png";
 
-function SignupForm({ onLogin }) {
-  const navigate = useNavigate();
+function Signup({ setUser }) {
+  // const navigate = useNavigate();
 
   const [firstName, setfirstName] = useState("");
   const [lastName, setlastName] = useState("");
@@ -30,8 +30,8 @@ function SignupForm({ onLogin }) {
       }),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => onLogin(user));
-        navigate("/home");
+        r.json().then((user) => {setUser(user); console.log(user.first_name)});
+        // navigate("/home");
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
@@ -133,4 +133,4 @@ function SignupForm({ onLogin }) {
   );
 }
 
-export default SignupForm;
+export default Signup;

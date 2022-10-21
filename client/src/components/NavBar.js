@@ -8,7 +8,7 @@ import piclogo from "./images/logo2.jpg";
 
 function NavBar() {
   return (
-    <div className=' sticky top-0 flex flex-col w-full h-32   mb-24 font-serif '>
+    <div className=' sticky top-0 flex flex-col w-full h-32   mb-10 font-serif z-10 shadow-lg'>
 <div className='w-full h-1/2 bg-slate-50 flex justify-between'>
 
   <img src={piclogo}  width="45"  alt="logo" className="hover:scale-125 ml-4" />
@@ -22,12 +22,12 @@ function NavBar() {
 
 
 <div>
-  <RiAccountPinBoxFill size={28} className="absolute left-2/4 ml-10 top-2.5 hover:scale-125 hover:text-slate-600 cursor-pointer "/>
-  <h3 className="absolute left-2/4 ml-20 top-2.5 font-bold "> Account</h3>
+  <RiAccountPinBoxFill size={28} className="absolute left-2/4 ml-20 top-2.5 hover:scale-125 hover:text-slate-600 cursor-pointer "/>
+  <h3 className="absolute left-2/4 ml-28 top-2.5 font-bold "> Account</h3>
 </div>
 
 <div>
-<IoMdHelpCircle size={28} className='absolute left-2/4 ml-52 top-2.5 hover:scale-125 hover:text-slate-600 cursor-pointer'/>
+<IoMdHelpCircle size={28} className='absolute left-2/4 ml-72 top-2.5 hover:scale-125 hover:text-slate-600 cursor-pointer'/>
 </div>
 
 <div>

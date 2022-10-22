@@ -11,11 +11,14 @@ function NavBar() {
 <div className='w-full h-1/2 bg-slate-50 flex justify-between'>
 
 
-   <div className=' mt-1 absolute left-72 ' > 
-   <button><CiSearch size={28} className=' absolute top-2 mr-20 hover:scale-125 hover:text-slate-600 cursor-pointer '/></button>
+   <form className=' mt-1 absolute left-72 ' > 
+   <button><CiSearch size={28} className=' absolute top-1.5 mr-20 hover:scale-125 hover:text-slate-600 cursor-pointer '/></button>
+
    <input  className=" p-1 border w-96 text-center  border-slate-500 rounded-lg" placeholder="Search products, brands, and categories" type="text"/>
    <button className='bg-black  ml-2 mt-1 w-20 h-8 text-[color:white] rounded-md hover:underline hover:scale-75'> Search</button>
-  </div>
+   
+
+   </form>
 
 
 <div>

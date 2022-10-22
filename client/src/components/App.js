@@ -1,10 +1,9 @@
 import React from "react";
-import Cart from "./Cart";
 
 function App() {
   return (
-    <div >
-<Cart/>
+    <div className="bg-green-400 w-full h-full">
+      <h1 className="text-red-500">Hello</h1>
     </div>
   );
 }

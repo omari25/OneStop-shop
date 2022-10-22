@@ -22,7 +22,7 @@ function Cart() {
     <p className='absolute left-1/2 ml-72 top-10'><span className="font-semibold">SubTotal</span><br/><br/>Ksh 3,000</p> 
 
 
-<button className='bg-[color:#EA4335] font-semibold p-2.5 border-none rounded-md w-48 h-12  ml-1 mt-10 text-sm cursor-pointer hover:bg-red-700 hover:text-black'>
+<button className=' font-semibold p-2.5 border-none rounded-md w-48 h-12  ml-1 mt-10 text-sm cursor-pointer bg-[red]  hover:scale-75 hover:text-black'>
     REMOVE
   </button>
 
@@ -30,7 +30,7 @@ function Cart() {
    <button className='bg-[color:black] text-[color:white] font-extrabold p-2.5 border-none rounded-md w-12 h-12 mr-4  text-sm cursor-pointer hover:scale-125 '>
      +</button>
       1
- <button className='bg-[color:black] font-semibold font-extrabold text-[color:white] p-2.5 border-none  rounded-md w-12 h-12 ml-4  text-sm cursor-pointer hover:scale-125'>
+ <button className='bg-[color:black]  font-extrabold text-[color:white] p-2.5 border-none  rounded-md w-12 h-12 ml-4  text-sm cursor-pointer hover:scale-125'>
  - </button>
 
    </div>

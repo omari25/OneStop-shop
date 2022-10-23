@@ -25,7 +25,7 @@ function Cart() {
 
   <div className="flex flex-col">
     <div className="flex">
-    <p className=" ml-8 mr-4"><span className="font-semibold  ml-6"> Product</span><br/><br/> Women long sleeve shirt</p> 
+    <p className=" ml-8 mr-4"><span className="font-semibold  ml-4 max-md:ml-1"> Product</span><br/><br/> Women long sleeve shirt</p> 
     <p><span className="font-semibold ">Quantity</span><br/><br/> <span className="ml-4 "> 1</span></p> 
     <p className=" ml-8 mr-4"><span className="font-semibold">Price</span><br/><br/> Ksh  3,000</p> 
     <p className='mr-0'><span className="font-semibold">SubTotal</span><br/><br/>Ksh 3,000</p> 

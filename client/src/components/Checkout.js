@@ -9,13 +9,13 @@ function Checkout() {
 <NavBar/>
 
 
-    <div className="h-full w-full flex max-md:flex-col	font-serif">
+    <div className="h-full w-full flex max-md:flex-col  max-md:absolute 	font-serif">
    
 
-    <div className="w-2/4 h-fit max-md:w-full flex justify-center items-center">
+    <div className="w-2/4 h-fit max-md:w-full flex justify-center items-center max-md:mt-0">
       <form className="px-[6vw] checkout-form w-full">
                     
-          <h1 className="text-2xl font-bold ml-28 mb-12">Billing Details</h1>
+          <h1 className="text-2xl font-bold ml-28 mb-12 max-md:ml-48">Billing Details</h1>
         
         <div className="flex justify-between">
           <div className="w-[45%]">
@@ -97,7 +97,7 @@ function Checkout() {
 
 
 
-<div className="w-2/4 max-md:w-full flex-row ">
+<div className="w-2/4 max-md:w-full flex-row max-md:ml-12 max-md:mt-12">
 
   <div className="border-b w-3/4 border-black">
     

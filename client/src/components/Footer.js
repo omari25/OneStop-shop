@@ -31,7 +31,7 @@ const Footer = () => {
                     type="text"
                     required 
                   />
-          <a className='text-xs text-white text-white' href="/">Subscribe</a>
+          <a className='text-xs  text-white' href="/">Subscribe</a>
           
           
         </div>

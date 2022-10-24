@@ -1,5 +1,5 @@
 import React from 'react'
-import imageabout from '../images/imageabout.png';
+//import imageabout from '../import '
 
 function AboutUs() {
   return (
@@ -7,17 +7,17 @@ function AboutUs() {
         text-center  bg-center h-500 
     '>
     <div className=' bg-white
-        text-center  bg-center h-50 w-70 bg-left-top
+        text-center  bg-center h-50 w-70 
     '> 
       <h1 className='text-2xl font-bold text-black bg-center'>About Us</h1>
         <br/>
-        <img src={imageabout}  alt={"loading"}/>  
+        <img src={'./images/imageabout.png'}  alt={" loading"}/>  
     </div>
       <br/>
       <div className=' bg-slate-200
         text-center  bg-center  
     '> 
-      
+      <hr/>
       <p class="text-black text-bold, center"></p>
       <br />
       <p class="text-black">

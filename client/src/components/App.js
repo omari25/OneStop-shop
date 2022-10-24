@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 //import AboutUs from "./AboutUs";
-//import Shop from "./Shop"
+import Shop from "./Shop"
 import Slider from "./Slider"
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
       <Slider/>
       {/* <AboutUs/>   */}
         <hr/>
-{/*       
-      <Shop/>   */}
+      
+      <Shop/>  
       <hr/>
       <Footer/> 
     </div>

@@ -1,5 +1,8 @@
 import React from 'react';
 import data from '../data';
+import electronicsdata from '../electronicsdata';
+import fooddata from '../fooddata';
+import sportsdata from '../sportsdata';
 
 function Home(){
   return (
@@ -9,7 +12,7 @@ function Home(){
     <div>
       <h2 className="text-2xl font-medium pt-40">Fashion </h2>
 
-      <div className="fashion-images-div flex flex-row justify-center items-center px-4 py-4 w-9/12 h-60">
+      <div className="fashion-images-div flex flex-row justify-center items-center px-4 py-4  h-60">
         {data.map((item) => (
           <div key={item.id} className="one item div w-80 h-50">
             <img classname="rounded-md" src={item.img} alt=""/>
@@ -24,8 +27,8 @@ function Home(){
     <div>
       <h2 className="text-2xl font-medium pt-40">Sporting Goods </h2>
 
-      <div className="fashion-images-div flex flex-row justify-center items-center px-4 py-4 w-9/12 h-60">
-        {data.map((item) => (
+      <div className="sports-images-div flex flex-row justify-center items-center px-4 py-4  h-60">
+        {sportsdata.map((item) => (
           <div key={item.id} className="one item div w-80 h-50">
             <img classname="rounded-md" src={item.img} alt=""/>
             <p className="font-light">{item.name}</p>
@@ -41,8 +44,8 @@ function Home(){
     <div>
       <h2 className="text-2xl font-medium pt-40">Electronics </h2>
 
-      <div className="fashion-images-div flex flex-row justify-center items-center px-4 py-4 w-9/12 h-60">
-        {data.map((item) => (
+      <div className="electronics-images-div flex flex-row justify-center items-center px-4 py-4  h-60">
+        {electronicsdata.map((item) => (
           <div key={item.id} className="one item div w-80 h-50">
             <img classname="rounded-md" src={item.img} alt=""/>
             <p className="font-light">{item.name}</p>
@@ -56,8 +59,8 @@ function Home(){
     <div>
       <h2 className="text-2xl font-medium pt-40">Food Stuff </h2>
 
-      <div className="fashion-images-div flex flex-row justify-center items-center px-4 py-4 w-9/12 h-60">
-        {data.map((item) => (
+      <div className="food-images-div flex flex-row justify-center items-center px-4 py-4  h-60">
+        {fooddata.map((item) => (
           <div key={item.id} className="one item div w-80 h-50">
             <img classname="rounded-md" src={item.img} alt=""/>
             <p className="font-light">{item.name}</p>

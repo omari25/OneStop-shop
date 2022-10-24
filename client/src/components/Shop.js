@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Slider from "./Slider";
-import Footer from "./Footer";
 
 function Shop() {
     const [shop, setShop] = useState([])
@@ -17,20 +16,7 @@ function Shop() {
     }, [])
 
     
-    // const myshop = shop.map((shop) => (
-    //   <>
-     
-    //   <div className="h-48 w-48">
-    //     <div key={shop.id} className="shop">
-            
-    //       <img className="shop-image" src= {shop.image} alt="logo" />
-    //       <p>product title:{(shop.title)}</p>
-         
-    //       <p>product price:{(shop.price)}</p>
-    //     </div>
-    //   </div>
-    //   </>
-    // ));
+    
     return (
       <div>
         <Slider/>
@@ -54,7 +40,6 @@ function Shop() {
          ))}
        </div>
       </div>
-      <Footer/>
       </div>
 
       );

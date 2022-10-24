@@ -1,17 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import data from '../data';
 import electronicsdata from '../electronicsdata';
 import fooddata from '../fooddata';
 import sportsdata from '../sportsdata';
+import { useNavigate } from 'react-router-dom';
 
-function Home(){
+
+function Home( {category, setCategory} ){
+  const [items, setItems] = useState([])
+
+  const navigate = useNavigate();
+
+  function handleCategory() {
+    fetch('/products', { method: 'GET' }).then ((r) => {
+      if (r.ok) {
+        setCategory(null);
+        navigate('/categories');
+      }
+    });
+  }
+
+  useEffect(() => {
+    fetch('categories')
+    .then(response => response.json())
+    .then((data) => {
+      setItems(data)
+    })
+  }, [])
   return (
+    
     
   <div className="w-2/4 pt-40 ml-80">
     <img className="w-5/6 rounded-md" src="https://cdni.iconscout.com/illustration/premium/thumb/summer-sale-banner-1472162-1246176.png" alt=""/>
 
     <div>
-      <h2 className="text-2xl font-medium pt-40">Fashion </h2>
+    
+      <h2 className="text-2xl font-medium pt-40" onClick={handleCategory}>Fashion </h2>
 
       <div className="fashion-images-div flex flex-row justify-center items-center px-4 py-4  h-60">
         {data.map((item) => (

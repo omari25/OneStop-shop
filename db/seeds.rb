@@ -259,106 +259,106 @@ Product.create!(
   price: 297
 )
 
-# Product.create!(
-#   product_name: "",
-#   image_url: "",
-#   description: "",
-#   category_id: 
-#   price:
-# )
+Product.create!(
+  product_name: "",
+  image_url: "",
+  description: "",
+  category_id: 
+  price:
+)
 
-# Product.create!(
-#   product_name: "",
-#   image_url: "",
-#   description: "",
-#   category_id: ,
-#   price:
-# )
+Product.create!(
+  product_name: "",
+  image_url: "",
+  description: "",
+  category_id: ,
+  price:
+)
 
-# Product.create!(
-#   product_name: "",
-#   image_url: "",
-#   description: "",
-#   category_id: 
-#   price:
-# )
+Product.create!(
+  product_name: "",
+  image_url: "",
+  description: "",
+  category_id: 
+  price:
+)
 
-# Product.create!(
-#   product_name: "",
-#   image_url: "",
-#   description: "",
-#   category_id: 
-#   price:
-# )
+Product.create!(
+  product_name: "",
+  image_url: "",
+  description: "",
+  category_id: 
+  price:
+)
 
-# Product.create!(
-#   product_name: "",
-#   image_url: "",
-#   description: "",
-#   category_id: 
-#   price:
-# )
+Product.create!(
+  product_name: "",
+  image_url: "",
+  description: "",
+  category_id: 
+  price:
+)
 
-# Product.create!(
-#   product_name: "",
-#   image_url: "",
-#   description: "",
-#   category_id: 
-#   price:
-# )
+Product.create!(
+  product_name: "",
+  image_url: "",
+  description: "",
+  category_id: 
+  price:
+)
 
-# Product.create!(
-#   product_name: "",
-#   image_url: "",
-#   description: "",
-#   category_id: 
-#   price:
-# )
+Product.create!(
+  product_name: "",
+  image_url: "",
+  description: "",
+  category_id: 
+  price:
+)
 
-# Product.create!(
-#   product_name: "",
-#   image_url: "",
-#   description: "",
-#   category_id: 
-#   price:
-# )
+Product.create!(
+  product_name: "",
+  image_url: "",
+  description: "",
+  category_id: 
+  price:
+)
 
-# Product.create!(
-#   product_name: "",
-#   image_url: "",
-#   description: "",
-#   category_id: 
-#   price:
-# )
+Product.create!(
+  product_name: "",
+  image_url: "",
+  description: "",
+  category_id: 
+  price:
+)
 
-# Product.create!(
-#   product_name: "",
-#   image_url: "",
-#   description: "",
-#   category_id: 
-#   price:
-# )
+Product.create!(
+  product_name: "",
+  image_url: "",
+  description: "",
+  category_id: 
+  price:
+)
 
-# Product.create!(
-#   product_name: "",
-#   image_url: "",
-#   description: "",
-#   category_id: 
-#   price:
-# )
+Product.create!(
+  product_name: "",
+  image_url: "",
+  description: "",
+  category_id: 
+  price:
+)
 
-# Product.create!(
-#   product_name: "",
-#   image_url: "",
-#   description: "",
-#   category_id: 
-#   price:
-# )
+Product.create!(
+  product_name: "",
+  image_url: "",
+  description: "",
+  category_id: 
+  price:
+)
 
-# Product.create!(
-#   product_name: "",
-#   image_url: "",
-#   description: "",
-#   category_id: 
-#   price:
-# )
+Product.create!(
+  product_name: "",
+  image_url: "",
+  description: "",
+  category_id: 
+  price:
+)

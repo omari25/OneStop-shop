@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import pic from "./images/image2.png";
 
 function Signup({ setUser }) {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [firstName, setfirstName] = useState("");
   const [lastName, setlastName] = useState("");
@@ -30,8 +30,8 @@ function Signup({ setUser }) {
       }),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => {setUser(user); console.log(user.first_name)});
-        // navigate("/home");
+        r.json().then((user) => setUser(user));
+        navigate("/home");
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
@@ -47,7 +47,7 @@ function Signup({ setUser }) {
       <div className="w-2/4 max-md:w-full flex justify-center items-center">
         <form className="px-[6vw] signup-form w-full" onSubmit={handleSubmit}>
             {errors.map((err) => (
-              <p key={err}>{err}</p> 
+              <p className="text-[red]" key={err}>{err}</p> 
             ))}            
             <p className="text-2xl mb-2">Register your acoount</p>
             <p className=" mb-2">Fill in the fields below and submit to register your account</p>

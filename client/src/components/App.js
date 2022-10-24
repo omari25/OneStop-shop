@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Login from "./LoginForm";
 import Signup from "./SignupForm";
-// import Home from "./Home";
-// import { Route, Routes } from "react-router-dom";
+import Home from "./Home";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -16,9 +16,12 @@ function App() {
   }, []);
   
   return (
-    <div>
-        <Signup user={user} setUser={setUser}/>
-        <Login user={user} setUser={setUser}/>
+    <div>   
+      <Routes>
+        <Route exact path="/" element={<Signup user={user} setUser={setUser}/>}/>
+        <Route exact path="/login" element={<Login user={user} setUser={setUser}/>}/>
+        <Route exact path="/home" element={<Home user={user} setUser={setUser}/>}/>
+      </Routes>
     </div>
   );
 }

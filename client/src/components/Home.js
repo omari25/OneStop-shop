@@ -1,15 +1,20 @@
-function Home( {user} ) { 
-  // function handleLogout({setUser}) {
-  //   fetch("/logout", { method: "DELETE" }).then((r) => {
-  //     if (r.ok) {
-  //       setUser(null);
-  //     }
-  //   });
-  // }
+import { useNavigate } from "react-router-dom";
+
+function Home( {user, setUser} ) {
+  const navigate = useNavigate();
+  // console.log(user.first_name)
+  function handleLogout() {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+        navigate("/login");
+      }
+    });
+  }
+
   return (
     <div>
-        {/* <h1>{user.first_name}</h1>
-        <button onClick={handleLogout}>logout</button> */}
+        <button onClick={handleLogout} >logout</button>
     </div>
   );
 }

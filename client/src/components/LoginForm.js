@@ -19,8 +19,8 @@ function Login({ setUser }) {
       body: JSON.stringify({ email, password }),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => setUser(user));
-        // navigate("/home");
+        r.json().then((user) => {setUser(user)});
+        navigate("/home");
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
@@ -35,7 +35,7 @@ function Login({ setUser }) {
         <div className="w-2/4 max-md:w-full flex justify-center items-center">
             <form onSubmit={handleSubmit} className="px-[6vw] signup-form w-full">
                 {errors.map((err) => (
-                    <p key={err}>{err}</p>
+                    <p className="text-[red]" key={err}>{err}</p>
                 ))}
                 <p className="text-2xl mb-2">Welcome</p>
                 <p className=" mb-2">Login to continue</p>
@@ -60,7 +60,7 @@ function Login({ setUser }) {
                     />
                 </div>
                 <button className="w-full bg-[red] p-3 rounded-md text-white" type="submit">Login</button>
-                <p className="text-center mt-8">Already have an account? <NavLink to="/signup" className="text-[blue]">Signup</NavLink></p>
+                <p className="text-center mt-8">Already have an account? <NavLink to="/" className="text-[blue]">Signup</NavLink></p>
             </form>
         </div>
     </div>

@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from "react-icons/ai";
 
 const featuredProducts = [
-  "/images/hero_1.png",
-  "/images/hero_2.png",
-  "/images/hero_3.png",
+  "./images/hero_1.png",
+  "./images/hero_2.png",
+  "./images/hero_3.png",
 ];
 
 let count = 0;
@@ -33,7 +33,7 @@ function Slider() {
   const startSlider = () => {
     slideInterval = setInterval(() => {
       handleOnNextClick();
-    }, 3000);
+    }, 1000);
   };
 
   const pauseSlider = () => {
@@ -60,7 +60,7 @@ function Slider() {
 
       <div className="absolute w-full top-1/2 transform -translate-y-1/2 px-3 flex justify-between items-center">
         <button
-          className="bg-black text-white p-1 rounded-full bg-opacity-50 cursor-pointer hover:bg-opacity-100 transition"
+          className="bg-black text-white p-1  bg-opacity-50 cursor-pointer hover:bg-opacity-100 transition"
           onClick={handleOnPrevClick}
         >
           <AiOutlineVerticalRight size={30} />

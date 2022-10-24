@@ -4,7 +4,7 @@ import {AiFillInstagram,AiFillTwitterCircle} from 'react-icons/ai'
 
 const Footer = () => {
   return (
-    <footer className='w-full h-32 bg-black fixed bottom-0'>
+    <footer className='w-full h-25 bg-black '>
       <div className='lg:w-3/5 w-11/12 m-auto p-5 flex justify-between'>
         <div className='flex flex-col space-y-2'>
           <h1 className='text-xl font-bold text-white'>Links</h1>
@@ -14,14 +14,14 @@ const Footer = () => {
           <a className='text-xs text-white' href="/">Contact</a>
           
         </div>
-        <div className='flex flex-col space-y-2'>
+        <div className='flex flex-col space-y-1'>
           <h1 className='text-xl font-bold text-white'>Help</h1>
           <a className='text-xs text-white' href="/">Payment Options</a>
           <a className='text-xs text-white' href="/">Returns</a>
           <a className='text-xs text-white' href="/">Private Policies</a>
        
         </div>
-        <div className='flex flex-col space-y-2'>
+        <div className='flex flex-col space-y-1'>
           <h1 className='text-xl font-bold color: text-white'>Newsletters</h1>
           <input
                     className="required:border-red-500 ..."
@@ -35,7 +35,7 @@ const Footer = () => {
           
           
         </div>
-        <div className='flex flex-col space-y-2'>
+        <div className='flex flex-col space-y-1'>
           <h1 className='text-xl font-bold text-white'>Socials</h1>
           <BsFacebook size={'2rem'} style={{color: "#FFF"}}/>
         <BsYoutube size={'2rem'} style={{color: "#FFF"}}/>

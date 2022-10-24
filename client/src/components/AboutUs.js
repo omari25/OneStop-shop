@@ -1,8 +1,8 @@
 import React from 'react'
-//import imageabout from '../import '
-
+import Footer from './Footer';
 function AboutUs() {
   return (
+    <>
     <div className=' bg-white
         text-center  bg-center h-500 
     '>
@@ -68,6 +68,8 @@ function AboutUs() {
       </p>
       </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 

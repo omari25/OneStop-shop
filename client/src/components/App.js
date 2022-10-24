@@ -1,11 +1,18 @@
 import React from "react";
+
+import Home from "./Home";
+
 import Cart from "./Cart"
 
 function App() {
   return (
-    <div >
-      <Cart/>
+    <div>
+      <Home />
+     <Cart/>
+
     </div>
+     
+   
   );
 }
 

@@ -28,6 +28,12 @@ const data = [
     img : "https://assets.vogue.com/photos/62c475e260c612fc97ae47ab/1:1/w_2667,h_2667,c_limit/slide_4.jpg",
     name : "Summer Palazzo Pants",
     price : "Ksh 3200"
+  },
+  {
+    id : 6,
+    img : "https://images.asos-media.com/products/sunday-rain-sleep-easy-body-scrub-265g/202314314-1-nocolour?$n_320w$&wid=317&fit=constrain",
+    name : "Body scrub",
+    price : "Ksh 650"
   }
 ]
 

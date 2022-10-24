@@ -34,7 +34,7 @@ function Slider() {
   const startSlider = () => {
     slideInterval = setInterval(() => {
       handleOnNextClick();
-    }, 1000);
+    }, 3000);
   };
 
   const pauseSlider = () => {
@@ -54,7 +54,7 @@ function Slider() {
   };
 
   return (
-    <div ref={slideRef} className="w-30 h-30px select-none relative">
+    <div ref={slideRef} className="w-30 h-30 select-none relative">
       <div className="aspect-w-9 aspect-h-9">
         <img src={featuredProducts[currentIndex]} alt="" />
       </div>

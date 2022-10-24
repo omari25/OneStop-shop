@@ -7,7 +7,7 @@ import Slider from "./Slider"
 function App() {
   return (
     <div className="bg-white w-full h-full">
-      <Slider/>
+       <Slider/> 
       {/* <AboutUs/>   */}
         <hr/>
       

@@ -6,6 +6,7 @@ import sportsdata from '../sportsdata';
 
 function Home(){
   return (
+    
   <div className="w-2/4 pt-40 ml-80">
     <img className="w-5/6 rounded-md" src="https://cdni.iconscout.com/illustration/premium/thumb/summer-sale-banner-1472162-1246176.png" alt=""/>
 
@@ -39,7 +40,7 @@ function Home(){
       </div>
     </div>
 
-    <img className="w-5/6 rounded-md " src="image.png" alt=""/>
+    <img className="w-5/6 rounded-md " src="https://img.freepik.com/free-vector/black-friday-sale-with-realistic-3d-paper-page_1361-3675.jpg?w=1380&t=st=1666600766~exp=1666601366~hmac=fcde90b5347db30e1d9353087909bef7a1128fd62740b2ec6d2cdd3cf04ff6fb" alt=""/>
 
     <div>
       <h2 className="text-2xl font-medium pt-40">Electronics </h2>

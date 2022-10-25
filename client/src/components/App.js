@@ -1,11 +1,17 @@
 import React from "react";
-import Cart from "./Cart"
+import Carts from "./Carts"
+import Checkout from "./Checkout"
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import CartProvider from "../CartContext";
 
 function App() {
   return (
-    <div >
-      <Cart/>
-    </div>
+    <CartProvider>
+    <Routes>
+    <Route  path="/carts" element={<Carts/>}/>
+    <Route  path="/checkout" element={<Checkout/>}/> 
+     </Routes>
+    </CartProvider>
   );
 }
 

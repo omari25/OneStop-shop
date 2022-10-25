@@ -22,7 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_24_064201) do
 
   create_table "products", force: :cascade do |t|
     t.string "product_name"
-    t.string "image"
+    t.string "image_url"
     t.string "description"
     t.integer "price"
     t.integer "category_id", null: false

@@ -1,9 +1,27 @@
-function SingleProduct({ product, setProduct }){
+// import { useState, useEffect } from "react"
+// import { useParams } from "react-router-dom"
 
-    return (
-        <div>
-        </div>
-    )
-}
+// function SingleProduct(){
+//     const { id } = useParams
+//     const [ product, setProduct ] = useState([])
+    
+//     useEffect(() => {
+//         fetch(`products`)
+//         .then(response => response.json())
+//         .then((data) => {
+//         setProduct(data)
+//         })
+//     }, [])
 
-export default SingleProduct
+//     return (
+//         <div>
+//             {
+//                 product.map((pro)=>(
+//                     pro[id].product_name
+//                 ))
+//             }
+//         </div>
+//     )
+// }
+
+// export default SingleProduct

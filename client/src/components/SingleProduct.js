@@ -35,7 +35,7 @@ const{productId}=useParams();
 const product=product.find((product)=>product.id===productId);
 return(
 <section className="section product">
-<img src={image} alt={shop.title}/>
+<img src={ shop.image }  alt={shop.title}/>
 <h3>{shop.title}</h3>
 <p>Unit Price:Ksh{shop.price}</p>
 <button>Add to Cart</button>
@@ -43,5 +43,4 @@ return(
 </section>
 );
 };
-
 export function SingleProduct()

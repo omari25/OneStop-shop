@@ -53,9 +53,9 @@ function Home( ){
 
       
       
-        <FeaturedTitle className=" py-3" text= "Fashion" />
+        <FeaturedTitle className=" py-3" text= "Shop by Categories" />
 
-        <div className="fashion-images-div flex flex-row justify-center items-center px-4 py-4  h-60">
+        <div className="flex flex-row justify-between items-center px-4 py-4  h-60">
           {data.map((item) => (
             <div key={item.id} className="one item div w-80 h-50">
               <img classname="rounded-md" src={item.img} alt=""/>

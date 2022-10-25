@@ -288,12 +288,9 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-<<<<<<< HEAD
   activeadmin
-=======
   active_model_serializers (~> 0.10.12)
   bcrypt (~> 3.1.7)
->>>>>>> d3f8936122e14a6c5e72dacaf5ad1e96ee6028a3
   bootsnap
   capybara
   debug

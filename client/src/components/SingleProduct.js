@@ -30,7 +30,7 @@
 import react from "react";
 import product from '../data'
 
-function Singleproduct(){
+function SingleProduct(){
 const{productId}=useParams();
 const product=product.find((product)=>product.id===productId);
 return(
@@ -44,4 +44,4 @@ return(
 );
 };
 
-export function Singleproduct()
+export function SingleProduct()

@@ -1,50 +1,135 @@
-// import { useState, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import data from '../data';
+import electronicsdata from '../electronicsdata';
+import fooddata from '../fooddata';
+import sportsdata from '../sportsdata';
+import { useNavigate } from 'react-router-dom';
 
-// function Home( {user, setUser} ) {
-//   const [items, setItems] = useState([])
 
-//   const navigate = useNavigate();
-//   // console.log(user.first_name)
-//   function handleLogout() {
-//     fetch("/logout", { method: "DELETE" }).then((r) => {
-//       if (r.ok) {
-//         setUser(null);
-//         navigate("/login");
-//       }
-//     });
-//   }
+function Home( {category, setCategory} ){
+  const [items, setItems] = useState([])
 
-//   useEffect(() => {
-//     fetch("categories")
-//     .then(response => response.json())
-//     .then((data) => {
-//       setItems(data)
-//     })
-//   }, [])
+  const navigate = useNavigate();
 
-//   return (
-//     <div>
-//         {/* <p>{user.first_name}</p> */}
-//         <button className="border-2" onClick={handleLogout} >logout</button>
-//         <div>
-//           {items.map((item)=>(
-//             <div key={item.id} className="">
-//               <h1 className="text-center text-2xl font-black mb-6">{item.name}</h1>
-//               <div className="flex w-full flex-wrap gap-4 justify-center " >
-//                 {item.products.map((data) => (
-//                   <div key={data.id} className="w-[250px] border-2" >
-//                     <img src={data.image} alt="" className="w-full"/>
-//                     <p>{data.product_name}</p>
-//                     <p>{`Ksh: ${data.price}`}</p>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//     </div>
-//   );
-// }
+  function handleCategory() {
+    fetch('/products', { method: 'GET' }).then ((r) => {
+      if (r.ok) {
+        setCategory(null);
+        navigate('/categories');
+      }
+    });
+  }
 
-// export default Home;
+  useEffect(() => {
+    fetch('categories')
+    .then(response => response.json())
+    .then((data) => {
+      setItems(data)
+    })
+  }, [])
+  return (
+    
+    
+  <div className="w-2/4 pt-40 ml-80">
+    <img className="w-5/6 rounded-md" src="https://cdni.iconscout.com/illustration/premium/thumb/summer-sale-banner-1472162-1246176.png" alt=""/>
+
+    <div>
+    
+      <h2 className="text-2xl font-medium pt-40" onClick={handleCategory}>Fashion </h2>
+
+      <div className="fashion-images-div flex flex-row justify-center items-center px-4 py-4  h-60">
+        {data.map((item) => (
+          <div key={item.id} className="one item div w-80 h-50">
+            <img classname="rounded-md" src={item.img} alt=""/>
+            <p className="font-light">{item.name}</p>
+            <p className="font-medium">{item.price}</p>
+       
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h2 className="text-2xl font-medium pt-40">Sporting Goods </h2>
+
+      <div className="sports-images-div flex flex-row justify-center items-center px-4 py-4  h-60">
+        {sportsdata.map((item) => (
+          <div key={item.id} className="one item div w-80 h-50">
+            <img classname="rounded-md" src={item.img} alt=""/>
+            <p className="font-light">{item.name}</p>
+            <p className="font-medium">{item.price}</p>
+       
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <img className="w-5/6 rounded-md " src="https://img.freepik.com/free-vector/black-friday-sale-with-realistic-3d-paper-page_1361-3675.jpg?w=1380&t=st=1666600766~exp=1666601366~hmac=fcde90b5347db30e1d9353087909bef7a1128fd62740b2ec6d2cdd3cf04ff6fb" alt=""/>
+
+    <div>
+      <h2 className="text-2xl font-medium pt-40">Electronics </h2>
+
+      <div className="electronics-images-div flex flex-row justify-center items-center px-4 py-4  h-60">
+        {electronicsdata.map((item) => (
+          <div key={item.id} className="one item div w-80 h-50">
+            <img classname="rounded-md" src={item.img} alt=""/>
+            <p className="font-light">{item.name}</p>
+            <p className="font-medium">{item.price}</p>
+       
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h2 className="text-2xl font-medium pt-40">Food Stuff </h2>
+
+      <div className="food-images-div flex flex-row justify-center items-center px-4 py-4  h-60">
+        {fooddata.map((item) => (
+          <div key={item.id} className="one item div w-80 h-50">
+            <img classname="rounded-md" src={item.img} alt=""/>
+            <p className="font-light">{item.name}</p>
+            <p className="font-medium">{item.price}</p>
+       
+          </div>
+        ))}
+      </div>
+    </div>
+      
+  </div>
+  );
+}
+
+export default Home;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <div>
+      <div className='bg-white '>
+        <img className='' src='https://cdni.iconscout.com/illustration/premium/thumb/summer-sale-banner-1472162-1246176.png' alt=""/>
+      </div>
+      <div>Categories
+        <h2 className='text-left'>Fashion</h2>
+        <div className=''>
+          <img 
+          className="justify-start box-border h-54" 
+          src='https://broffice.org/wp-content/uploads/2020/08/92a97d6f91f63a6b1a6cea1ff40918e7.jpg' alt=''/>
+        </div>
+        <h2>Sporting Goods</h2>
+      </div>
+      <div>Sale</div>
+      <div>
+        <h2>Electronics</h2>
+        <h2>Food Stuff</h2>
+      </div>
+    </div> */

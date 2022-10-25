@@ -2,15 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-.signup-form input{
+.checkout-form input, .signup-form input{
     width: 100%;
     margin-bottom: 16px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #706965;
 }
-.signup-form input:focus{
+
+.checkout-form input:focus, .signup-form input:focus{
     outline: none;
 }

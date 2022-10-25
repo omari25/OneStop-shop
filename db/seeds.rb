@@ -263,6 +263,109 @@ Product.create!(
   price: 297
 )
 
+Product.create!(
+  product_name: "Shea Moisture Coconut & Hibiscus KIDS Extra-Moisturizer Detangler 8oz",
+  image_url: "https://static.wixstatic.com/media/8832f2_34254ea4f9184d8290b35cfa2936e69a~mv2.jpg/v1/fill/w_500,h_500,al_c,q_85,usm_0.66_1.00_0.01/8832f2_34254ea4f9184d8290b35cfa2936e69a~mv2.webp",
+  description: "An absolute must have hair moisturizer from SheaMoisture, this nourishing detangler contains certified organic Shea Butter, which is essential in keeping hair frizz-free and soft as silk",
+  category_id: 5,
+  price: 2350
+)
+
+Product.create!(
+  product_name: "Fenty Beauty Eaze Drop’Lit Foundation",
+  image_url: "https://static.wixstatic.com/media/8832f2_3fdada5d73e441fc93a228d265a703f3~mv2.jpg/v1/fill/w_500,h_500,al_c,q_85,usm_0.66_1.00_0.01/8832f2_3fdada5d73e441fc93a228d265a703f3~mv2.webp",
+  description: "A few drops deliver instant, natural-looking illumination while skin-loving ingredients hydrate, help reduce the look of pores, and brighten over time",
+  category_id: 5,
+  price: 6450
+)
+
+Product.create!(
+  product_name: "Lancome La Vie Est Belle Intensement L'Eau de Parfum 100ml",
+  image_url: "https://static.wixstatic.com/media/81a610_c28d1d9e516a494899afab8adc80a6e4~mv2.png/v1/fill/w_500,h_500,al_c,q_90,usm_0.66_1.00_0.01/81a610_c28d1d9e516a494899afab8adc80a6e4~mv2.webp",
+  description: "Spray La vie Est Belle Intens�ment onto your skin, focusing on the warm areas of your body: the inside of your wrists, below your earlobes and behind your knees.",
+  category_id: 5,
+  price: 23500
+)
+
+Product.create!(
+  product_name: "Lustre Shower Foam",
+  image_url: "https://cdn.shopify.com/s/files/1/0018/4136/5053/products/Lustre-Shower-Foam-Front_750x.jpg?v=1618992584",
+  description: "Experience the joy of this fragrant shower foam every morning and evening with Lustre Shower Foam. Virgin coconut oil is rich in medium-chain triglycerides which soften and moisten the skin.
+   Suitable for all skin types and free from harsh chemicals.",
+  category_id: 5,
+  price: 3400
+)
+
+Product.create!(
+  product_name: "MEGAVIT Vitamin C 20 EFF Tabs",
+  image_url: "https://www.healthyu.co.ke/wp-content/uploads/2020/05/Vitamin-C-768x768.jpg",
+  description: "Vitamin C supports a healthy immune system.",
+  category_id: 5,
+  price: 409
+)
+
+Product.create!(
+  product_name: "Quest Omega 3 90 for 45 capsules",
+  image_url: "https://www.healthyu.co.ke/wp-content/uploads/2019/11/QUEST_OMEGA_3_-90_-FOR_-45_CAPSULES.jpg",
+  description: "This natural fish oil concentrate is manufactured under strict quality control standards. It is tested to be free of potentially harmful levels of contaminants such as PCBs, dioxins, mercury and other heavy metals.",
+  category_id: 5,
+  price: 2045
+)
+
+Product.create!(
+  product_name: "Optima Teatree toothpaste FRESH&WHITE 100ML",
+  image_url: "https://www.healthyu.co.ke/wp-content/uploads/2019/11/OPTIMA-TEATREE-TOOTHPASTE-FRESHWHITE-100ML.jpg",
+  description: "Regular brushing using Australian Tea Tree Toothpaste helps prevent the build of plaque and tartar. In addition to the benefits of tea tree this unique toothpaste also includes soothing aloe vera, calcium silica,
+   with added Co-Q10 and Escin (from horse chestnut) known for helping to keep gums looking healthy, plus tooth-friendly xylitol. Minty-fresh with essential oil of peppermint.Ingredients Tea tree oil,Aloe vera,calcium, silica,
+   Co-Q10,peppermint oil and horsequest nut SUGAR FREE Free From from artificial colours, flavours, , saccharin, triclosan, fluoride other unnecessary chemicals.",
+  category_id: 5,
+  price: 1245
+)
+
+Product.create!(
+  product_name: "Desert Essence Teatree dental floss",
+  image_url: "https://www.healthyu.co.ke/wp-content/uploads/2019/11/DESERT-ESSENCE-TEATREE-DENTAL-FLOSS.jpg",
+  description: "Naturally waxed with beeswax and saturated with pure Australian Tea Tree Oil.Ingredients Naturally waxed with beeswax and saturated with pure Australian Tea Tree Oil.Free From animal testing",
+  category_id: 5,
+  price: 899
+)
+
+Product.create!(
+  product_name: "Aqua Oleum Eucalyptus 10ml",
+  image_url: "https://www.healthyu.co.ke/wp-content/uploads/2019/11/AQUA-OLEUM-EUCALYPTUS-10ML-768x768.jpg",
+  description: "Used as a decongestant to facilitates breathing, used as a purifying air freshener and may be used as a stimulant for muscular aches and painsIngredients100% pure eucalyptus oil100% pure",
+  category_id: 5,
+  price: 1187
+)
+
+Product.create!(
+  product_name: "Dr. Organic Vitamin E cream 100ml",
+  image_url: "https://www.healthyu.co.ke/wp-content/uploads/2019/11/DR-ORGANIC-VITAMIN-E-CREAM-50ML.png",
+  description: "Super rich moisturising organic Vitamin E provides a natural mix of bioactive tocopherols which penetrate and moisturise the driest of skin. This bioactive organic Vitamin E cream is a rich absorbent moisturiser,
+   formulated to penetrate deep into the skins epidermal layer, instantly hydrating and leaving the skin radiant and intensely moisturize.",
+  category_id: 5,
+  price: 2070 
+)
+
+Product.create!(
+  product_name: "Marini Naturals curling butter",
+  image_url: "https://www.healthyu.co.ke/wp-content/uploads/2019/11/MARINI-CURL-ME-PRETTY-CURLING-BUTTER-300GM-768x768.jpg",
+  description: "Curl Me Pretty Curling Butteris a moisture-rich curl-defining and sealing butter! This nutritive curling butter will work wonders in defining and holding your style for days,
+   giving you that salon-look definition! All this with zero-crunch and sealing in loads of moisture. Your twist-outs and braid-outs have never looked this good! Aside from the beautiful soft curls with regular use you will notice stronger,
+   longer and fuller hair due to this butters amazing hair growth ingredients",
+  category_id: 5,
+  price: 1360
+)
+
+Product.create!(
+  product_name: "Dr Organic Aloe Vera hair shampoo 265ml",
+  image_url: "https://www.healthyu.co.ke/wp-content/uploads/2019/11/DR-ORGANIC-ALOE-VERA-HAIR-SHAMPOO-265ML.jpg",
+  description: "Using pure organic bioactive Aloe Vera ensures that the plants beneficial polysaccharide levels are maximised, and in combination with a select blend of bioactive natural extracts they coat and penetrate the fibres of the hair,
+   soothing and nourishing the roots and scalp, leaving hair feeling silky soft, restored and totally manageable",
+  category_id: 5,
+  price: 1710
+)
+
 
 
 

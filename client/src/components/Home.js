@@ -1,55 +1,82 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import data from '../data';
-import electronicsdata from '../electronicsdata';
-import fooddata from '../fooddata';
-import sportsdata from '../sportsdata';
-import { useNavigate } from 'react-router-dom';
+import Slider from './Slider';
+import FeaturedTitle from './FeaturedTitle';
+// import electronicsdata from '../electronicsdata';
+// import fooddata from '../fooddata';
+// import sportsdata from '../sportsdata';
+// import { useNavigate } from 'react-router-dom';
 
 
-function Home( {category, setCategory} ){
-  const [items, setItems] = useState([])
+function Home( ){
+  const [electronics, setElectronics] = useState([]);
+  const [foodStuffs, setFoodStuffs] = useState([]);
+  const [fashion, setFashion] = useState([]);
+  const [books, setBooks] = useState([]);
+  const [health, setHealth] = useState([]);
+  // const [phones, setPhones] = useState([])
+  // const [sportingGoods, setSportingGoods] = useState([])
+  // const [babyProducts, setbabyProducts] = useState([])
 
-  const navigate = useNavigate();
+  const fetchCategories = async () => {
+    const { data } = await axios.get("/categories");
+    const { electronics, foodStuffs, fashion, books, health } = data.products;
+    setElectronics(electronics);
+    setFoodStuffs(foodStuffs);
+    setFashion(fashion);
+    setBooks(books);
+    setHealth(health);
 
-  function handleCategory() {
-    fetch('/products', { method: 'GET' }).then ((r) => {
-      if (r.ok) {
-        setCategory(null);
-        navigate('/categories');
-      }
-    });
-  }
+  };
+
+  // function handleCategory() {
+  //   fetch('/products', { method: 'GET' }).then ((r) => {
+  //     if (r.ok) {
+  //       setCategory(null);
+  //       navigate('/categories');
+  //     }
+  //   });
+  // }
 
   useEffect(() => {
-    fetch('categories')
-    .then(response => response.json())
-    .then((data) => {
-      setItems(data)
-    })
-  }, [])
+    fetchCategories();
+   
+  }, []);
+
   return (
     
-    
-  <div className="w-2/4 pt-40 ml-80">
-    <img className="w-5/6 rounded-md" src="https://cdni.iconscout.com/illustration/premium/thumb/summer-sale-banner-1472162-1246176.png" alt=""/>
+   <>
+   <Slider />
+    <div className="xl:px-0 px-2">
+      {/* <img className="w-5/6 rounded-md" src="https://cdni.iconscout.com/illustration/premium/thumb/summer-sale-banner-1472162-1246176.png" alt=""/> */}
 
-    <div>
-    
-      <h2 className="text-2xl font-medium pt-40" onClick={handleCategory}>Fashion </h2>
+      
+      
+        <FeaturedTitle className=" py-3" text= "Fashion" />
 
-      <div className="fashion-images-div flex flex-row justify-center items-center px-4 py-4  h-60">
-        {data.map((item) => (
-          <div key={item.id} className="one item div w-80 h-50">
-            <img classname="rounded-md" src={item.img} alt=""/>
-            <p className="font-light">{item.name}</p>
-            <p className="font-medium">{item.price}</p>
-       
-          </div>
-        ))}
+        <div className="fashion-images-div flex flex-row justify-center items-center px-4 py-4  h-60">
+          {data.map((item) => (
+            <div key={item.id} className="one item div w-80 h-50">
+              <img classname="rounded-md" src={item.img} alt=""/>
+              <p className="font-light">{item.name}</p>
+              <p className="font-medium">{item.price}</p>
+        
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    
+   
+   </>
+  );
+}
 
-    <div>
+export default Home;
+
+  
+
+    {/* <div>
       <h2 className="text-2xl font-medium pt-40">Sporting Goods </h2>
 
       <div className="sports-images-div flex flex-row justify-center items-center px-4 py-4  h-60">
@@ -94,14 +121,10 @@ function Home( {category, setCategory} ){
           </div>
         ))}
       </div>
-    </div>
+    </div> */}
       
-  </div>
-  );
-}
-
-export default Home;
-
+  
+  
 
 
 
@@ -133,3 +156,6 @@ export default Home;
         <h2>Food Stuff</h2>
       </div>
     </div> */
+    
+
+    // https://static.wixstatic.com/media/6f98b7_d342cc168c024da584ac607e3d17a26b~mv2.jpg/v1/fill/w_1514,h_458,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/6f98b7_d342cc168c024da584ac607e3d17a26b~mv2.jpg

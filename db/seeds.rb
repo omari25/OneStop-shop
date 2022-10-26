@@ -8,6 +8,140 @@
 #   Character.create(name: "Luke", movie: movies.firs
 
 #   Character.create(name: "Luke", movie: movies.first)
+AdminUser.create!(email: 'admin@example.com', password: 'password', 
+password_confirmation: 'password')
+
+# 10.times do
+#     User.create({
+#         first_name: Faker::Name.first_name, 
+#         last_name: Faker::Name.last_name, 
+#         email: Faker::Internet.email,
+ 
+#         password: "testpassword" })
+# end
+    Category.create!(name: "Electronics")
+    Category.create!(name: "Foods stuffs")
+    Category.create!(name: "Fashion")
+    Category.create!(name: "Books")
+    Category.create!(name: "Health & Beauty")
+    Category.create!(name: "Phones & Tablets")
+    Category.create!(name: "Sporting Goods     ")
+    Category.create!(name: "Baby Products")
+
+    Product.create!(
+        product_name: "Fishing gilet 500 grey",
+        price: 3950,
+        category_id: 7,
+        description: "Our designers have developed this gilet to enable you to transport your accessories and have them to hand during your fishing trips.",
+        image_url: "https://contents.mediadecathlon.com/p439845/k$7f4966eb1a1256318c6907257d11dcc1/fishing-gilet-500-grey.jpg?format=auto&quality=40&f=800x800"
+        )
+        Product.create!(
+        product_name: "Fitness leggings - print",
+        price: 2550,
+        category_id: 7,
+        description: "These ultra-feminine leggings offer great quality at a great price for everyone who wants to exercise in comfort and style.",
+        image_url: "https://contents.mediadecathlon.com/p1851141/k$760d98dff9bf2980ceffe78b93bf8dfb/fitness-leggings-print.jpg?format=auto&quality=40&f=800x800"
+    )
+    Product.create!(
+        product_name: "Folding self-powered smart front flywheel cross trainer 700",
+        price: 149000,
+        category_id: 7,
+        description: "Our passionate designers have developed this cross trainer for regular use of more than 7 hours per week.",
+        image_url: "https://contents.mediadecathlon.com/p2147607/k$02456777c8065006cc2365803289e02a/fold-down-connected-cross-trainer-el700.jpg?format=auto&quality=40&f=452x452"
+    )
+    Product.create!(
+        product_name: "Fitness leggings with phone pocket - print",
+        price: 2250,
+        category_id: 7,
+        description: "Available in a plain or a printed version, these leggings are THE go-to option for any sports activity.",
+        image_url: "https://contents.mediadecathlon.com/p1851012/k$1cf234acb544f169a18314cfe134799f/120-women-s-fitness-cardio-training-leggings-black.jpg?format=auto&quality=40&f=452x452"
+    )
+    Product.create!(
+        product_name: "Ts 190 women's tennis shoes - turquoise",
+        price: 3250,
+        category_id: 7,
+        description: "Our passionate tennis team developed these tennis shoes for beginning players to wear while training on all surfaces",
+        image_url: "https://contents.mediadecathlon.com/p1583940/k$2486337564f22ba7efa2f426416bd17b/ts-190-women-s-tennis-shoes-turquoise.jpg?format=auto&quality=40&f=452x452"
+    )
+    Product.create!(
+        product_name: "Adult beginner mid bow fibreglass field hockey stick fh500 - red",
+        price: 7950,
+        category_id: 7,
+        description: "Designed for adults learning to play field hockey who need control and a little power (100% fibreglass)",
+        image_url: "https://contents.mediadecathlon.com/p2057763/k$0b737496c5223785e9e91035986e3c51/adult-beginner-mid-bow-fibreglass-field-hockey-stick-fh500-red.jpg?format=auto&quality=40&f=452x452"
+    )
+    Product.create!(
+        product_name: "Discovery junior kids archery bow - red",
+        price: 3150,
+        category_id: 7,
+        description: "We designed this ambidextrous bow as an introduction to archery from age 6 at a distance between 5 & 10m with a suction cup arrowhead, making it easier to learn",
+        image_url: "https://contents.mediadecathlon.com/p757595/k$b36acc211b1d9453078c407dd990c71c/discovery-junior-kids-archery-bow-blue.jpg?format=auto&quality=40&f=452x452"
+    )
+    Product.create!(
+        product_name: "Boxing gloves 100 - red",
+        price: 2950,
+        category_id: 7,
+        description: "Designed for boxers looking for comfortable gloves for low-intensity training while sparring or with the punching bag.",
+        image_url: "https://contents.mediadecathlon.com/p2217572/k$c88b830de364031e9f635011c0b5a988/boxing-gloves-100-red.jpg?format=auto&quality=40&f=452x452"
+    )
+    Product.create!(
+        product_name: "Fitness durable size 3 swiss ball (75 cm) - burgundy",
+        price: 3950,
+        category_id: 7,
+        description: "We've designed this Swiss ball to help you tone your body, strengthen your back and stretch out.",
+        image_url: "https://contents.mediadecathlon.com/p1988443/k$e0125bf2ce82c24d66590c243145c4b1/durable-fitness-gym-ball-size-3-75-cm-turquoise.jpg?format=auto&quality=40&f=452x452"
+    )
+    Product.create!(
+        product_name: "Mountain biking helmet st 500 - neon yellow",
+        price: 6150,
+        category_id: 7,
+        description: "This well-ventilated, adjustable mountain biking helmet is designed for rides lasting over 2 hours.",
+        image_url: "https://contents.mediadecathlon.com/p2228490/k$8cafb39b59bc205082d22f1bdf11b707/mountain-bike-helmet-st-500-red.jpg?format=auto&quality=40&f=452x452"
+    )
+    Product.create!(
+        product_name: "Adult kashmir willow cricket bat kw 100 drb turquoise",
+        price: 6950,
+        category_id: 7,
+        description: "Our cricket passionate team has developed this durable mid profile bat for you to practice leather ball cricket occassionally.",
+        image_url: "https://contents.mediadecathlon.com/p1977092/k$db1a78abb2f6b7b8fe4329415493b635/adult-kashmir-willow-cricket-bat-kw-100-drb-turquoise.jpg?format=auto&quality=40&f=452x452"
+    )
+    Product.create!(
+        product_name: "10 to 14 ball bag - black yellow",
+        price: 1550,
+        category_id: 7,
+        description: "This ball net was created to allow trainers to easily store and transport up to 14 size-5 balls.",
+        image_url: "https://contents.mediadecathlon.com/p1299794/k$f13a8a283e2b346f21a5e2fa59870dc3/10-to-14-ball-bag-black-yellow.jpg?format=auto&quality=40&f=452x452"
+    )
+    Product.create!(
+        product_name: "Size 7 basketball r500 - black/red/blue",
+        price: 1950,
+        category_id: 7,
+        description: "Official size 7 basketball designed for playing outdoors or indoors.",
+        image_url: "https://contents.mediadecathlon.com/p2154516/k$0bd53fae46ee5bcf0737180c004b85ed/men-s-size-7-ages-13-and-up-beginner-basketball-red.jpg?format=auto&quality=40&f=452x452"
+    )
+    Product.create!(
+        product_name: "Official size 7 basketball designed for playing outdoors or indoors.",
+        price: 4350,
+        category_id: 7,
+        description: "Our team of passionate designers created this scrum cap to give you better protection during all training sessions and matches, even for advanced level players.",
+        image_url: "https://contents.mediadecathlon.com/p1817406/k$24e65b6f2e82f26bd7644b2f6fd1413d/500-adult-rugby-scrum-cap-blackslashgrey.jpg?format=auto&quality=40&f=452x452"
+    )
+    Product.create!(
+        product_name: "Size 5 rugby ball r500 match - blue",
+        price: 3450,
+        category_id: 7,
+        description: "This ball was designed for regular rugby training and match use.",
+        image_url: "https://contents.mediadecathlon.com/p1833819/k$1137356a67195e569f29370930311f97/size-5-rugby-ball-r500-match-blue.jpg?format=auto&quality=40&f=452x452"
+    )
+    Product.create!(
+        product_name: "Kids'/adult size 7 basketball r100 - orange.",
+        price: 1250,
+        category_id: 7,
+        description: "Official size 7 basketball suitable for kids and adults playing basketball indoors or outdoors. Very durable.",
+        image_url: "https://contents.mediadecathlon.com/p1914261/k$b8c46165714a1d01ff25f648a6a3a0a3/kids-slashadult-size-7-basketball-r100-orange.jpg?format=auto&quality=40&f=452x452"
+    )
+    
+    
 User.create( first_name: "Omar", last_name: "Mahat", email: "j@mail.com", phone_number: 23456789, password: "1234567", password_confirmation: "1234567")
 
 
@@ -64,6 +198,373 @@ Product.create!(product_name: "Lenovo Tab M8 HD Tablet 8", image_url: "https://w
 Product.create!(product_name: "Lenovo M8 TB-8505", image_url: "https://www.saruk.co.ke/images/78171664969902.jpg", description: "The Lenovo Tab M8 (2nd Gen) is an impressive little tablet. Sleek metal construction, a spectacular HD display, and a Dolby Audio™-tuned speaker, come together to bring you enjoyable entertainment with luxury appeal. And with a quad-core processor and up to 18 hours of battery life, this tablet will keep you engaged all day with your favorite apps from the Google Play Store.", price: 15999, category_id: 6)
 Product.create!(product_name: "Samsung Galaxy Tab A8", image_url: "https://www.saruk.co.ke/images/23231644485029.jpeg", description: "A Screen Everyone Will Love: Whether your family is streaming or video chatting with friends, the Galaxy Tab A8 tablet brings out the best in every moment on a 10.5 LCD screen Power and Storage for All: Get the power, storage and speed your family needs with an upgraded chipset and plenty of room to keep files — up to 128GB of storage; A long-lasting battery lets you go unplugged for hours to keep the family fun going Charge Fast, Power for Hours: Go for hours on a single charge* and back to 100% with the fast charging USB C port; *Battery life may vary depending on network environment, usage patterns and other factors", price: 7100, category_id: 6)
 Product.create!(product_name: "Samsung Galaxy Tab A7", image_url: "https://www.saruk.co.ke/images/52681647121252.jpg", description: "The  Samsung Galaxy Tab A7 32GB Tablet features a 10.4 TFT display, which features a 2000 x 1200 resolution. The quad speakers provide support for Dolby Atmos surround sound. The Galaxy Tab A7 is powered by a Qualcomm Snapdragon 662 eight-core processor, 3GB of RAM, 32GB of storage, and integrated Qualcomm Adreno 610 graphics. If you need more storage, you can expand via the microSD card slot. Stay connected with Wi-Fi and sync wireless accessories via Bluetooth. For cameras, the Galaxy Tab A7 features a 5MP rear camera and an 8MP front-facing camera. The operating system is Android 10.", price: 9299, category_id: 6)
+
+
+
+Product.create!(
+  product_name: "Bio whole milk",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2018/06/Greenspoon-256.jpg.webp",
+  description: "When it comes to milk Bio Fresh Milk have the most stringent quality standards in Kenya. 
+  They source milk from farmers they know and trust and they test every batch of milk for various quality parameters.
+  They also test every batch of the final product to guarantee it is up to the Bio quality. ",
+  category_id: 2,
+  price: 309
+)
+Product.create!(
+  product_name: "Gelato Street Cookies & Cream Gelato - 500ml",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2021/12/COOKIES-N-CREAM-GREENSPOON-1400x933-1.png",
+  description: "Our gourmet chocolate chip cookies made with award-winning Ugandan organic chocolate makes up the cookies in this creamy, lush gelato.
+  Ingredients: milk, cream, sugar, dextrose, flour, skimmed milk powder, dark chocolate, eggs
+  Storage Instructions: Store at -18℃
+  Shelf life: 4 months",
+  category_id: 2,
+  price: 1800
+)
+Product.create!(
+  product_name: "Queen Deli Societe Roquefort Cheese",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2022/08/Greenspoon-Roquefort.jpg",
+  description: "Visually reminiscent of the limestone cliff sides in which it is aged, Roquefort illustrates French artisanry like few others.
+   A favourite among kings and popes, this classic blue mould cheese is made from sheep’s milk and is easily recognised by its blue veins stretching across its moist and crumbly body. 
+  It is creamy and aromatic, complex and intense, with sharp and tangy nuances.",
+  category_id: 2,
+  price: 1400
+)
+Product.create!(
+  product_name: "Laki Laki Raspberry Greek Yoghurt",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2022/02/Greenspoon-Raspberry-Greek-Yoghurt-Laki-Laki-.jpg",
+  description: " Delicious artisanal greek yoghurt from Laki Laki is not only locally made in Kenya, it is also free of additives, stabilizers or preservatives, and
+   made with milk that is tested for aflatoxin levels. 
+  It’s a highly nutritional product, with a 6% protein content.",
+  category_id: 2,
+  price: 543
+)
+Product.create!(
+  product_name: "WHB Rib Eye on Bone",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/1970/01/WHB-Rib-of-Beef-on-Bone-Frozen.jpg",
+  description: "Rib of Beef on bone is an outstanding roasting joint with plenty of marbling which caramelizes during the cooking process and left on the bone to ensure maximum flavour.
+   It’s cut and shape make it a stunning centre piece for a celebration or special meal.",
+  category_id: 2,
+  price: 4508
+)
+Product.create!(
+  product_name: "BROOD Sourdough bread",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2017/07/Rye-50_.jpg",
+  description: "Rye is a very healthy and nutritious cereal grain packed full of nutrients and health benefits. It is also rich in fiber and is available in either 50% or 100% rye.",
+  category_id: 2,
+  price: 378
+)
+Product.create!(
+  product_name: "Le Grenier à Pain Raspberry and White Chocolate Cake (Order 2 days in advance)",
+  image_url: "https://onlycrumbsremain.com/wp-content/uploads/2019/03/lemon-and-raspberry-layer-cake-3.jpg",
+  description: "Le Grenier à Pain is a genuine French bakery chain that operates in Kenya
+  Enjoy an array of fruits, flavors, colors, and textures that have been revised and redesigned to shy away from what the market offers.
+  Refresh your palette… Fresh wild raspberries, vanilla sponge, lemon syrup, and white chocolate mousse.
+  Allergens: Contains egg, dairy & gluten.",
+  category_id: 2,
+  price: 4560
+)
+Product.create!(
+  product_name: "Voyager Estate Sauvignon Blanc Semillon",
+  image_url: "https://www.designerpeople.com/wp-content/uploads/2022/02/white-color-wine-bottle.jpg",
+  description: "The 2018 vintage has produced a classic expression of this quintessential Margaret River blend – showcasing a wonderful purity of fruit from our sustainably farmed coastal vineyards. 
+  The wine displays vibrant citrus and tropical fruit flavours with lovely texture and complexity. A perfectly balanced wine with a long, crisp dry finish, made to drink whilst young and fresh.",
+  category_id: 2,
+  price: 3400
+)
+Product.create!(
+  product_name: "Freshly Box: 4.5Kg - 5Kgs of Export Quality Vegetables",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2019/01/Greenspoon-Freshly-Box.jpg",
+  description: "Our NEW seasonal box of fruit and veg comes from one of Kenya’s top exporters of fruit and vegetables
+  You’ll simply receive your veggies, lovingly packed, in a sturdy cardboard box which we hope to be able to use up to 10 times.
+  You’ll be getting a mixed box of seasonal vegetables and some soft fruit depending on availability.",
+  category_id: 2,
+  price: 1800
+)
+Product.create!(
+  product_name: "Chayil Frozen Chicken Spring Rolls - Pack of 10 Pieces",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2022/05/Greenspoon-Par-cooked-Spring-Rolls-Chayil.jpg",
+  description: "A household favorite, these spring rolls go well with a nice chutney. 
+  Instructions : Keep frozen if you want to store it for another day. Otherwise just defrost and fry it. Then eat with a nice dip on hand!",
+  category_id: 2,
+  price: 497
+)
+Product.create!(
+  product_name: "Naara Very Berry Granola - 500g",
+  image_url: "https://delictablefoods.com/wp-content/uploads/2018/05/2-Original-Granola-web.jpg",
+  description: "Naara Very Berry Granola is just the perfect go-to breakfast meal for the whole family. It’s a perfect mix of whole grain nuts and seeds but with added dried raspberries and strawberries to add that extra goodness.
+  Try serving it with Greek yogurt, a few fresh berries and a drizzle of honey. 
+  We’re berry excited for you to try it!",
+  category_id: 2,
+  price: 996
+)
+Product.create!(
+  product_name: "Kalahari Desert Salt Chocolate 54% - 100g",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2018/06/Greenspoon-205.jpg",
+  description: "A combination of dark chocolate and pure Kalahari desert salt.
+  Absolute Chocolate was founded with the idea of providing Kenyans with a real artisan chocolate experience. 
+  Ingredients: Cocoa Mass (54%), Cocoa Butter, Sugar, Soy Lecithin, Kalahari Desert Salt.",
+  category_id: 2,
+  price: 1200
+)
+Product.create!(
+  product_name: "Sunrice Basmati Rice - 2Kg",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2019/01/Greenspoon-Basmati-Rice-Sunrice.jpg.webp",
+  description: "Basmati remains at the heart of Sunrice. Basmati literally translated means “Queen of Fragrance” due to its unique aroma. 
+  It is a unique rice that is sown and specially nurtured by the Himalayan waters. It is ideal for making pilaus, biryanis and for special occasions.",
+  category_id: 2,
+  price: 702
+)
+Product.create!(
+  product_name: "Sweet Banana - Bunch ",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2021/11/Greenspoon-Kwik-Basket-Sweet-Banana.jpg",
+  description: "Lady Fingers have a lovely sweet flavour and should be eaten when you see small dark brown spots start to appear on the skin.
+   As this variety of banana ripens, the starch in the fruit turns to sugar giving the skin the brown marks and turning the fruit into a sweet eating sensation.",
+  category_id: 2,
+  price: 187
+)
+Product.create!(
+  product_name: "Kentaste Coconut Milk - 400ml",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/1970/01/Greenspoon-71.jpg.webp",
+  description: "100% Kenyan Coconut Milk sourced from the Kenyan coast. This milk is cholesterol and trans fat free, has no flavouring or colouring. It is rich, smooth and made from the finest Kenyan coconuts.
+   Use it in your favourite sauces, desserts, drinks, curries and more!",
+  category_id: 2,
+  price: 279
+)
+Product.create!(
+  product_name: "Fresh Juice - 350ml",
+  image_url: "https://domf5oio6qrcr.cloudfront.net/medialibrary/8931/Smoothie-post.jpg",
+  description: "100% natural fruit juice available in delicious variants. Each one of these fresh tasting flavours is healthy, nutritious and very well balanced.
+  Proudly Kenyan brand made with no preservatives, additives, colourings or artificial flavours.",
+  category_id: 2,
+  price: 349
+)
+Product.create!(
+  product_name: "Tropical Heat Kenyan Masala Chevda - 340g",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2022/07/Greenspoon-Kenya-Premium-Kenyan-Chevda-Tropical-Heat.jpg",
+  description: "Kenya chevda is a product of cultures mingling. Its origins lie in the South Asian diaspora cuisine of East Africa. Chevdo or chivda is an Indian snack mix of puffed rice, daal(lentils), fried potatoes, nuts and spices. 
+   The Kenyan version doesn’t go wild with the spices, but instead draws flavour from a great deal of crispy fried curry leaves, chilli, turmeric, citric acid, salt and sugar. ",
+  category_id: 2,
+  price: 478
+)
+Product.create!(
+  product_name: "White milk bread",
+  image_url: "https://assets.bonappetit.com/photos/5c62e4a3e81bbf522a9579ce/5:4/w_2815,h_2252,c_limit/milk-bread.jpg",
+  description: "Bread lovers, rejoice. This gluten free bread is the real deal – with a soft, chewy open crumb and a deliciously crisp caramelised crust. Please enjoy it with some jam and a nice warm cuppa. That’s your breakfast sorted!",
+  category_id: 2,
+  price: 419
+)
+Product.create!(
+  product_name: "Organic Whole Tilapia - 1Kg ",
+  image_url: "https://a-z-animals.com/media/2022/03/shutterstock_275529065-e1662866096559.jpg",
+  description: "Tilapia is probably the most popular freshwater fish in much of East Africa. We all know and love this fish for its tastiness, and the hefty nutritional punch that it packs.
+  The fish are left to grow naturally with NO hormones and force-feeding to accelerate their growth. ",
+  category_id: 2,
+  price: 1300
+)
+Product.create!(
+  product_name: "Elianto Corn Cooking Oil - 3L",
+  image_url: "https://www.bidcoafrica.com/wp-content/uploads/2018/07/eliantoProduct.png",
+  description: "Popularly known for its fine quality. The icing on the cake is that it’s made from locally grown, handpicked corn. The 100% pure corn oil is healthy and can be used for various types of cooking.
+   East Africa’s prized, pure and premium corn oil is winterized—it does not solidify in cold weather.",
+  category_id: 2,
+  price: 1876
+)
+Product.create!(
+  product_name: "Winnie's Pure Health Atta Mark 1 - 2kg",
+  image_url: "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/47/600721/1.jpg?1873",
+  description: "Winnie’s Pure Health Atta Mark 1 Flour is Whole Grain Wheat Flour with no chemicals, additives, or preservatives!",
+  category_id: 2,
+  price: 307
+)
+
+
+
+
+
+    Product.create!(
+        product_name: "Intelligent Automatic Double Electric Breast Pump",
+        price: 3000,
+        category_id: 8,
+        description: "Automatic intelligent double electric breast pump, comfort and convenient, best for busy, on-the-go moms. It is very efficient and affordable. It also has a sleek design that makes it user friendly. The motor buttons are touch and go. Very high with both  massage and express separate buttons. It contains:2 bottles, breast shield body, silicone diaphram, cap, tubes, duckbill valve, nipple, pump motor, usb cable, nipple cover, dual connector",
+        image_url: "https://cdn.shopify.com/s/files/1/0052/7967/8579/products/369_Image2_666x666.jpg?v=1665995152"
+        )
+        Product.create!(
+        product_name: "Birthing Ball with Pump 65cm",
+        price: 3150,
+        category_id: 8,
+        description: "Get the exercise you need as you bounce to help the baby decend while helping your posture",
+        image_url: "https://cdn.shopify.com/s/files/1/0052/7967/8579/products/MotherandBabyNewProductsCreation_1_461cce9a-ea88-4315-bb68-7e41a9f93557_500x500.png?v=1666004734"
+    )
+    Product.create!(
+        product_name: "Peri Bottle 300 ml- Portable Bidet - Blue",
+        price: 3000,
+        category_id: 8,
+        description: "Relief for you peraneal area after child birth. Good for soothing sensitive areas. Good for Keep the perineal area clean. Reduce the risk of infection.",
+        image_url: "https://cdn.shopify.com/s/files/1/0052/7967/8579/products/2_0463dc81-5f2e-4d8a-931e-6a89c5bbf2d8_869x869.png?v=1666004141"
+    )
+    Product.create!(
+        product_name: "Foldable Baby Bath/Changing Station",
+        price: 9295,
+        category_id: 8,
+        description: "This product offers the comfort and practicality of an elevated changing and bath station, it is designed at the proper height of parent to prevent mom’s back aches and pains from kneeling or bending when changing diapers to babies.",
+        image_url: "https://cdn.shopify.com/s/files/1/0052/7967/8579/products/324_Image1_300x300.jpg?v=1665995170"
+    )
+    Product.create!(
+        product_name: "Lamaze Classic Discovery Book",
+        price: 2158,
+        category_id: 8,
+        description: "With eight pages of fun, the Lamaze Classic Discovery book features friendly and cute woodland characters. Full of surprises for baby to touch and feel, the book includes soft textures, bright colours, and sounds to encourage baby's exploration. This helps to develop baby's visual, fine motor and auditory skills. ",
+        image_url: "https://cdn.shopify.com/s/files/1/0052/7967/8579/products/412_Image1_600x600.jpg?v=1665994980"
+    )
+    Product.create!(
+        product_name: "Dr. Brown's Bunny Lovey with Blue One Piece Pacifier",
+        price: 1889,
+        category_id: 8,
+        description: "Designed to keep baby's pacifiers and teethers close by. Holds any Dr. Brown's pacifiers and teethers and most other brands. Lovey's soft, multi-textured materials are great for exploring fingers. Included Dr. Brown's HappyPaci is 100% silicone with a contoured shield",
+        image_url: "https://cdn.shopify.com/s/files/1/0052/7967/8579/products/234_Image1_869x869.jpg?v=1665994785"
+    )
+    Product.create!(
+        product_name: "Dr. Brown's Flexees Friends Octopus Teether - Purple",
+        price: 1085,
+        category_id: 8,
+        description: "Dr. Brown's Flexees Friends Fox Teether - Red. Textured for sore gums and eases pain in every area of baby's mouth like a true pal. Easy-grip and designed to aid in tongue exploration and speech development. Dishwasher (top rack) and sterilizer safe. BPA free. 3m+",
+        image_url: "https://cdn.shopify.com/s/files/1/0052/7967/8579/products/244_Image1_869x869.jpg?v=1665994795"
+    )
+    Product.create!(
+        product_name: "Ankara Diaper Bag",
+        price: 3575,
+        category_id: 8,
+        description: "A diaper bag is one of the most important baby essentials. Once you leave the house, you will need to bring a ton of supplies like diapers, baby wipes, changing pads, baby bottles, burping cloths, pacifiers, lotions, diaper rash creams and change of clothes.",
+        image_url: "https://cdn.shopify.com/s/files/1/0052/7967/8579/products/24_PriceBreak_27_869x869.jpg?v=1665994912"
+    )
+    Product.create!(
+        product_name: "Vilac Animals Ark Shape Sorter",
+        price: 5100,
+        category_id: 8,
+        description: "This is a wonderful wooden toy that will help your child to learn about the animals included. It will also teach them sorting and fine motor skills as they work out which animal fits into which hole. Each of the nine animals included is beautifully illustrated for better recognition. Your child will love playing and learning with this toy. ",
+        image_url: "https://cdn.shopify.com/s/files/1/0605/5572/2999/products/2429-A1_resized_1800x1800.jpg?v=1645774447"
+    )
+    Product.create!(
+        product_name: "Vilac Rainbow Activity Table",
+        price: 8700,
+        category_id: 8,
+        description: "Rainbow Wooden Early Learning Play table, specially designed for toddlers to develop manual coordination. Multi-activity free-standing play table to discover sounds, textures and shape sorting.",
+        image_url: "https://cdn.shopify.com/s/files/1/0605/5572/2999/products/2459-A2_resized_1800x1800.jpg?v=1645774466"
+    )
+    Product.create!(
+        product_name: "Doomoo Cocoon",
+        price: 13700,
+        category_id: 8,
+        description: "doomoo cocoon is a cosy, comfortable and safe baby nest which can be used during daytime as well as for sleeptime. It offers a made to measure space to the baby and gives him a safe feeling during the transition of Mom’s cosy belly to his own bed, the playbox, etc",
+        image_url: "https://cdn.shopify.com/s/files/1/0605/5572/2999/products/doomoo_webshops_CO07_Cocoon_Classic_grey_01_resized_1800x1800.jpg?v=1645774429"
+    )
+    Product.create!(
+        product_name: "Bear Club 5 Piece Waterproof Nappy Diaper Bag",
+        price: 1470,
+        category_id: 8,
+        description: "Made with top of the range synthetic material, a set of this Diaper bag contains 1 big bag, 1 medium sized bag, 1 oversized thickly padded changing pad and 1 feeding bottle holder. Double-zippered top provides wide opening and easy access. The bag is user friendly with two outside bottle pouches, large envelope pocket, dirty duds bag, three inside storage compartments and clear outside pouch. Adjustable shoulder strap keeps bag from slipping. ",
+        image_url: "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/35/890703/1.jpg?0365"
+    )
+    Product.create!(
+        product_name: " Infant Baby Boys Girls Clothes Sets-Cartoon",
+        price: 690,
+        category_id: 8,
+        description: "Make your baby the most beautiful princess that she is.",
+        image_url: "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/80/511093/1.jpg?5913"
+    )
+    Product.create!(
+        product_name: "3PCs Most Beautiful Turban Baby Girls Headband",
+        price: 450,
+        category_id: 8,
+        description: "Make your baby the most beautiful princess that she is with the most gorgeous shinny headbands. Designed with Softest lace plus shinny stars deco. Has elastic fabric that is super comfortable on the baby's head and it stretches as the baby grows plus it designed with the softest elastic that is so gentle on her head in that it allows blood to circulate perfectly with No side effect. Your baby is going to love it and so are you. Try it and I promise it won't let you down ",
+        image_url: "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/19/638354/1.jpg?9796"
+    )
+    Product.create!(
+        product_name: "Generic Comfortable Warm With a Hood Baby Carrier - Blue .",
+        price: 1299,
+        category_id: 8,
+        description: "It adapts itself to your needs thanks to its many carrying positions ie,off centre,on your hip etc. The sliding pouch enables you to change baby's position without disturbing him.Shoulder strap for the wearer. Reinforced head support for and height adjustable for baby. It is lined with a 3D mesh fabric optimising comfort for all seasons. Recomended for infants from birth to 12Kg.Helps position the baby in a comfortable position and at the same time provide the proper support for the baby's spine and hips this is a must have for all moms out there feel free to choose your desired colour. ",
+        image_url: "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/42/406691/1.jpg?3845"
+    )
+    Product.create!(
+        product_name: "Huggies Dry Comfort Diaper 60s Size 4",
+        price: 1599,
+        category_id: 8,
+        description: "Enjoy Shopping Huggies Products at the best price in the kenyan market. Huggies Diapers and Wipes are made with natural ingredients and free of harmful chemicals. Learn about product features, ingredients, and diaper sizes. Shop from a Huge Collection - Enjoy Shopping Best Offers & Deals Online from Jumia Kenya - Receive at your doorstep - Fast Delivery  - Secure mode of Payment",
+        image_url: "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/72/189685/1.jpg?6220"
+    )
+
+
+Product.create!(
+  product_name: "Renew Nourishing Cleanser",
+  image_url: "https://cdn.shopify.com/s/files/1/0087/9021/2659/products/PRODUCTPHOTOTEMPLATES.psd_86_770x.jpg?v=1650004296",
+  description: "Gently remove dirt and impurities without stripping your skin with this nourishing hypoallergenic cleanser. An abundance of antioxidants and aloe vera leave your skin feeling soft, clean and refreshed making this cleanser ideal for aging or dry skin.
+   Naturally scented with grapefruit, lavender, vetiver and jasmine.",
+  category_id: 5,
+  price: 4900
+)
+
+Product.create!(
+  product_name: "Rejuvenating Overnight Facial Mask",
+  image_url: "https://cdn.shopify.com/s/files/1/0087/9021/2659/products/NOT-OFM_ecomm_770x.jpg?v=1632264707",
+  description: "Awake to a complexion more vibrant, healthy and radiant than the night before. This lightweight mask is designed to be applied before bed to allow its ingredients to penetrate more effectively overnight. ",
+  category_id: 5,
+  price: 9460
+)
+
+Product.create!(
+  product_name: "Quinoa Water Foundation",
+  image_url: "https://cdn.shopify.com/s/files/1/0087/9021/2659/products/adc7657dd6a342969b3082ee9a748662_770x.jpg?v=1594062594",
+  description: "Give skin the look of ethereal refinement in a feather-light formula with Ere Perez Quinoa Water Foundation.
+   More than a simple cover-up, this blend is designed to reduce the appearance of redness and inflammation with quinoa water and blackcurrant.",
+  category_id: 5,
+  price: 3900
+)
+
+Product.create!(
+  product_name: "Cinnabar Green Soaps (100g)",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2020/08/Greenspoon-Kenya-Lavender-and-Citrus-Soap-Cinnabar-Green.jpg.webp",
+  description: "All our soaps are handmade in small batches to maintain authenticity and the human touch in every bar. The ingredients are sourced locally, and the oils, waxes, butters as well as essential oils and hydrosols are plant-derived and natural.
+   They are not tested on animals, are chemical-fragrance free with no preservative. The ingredients are sourced from eco-friendly suppliers and manufacturers,
+   do not contain palm and the soap is totally biodegradable.",
+  category_id: 5,
+  price: 235
+)
+
+Product.create!(
+  product_name: "Eco Smiles Kids' Toothbrush",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2022/09/Greenspoon-Eco-Smiles-Bamboo-Toothbrush-Kids.jpg",
+  description: "Encouraging good oral hygiene is important at an early stage. You can do this and still reduce plastic use in the household by getting your little humans a kids toothbrush.
+     It obviously looks like a regular toothbrush but is smaller so it can fit better in their cute little hands.
+     And it comes with softer bristles so they can get used to brushing without feeling uncomfortable.",
+  category_id: 5,
+  price: 349
+)
+
+Product.create!(
+  product_name: "Vaaji Organic Tampons Life 16 Regular",
+  image_url: "https://greenspoon.co.ke/wp-content/uploads/2022/06/Greenspoon-7752.jpg.webp",
+  description: "Made of 100% organic cotton, our super absorbent core is free of fragrances and dyes; and designed to work. It expands to fit your body for maximum leak-proof protection.
+   Our BPA-free plastic applicator has a pull and click design that allows for easy application",
+  category_id: 5,
+  price: 880
+)
+
+Product.create!(
+  product_name: "Vagus Nerve Bath Oil",
+  image_url: "https://cdn.shopify.com/s/files/1/0087/9021/2659/products/Oseavagusnervebathoil_770x.jpg?v=1664574656",
+  description: "Soak away signs of stress and leave the day behind. This soothing bath oil helps promote a sense of serenity. Soften and moisturize your skin with this one-of-a- kind bath experience.",
+  category_id: 5,
+  price: 5200
+)
+
+Product.create!(
+  product_name: "Femelle Cotton Buds 200S",
+  image_url: "https://www.goodlife.co.ke/wp-content/uploads/2021/09/FEMELLE-COTTON-BUDS-100S-scaled-1.jpg",
+  description: "The femelle cotton buds are comprised of a small stick with a cotton-wool tip used for cleaning the ears, applying make-up. ",
+  category_id: 5,
+  price: 297
+)
 
 
 Product.create!(product_name: "Bio whole milk", image_url: "https://greenspoon.co.ke/wp-content/uploads/2018/06/Greenspoon-256.jpg.webp", description: "When it comes to milk Bio Fresh Milk have the most stringent quality standards in Kenya.  They source milk from farmers they know and trust and they test every batch of milk for various quality parameters. They also test every batch of the final product to guarantee it is up to the Bio quality. ", category_id: 2, price: 309)

@@ -333,7 +333,7 @@ Product.create!(product_name: "Cute Rabbit Radio FM", description: "White &Green
 
 Product.create!(
     
-  id: 1,
+  
  product_name:
  "Air Jordan 1 Retro High OG",
  description: "Midsole Material:RubberOutsole Material:RubberUpper Material:PUGender:MaleSeason:Spring, AutumnStyle:Walking Shoes;Men Casual ShoesFeature:Fashion Trend, Waterproof, Breathable, Hard-Wearing, Light WeighColor:WhiteSize:39-44",
@@ -343,7 +343,7 @@ Product.create!(
   )
 
 Product.create!( 
-id: 2,
+
  product_name:
  "Travis Scott x Air Jordan 4 Retro 'Cactus Jack'",
 description: "  Comfortable, Soft Lining shoes with casual insole is designed with a unique and thick foam cushioned which is soft and flexible. You will never feel tired even after a long walk.",
@@ -353,7 +353,7 @@ category_id:3
   )
 
 Product.create!(
-  id: 3,
+  
  product_name: "OFF-WHITE x Air Max 90 'Desert Ore'",
  description: "Anti-slip Design shoes  fashion air max outsole is of high quality and anti slip rubber sole for excellent grip which has high resilience and tension resistance, outsole with multi-section cross-sectional texture affords good stability and non-slip for walking",
   price: 4600,
@@ -362,7 +362,7 @@ category_id:3
   )
 
 Product.create!(
-  id: 4,
+  
  product_name: "Yeezy Boost 700 MNVN 'Triple Black'",
  description: "quality Yeezy slides available in different colors and sizes.
  delivery still available country wide within 24 hours.",
@@ -373,7 +373,7 @@ category_id:3
 
 
 Product.create!(       
-   id: 5,
+   
    product_name: "Ben & Jerry's x Dunk Low SB 'Chunky Dunky'",
    description: "quality Chunky Dunky available in different colors and sizes.
    delivery still available country wide within 24 hours.",
@@ -383,7 +383,7 @@ Product.create!(
     )
 
 Product.create!(
-  id: 6,
+  
  product_name: "Women short skirt",
  description: "Fashion Women checjked High Waist Mini Straight skirt-Grey",
   price: 800,
@@ -393,7 +393,7 @@ category_id:3
 
 
   Product.create!( 
-  id: 7,
+  
   product_name: "Full Touch Men Smart Watch",
   description: "This LED watch is more environmentally friendly and it tend to have a longer life span than other watch display modes.
   Because it has no moving parts, it's actually easier to maintain this LED watch.",
@@ -403,7 +403,7 @@ category_id:3
   )
 
   Product.create!(
-    id: 8,
+   
   product_name: "Women Smart Watch",
   description: "This luxury women's watch features an analog display. It is also water resistant. It is great for work and dinner wear.",
   price: 1000,
@@ -412,7 +412,7 @@ category_id:3
 )
 
 Product.create!(
- id: 9,
+ 
  product_name: "Women comfortable sandals",
  description: "The perfect summer shoe and ideal for packing in your suitcase. It is durable yet comfortable, with a sole that creates a fresh and natural look.",
   price: 700,
@@ -420,7 +420,7 @@ Product.create!(
   category_id:3
 )
 Product.create!(
-  id: 10,
+  
  product_name: "Women white chunk heels",
  description: "This particular chunky heel is made from fine leather for durability and its a shoe that is all time in style and fashion. Its a shoe to pull in in occasion and its comfortable to make you reach your destination with speed",
   price: 2200,
@@ -430,7 +430,7 @@ Product.create!(
 
 
 Product.create!(
-  id: 11,
+  
  product_name: "Long women brown boots",
  description: "This is a pair of high-value, very British-style long boots essential for cold seasons.",
   price: 3000,
@@ -439,7 +439,7 @@ category_id:3
 )
 
 Product.create!(
-  id: 12,
+  
  product_name: "Black short boots",
  description: "This pair of shoes combines comfort and height enhancement for all women who love beauty",
   price: 2900,
@@ -448,7 +448,7 @@ Product.create!(
 )
 
 Product.create!(
-  id: 13,
+ 
  product_name: "Glossy women heels",
  description: "Fashion Women Thick Heel Pointed Toe Pumps  Heels glossy",
   price: 2000,
@@ -457,7 +457,7 @@ Product.create!(
   )
 
 Product.create!(
-  id: 14,
+  
  product_name: "Red sassy heels",
  description: " Ladies High Heels Latest Design Fashion Sandals Lace Up Summer Red",
   price: 2000,
@@ -466,7 +466,7 @@ Product.create!(
   )
 
 Product.create!(
-  id: 15,
+  
  product_name: "Plain Black men's T-shirt",
  description: "Fashionable, fitting, 100% Cotton, Round neck T-shirt that doesn't fade nor stretch after wash.
  The design is high durable print, doesn't fade or come out.",
@@ -476,7 +476,7 @@ Product.create!(
   )
 
 Product.create!(
-  id: 16,
+  
  product_name: "Official Men's Shirt",
  description: "Order this 5 Pack Cotton Official Shirts.Slim fitting, long sleeve, 100% cotton. The quality that won't disappoint.
  The 100%cotton shirt has a unique breathability and soft fabric.",
@@ -486,7 +486,7 @@ Product.create!(
   )
 
 Product.create!(
-  id: 17,
+  
  product_name: "Women Jeans",
  description: "This fashionable Body shaping high waist ladies jeans is perfect for casual events. Its is an essential  piece for all ladies` wardrobe",
   price: 1000,
@@ -495,7 +495,7 @@ Product.create!(
   )
 
 Product.create!(
-  id: 18,
+  
  product_name: "Sleeveless white bodycon",
  description: "Fashion Elegant Solid Color Women Summer sleeveless  Bodycon Midi Party Dress-white",
   price: 2500,
@@ -504,7 +504,7 @@ Product.create!(
   )
 
 Product.create!(
-  id: 19,
+ 
  product_name: "Men Leather Jacket",
  description: "Fashion Mens Leather Jackets Casual Business Trendy Jacket",
   price: 3000,
@@ -513,7 +513,7 @@ Product.create!(
   )
 
   Product.create!(
-  id: 20,
+  
   product_name: "Women black Leather Jacket",
   description: "Fashion Women Bike Coat PU Leather Outwear Short Female Jacket",
   price: 2000,
@@ -523,7 +523,7 @@ Product.create!(
   )
 
 Product.create!(
-  id: 21,
+ 
   product_name: "Sun glasses",
   description: "Fashion Round Steampunk Sunglasses Metal Punk Sun Glasses Vintage Sunglass UV400",
    price: 500,

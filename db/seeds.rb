@@ -329,3 +329,205 @@ Product.create!(product_name: "Hisense 200W Sound Bar", description: "With HDMI 
 
 Product.create!(product_name: "Cute Rabbit Radio FM", description: "White &Green Cute Rabbit Radio FM,USB,TF-Portable",  price:2100,image: "https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/286734/1.jpg?2182",category_id:1 )
 
+# fashion
+
+Product.create!(
+    
+  id: 1,
+ product_name:
+ "Air Jordan 1 Retro High OG",
+ description: "Midsole Material:RubberOutsole Material:RubberUpper Material:PUGender:MaleSeason:Spring, AutumnStyle:Walking Shoes;Men Casual ShoesFeature:Fashion Trend, Waterproof, Breathable, Hard-Wearing, Light WeighColor:WhiteSize:39-44",
+  price: 4500,
+  image: "https://image.goat.com/crop/1250/attachments/product_template_additional_pictures/images/008/488/063/original/14741_01.jpg.jpeg?1513115596",
+ category_id:3
+  )
+
+Product.create!( 
+id: 2,
+ product_name:
+ "Travis Scott x Air Jordan 4 Retro 'Cactus Jack'",
+description: "  Comfortable, Soft Lining shoes with casual insole is designed with a unique and thick foam cushioned which is soft and flexible. You will never feel tired even after a long walk.",
+  price: 4800,
+  image: "https://image.goat.com/crop/1250/attachments/product_template_additional_pictures/images/012/478/528/original/365514_01.jpg.jpeg?1528250655",
+category_id:3
+  )
+
+Product.create!(
+  id: 3,
+ product_name: "OFF-WHITE x Air Max 90 'Desert Ore'",
+ description: "Anti-slip Design shoes  fashion air max outsole is of high quality and anti slip rubber sole for excellent grip which has high resilience and tension resistance, outsole with multi-section cross-sectional texture affords good stability and non-slip for walking",
+  price: 4600,
+  image: "https://image.goat.com/crop/750/attachments/product_template_additional_pictures/images/017/794/463/original/394710_01.jpg.jpeg?1547236891",
+category_id:3
+  )
+
+Product.create!(
+  id: 4,
+ product_name: "Yeezy Boost 700 MNVN 'Triple Black'",
+ description: "quality Yeezy slides available in different colors and sizes.
+ delivery still available country wide within 24 hours.",
+  price: 1900,
+  image:"https://image.goat.com/crop/1250/attachments/product_template_additional_pictures/images/015/292/400/original/386481_01.jpg.jpeg?1539209010",
+category_id:3
+  )
+
+
+Product.create!(       
+   id: 5,
+   product_name: "Ben & Jerry's x Dunk Low SB 'Chunky Dunky'",
+   description: "quality Chunky Dunky available in different colors and sizes.
+   delivery still available country wide within 24 hours.",
+    price: 5000,
+    image: "https://image.goat.com/crop/750/attachments/product_template_additional_pictures/images/035/924/793/original/616017_01.jpg.jpeg?1588007195",
+    category_id:3
+    )
+
+Product.create!(
+  id: 6,
+ product_name: "Women short skirt",
+ description: "Fashion Women checjked High Waist Mini Straight skirt-Grey",
+  price: 800,
+  image: "https://images.unsplash.com/photo-1615898291574-e69bd007e985?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHNraXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+category_id:3
+  )
+
+
+  Product.create!( 
+  id: 7,
+  product_name: "Full Touch Men Smart Watch",
+  description: "This LED watch is more environmentally friendly and it tend to have a longer life span than other watch display modes.
+  Because it has no moving parts, it's actually easier to maintain this LED watch.",
+  price: 1400,
+  image: "https://images.unsplash.com/photo-1623040594022-3f46dd09c260?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+  )
+
+  Product.create!(
+    id: 8,
+  product_name: "Women Smart Watch",
+  description: "This luxury women's watch features an analog display. It is also water resistant. It is great for work and dinner wear.",
+  price: 1000,
+  image: "https://images.unsplash.com/photo-1625178280953-e5aad13aa270?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d29tZW4lMjB3YXRjaGVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+)
+
+Product.create!(
+ id: 9,
+ product_name: "Women comfortable sandals",
+ description: "The perfect summer shoe and ideal for packing in your suitcase. It is durable yet comfortable, with a sole that creates a fresh and natural look.",
+  price: 700,
+  image: "https://images.unsplash.com/photo-1618615098938-84fc29796e76?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2FuZGFsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+)
+Product.create!(
+  id: 10,
+ product_name: "Women white chunk heels",
+ description: "This particular chunky heel is made from fine leather for durability and its a shoe that is all time in style and fashion. Its a shoe to pull in in occasion and its comfortable to make you reach your destination with speed",
+  price: 2200,
+  image: "https://images.unsplash.com/photo-1614634717465-eb3d6bc8d930?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNhbmRhbHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+ category_id:3
+  )
+
+
+Product.create!(
+  id: 11,
+ product_name: "Long women brown boots",
+ description: "This is a pair of high-value, very British-style long boots essential for cold seasons.",
+  price: 3000,
+  image: "https://images.unsplash.com/photo-1575425939273-46ecee6d6931?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60g",
+category_id:3
+)
+
+Product.create!(
+  id: 12,
+ product_name: "Black short boots",
+ description: "This pair of shoes combines comfort and height enhancement for all women who love beauty",
+  price: 2900,
+  image: ".https://images.unsplash.com/photo-1605733513549-de9b150bd70d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+ category_id:3
+)
+
+Product.create!(
+  id: 13,
+ product_name: "Glossy women heels",
+ description: "Fashion Women Thick Heel Pointed Toe Pumps  Heels glossy",
+  price: 2000,
+  image: "https://images.unsplash.com/photo-1632793039681-2cf5f97be82c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhlZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+ category_id:3
+  )
+
+Product.create!(
+  id: 14,
+ product_name: "Red sassy heels",
+ description: " Ladies High Heels Latest Design Fashion Sandals Lace Up Summer Red",
+  price: 2000,
+  image: "https://images.unsplash.com/photo-1613987876445-fcb353cd8e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aGVlbHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+  )
+
+Product.create!(
+  id: 15,
+ product_name: "Plain Black men's T-shirt",
+ description: "Fashionable, fitting, 100% Cotton, Round neck T-shirt that doesn't fade nor stretch after wash.
+ The design is high durable print, doesn't fade or come out.",
+  price: 1100,
+  image: ".https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+  category_id:3
+  )
+
+Product.create!(
+  id: 16,
+ product_name: "Official Men's Shirt",
+ description: "Order this 5 Pack Cotton Official Shirts.Slim fitting, long sleeve, 100% cotton. The quality that won't disappoint.
+ The 100%cotton shirt has a unique breathability and soft fabric.",
+  price: 5700,
+  image: "https://images.unsplash.com/photo-1561053720-76cd73ff22c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+  )
+
+Product.create!(
+  id: 17,
+ product_name: "Women Jeans",
+ description: "This fashionable Body shaping high waist ladies jeans is perfect for casual events. Its is an essential  piece for all ladies` wardrobe",
+  price: 1000,
+  image: "https://images.unsplash.com/photo-1560243563-062bfc001d68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGFwcGFyZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+  )
+
+Product.create!(
+  id: 18,
+ product_name: "Sleeveless white bodycon",
+ description: "Fashion Elegant Solid Color Women Summer sleeveless  Bodycon Midi Party Dress-white",
+  price: 2500,
+  image: "https://images.unsplash.com/photo-1631234764568-996fab371596?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZHJlc3Nlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+  )
+
+Product.create!(
+  id: 19,
+ product_name: "Men Leather Jacket",
+ description: "Fashion Mens Leather Jackets Casual Business Trendy Jacket",
+  price: 3000,
+  image: "https://images.unsplash.com/photo-1575862980254-f331e54623f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OHxZeU5JSmZVc28tOHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+  )
+
+  Product.create!(
+  id: 20,
+  product_name: "Women black Leather Jacket",
+  description: "Fashion Women Bike Coat PU Leather Outwear Short Female Jacket",
+  price: 2000,
+  image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlciUyMGphY2tldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+
+  )
+
+Product.create!(
+  id: 21,
+  product_name: "Sun glasses",
+  description: "Fashion Round Steampunk Sunglasses Metal Punk Sun Glasses Vintage Sunglass UV400",
+   price: 500,
+   image: "https://images.unsplash.com/photo-1608539733292-190446b22b83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3VuZ2xhc3Nlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+   category_id:3
+  )
+

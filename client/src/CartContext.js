@@ -11,27 +11,7 @@ export const CartContext = createContext({
 });
 
 export function CartProvider({children}) {
-    const [cartProducts, setCartProducts] = useState([{
-        id: 1,
-        title: "Jbl Speaker",
-        quantity: 3,
-        image:"https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/04/515737/1.jpg?5488",
-        price: 20000
-    },
-    {
-        id: 2,
-        title: "Anker Speaker",
-        quantity: 1,
-        image:"https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/34/066834/1.jpg?2193" ,
-        price: 20000
-    },
-    {
-        id: 3,
-        title: "Vankyo Wireless Wifi Projector",
-        quantity: 1,
-        image:"https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/06/322376/1.jpg?0153",
-        price:10000
-    }]);
+    const [cartProducts, setCartProducts] = useState([]);
 
 
     
@@ -46,26 +26,30 @@ export function CartProvider({children}) {
         return quantity;
     }
 
-    function addOneToCart(id) {
+    function addOneToCart(id,item) {
         const quantity = getProductQuantity(id);
 
-        if (quantity === 0) { // product is not in cart
+        if (quantity === 0) { 
             setCartProducts(
                 [
-                    ...cartProducts,
                     {
                         id: id,
+                        price:item.price,
+                        image:item.image,
+                        title:item.title,
                         quantity: 1
-                    }
+                    },
+                    ...cartProducts
+                  
                 ]
             )
         } else { 
             setCartProducts(
                 cartProducts.map(
                     product =>
-                    product.id === id                                
-                    ? { ...product, quantity: product.quantity + 1 }  
-                    : product                                         
+                    product.id === id                               
+                    ? { ...product, quantity: product.quantity + 1 } 
+                    : product                                        
                 )
             )
         }

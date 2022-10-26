@@ -77,7 +77,152 @@ Product.create!(product_name: "Elianto Corn Cooking Oil - 3L",image_url: "https:
 Product.create!(product_name: "Winnie's Pure Health Atta Mark 1 - 2kg",image_url: "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/47/600721/1.jpg?1873",description: "Winnie’s Pure Health Atta Mark 1 Flour is Whole Grain Wheat Flour with no chemicals, additives, or preservatives!",category_id: 2,price: 307)
 
 
-
+Product.create!(
+product_name:"Air Jordan 1 Retro High OG",
+description: "Midsole Material:RubberOutsole Material:RubberUpper Material:PUGender:MaleSeason:Spring, AutumnStyle:Walking Shoes;Men Casual ShoesFeature:Fashion Trend, Waterproof, Breathable, Hard-Wearing, Light WeighColor:WhiteSize:39-44",
+price: 4500,
+image_url: "https://image.goat.com/crop/1250/attachments/product_template_additional_pictures/images/008/488/063/original/14741_01.jpg.jpeg?1513115596",
+category_id:3
+)
+Product.create!(
+ product_name:
+ "Travis Scott x Air Jordan 4 Retro 'Cactus Jack'",
+description: "  Comfortable, Soft Lining shoes with casual insole is designed with a unique and thick foam cushioned which is soft and flexible. You will never feel tired even after a long walk.",
+  price: 4800,
+  image_url: "https://image.goat.com/crop/1250/attachments/product_template_additional_pictures/images/012/478/528/original/365514_01.jpg.jpeg?1528250655",
+category_id:3
+  )
+Product.create!(
+ product_name: "OFF-WHITE x Air Max 90 'Desert Ore'",
+ description: "Anti-slip Design shoes  fashion air max outsole is of high quality and anti slip rubber sole for excellent grip which has high resilience and tension resistance, outsole with multi-section cross-sectional texture affords good stability and non-slip for walking",
+  price: 4600,
+  image_url: "https://image.goat.com/crop/750/attachments/product_template_additional_pictures/images/017/794/463/original/394710_01.jpg.jpeg?1547236891",
+category_id:3
+  )
+Product.create!(
+ product_name: "Yeezy Boost 700 MNVN 'Triple Black'",
+ description: "quality Yeezy slides available in different colors and sizes.
+ delivery still available country wide within 24 hours.",
+  price: 1900,
+  image_url:"https://image.goat.com/crop/1250/attachments/product_template_additional_pictures/images/015/292/400/original/386481_01.jpg.jpeg?1539209010",
+category_id:3
+  )
+Product.create!(
+   product_name: "Ben & Jerry's x Dunk Low SB 'Chunky Dunky'",
+   description: "quality Chunky Dunky available in different colors and sizes.
+   delivery still available country wide within 24 hours.",
+    price: 5000,
+    image_url: "https://image.goat.com/crop/750/attachments/product_template_additional_pictures/images/035/924/793/original/616017_01.jpg.jpeg?1588007195",
+    category_id:3
+    )
+Product.create!(
+ product_name: "Women short skirt",
+ description: "Fashion Women checjked High Waist Mini Straight skirt-Grey",
+  price: 800,
+  image_url: "https://images.unsplash.com/photo-1615898291574-e69bd007e985?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHNraXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+category_id:3
+  )
+  Product.create!(
+  product_name: "Full Touch Men Smart Watch",
+  description: "This LED watch is more environmentally friendly and it tend to have a longer life span than other watch display modes.
+  Because it has no moving parts, it's actually easier to maintain this LED watch.",
+  price: 1400,
+  image_url: "https://images.unsplash.com/photo-1623040594022-3f46dd09c260?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+  )
+  Product.create!(
+  product_name: "Women Smart Watch",
+  description: "This luxury women's watch features an analog display. It is also water resistant. It is great for work and dinner wear.",
+  price: 1000,
+  image_url: "https://images.unsplash.com/photo-1625178280953-e5aad13aa270?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d29tZW4lMjB3YXRjaGVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+)
+Product.create!(
+ product_name: "Women comfortable sandals",
+ description: "The perfect summer shoe and ideal for packing in your suitcase. It is durable yet comfortable, with a sole that creates a fresh and natural look.",
+  price: 700,
+  image_url: "https://images.unsplash.com/photo-1618615098938-84fc29796e76?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2FuZGFsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+)
+Product.create!(
+ product_name: "Women white chunk heels",
+ description: "This particular chunky heel is made from fine leather for durability and its a shoe that is all time in style and fashion. Its a shoe to pull in in occasion and its comfortable to make you reach your destination with speed",
+  price: 2200,
+  image_url: "https://images.unsplash.com/photo-1614634717465-eb3d6bc8d930?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNhbmRhbHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+ category_id:3
+  )
+Product.create!(
+ product_name: "Long women brown boots",
+ description: "This is a pair of high-value, very British-style long boots essential for cold seasons.",
+  price: 3000,
+  image_url: "https://images.unsplash.com/photo-1575425939273-46ecee6d6931?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60g",
+category_id:3
+)
+Product.create!(
+ product_name: "Black short boots",
+ description: "This pair of shoes combines comfort and height enhancement for all women who love beauty",
+  price: 2900,
+  image_url: ".https://images.unsplash.com/photo-1605733513549-de9b150bd70d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+ category_id:3
+)
+Product.create!(
+ product_name: "Glossy women heels",
+ description: "Fashion Women Thick Heel Pointed Toe Pumps  Heels glossy",
+  price: 2000,
+  image_url: "https://images.unsplash.com/photo-1632793039681-2cf5f97be82c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhlZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+ category_id:3
+  )
+Product.create!(
+ product_name: "Red sassy heels",
+ description: " Ladies High Heels Latest Design Fashion Sandals Lace Up Summer Red",
+  price: 2000,
+  image_url: "https://images.unsplash.com/photo-1613987876445-fcb353cd8e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aGVlbHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+  )
+Product.create!(
+ product_name: "Plain Black men's T-shirt",
+ description: "Fashionable, fitting, 100% Cotton, Round neck T-shirt that doesn't fade nor stretch after wash.
+ The design is high durable print, doesn't fade or come out.",
+  price: 1100,
+  image_url: ".https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+  category_id:3
+  )
+Product.create!(
+ product_name: "Official Men's Shirt",
+ description: "Order this 5 Pack Cotton Official Shirts.Slim fitting, long sleeve, 100% cotton. The quality that won't disappoint.
+ The 100%cotton shirt has a unique breathability and soft fabric.",
+  price: 5700,
+  image_url: "https://images.unsplash.com/photo-1561053720-76cd73ff22c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+  )
+Product.create!(
+ product_name: "Women Jeans",
+ description: "This fashionable Body shaping high waist ladies jeans is perfect for casual events. Its is an essential  piece for all ladies` wardrobe",
+  price: 1000,
+  image_url: "https://images.unsplash.com/photo-1560243563-062bfc001d68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGFwcGFyZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+  )
+Product.create!(
+ product_name: "Sleeveless white bodycon",
+ description: "Fashion Elegant Solid Color Women Summer sleeveless  Bodycon Midi Party Dress-white",
+  price: 2500,
+  image_url: "https://images.unsplash.com/photo-1631234764568-996fab371596?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZHJlc3Nlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+  )
+Product.create!(
+ product_name: "Men Leather Jacket",
+ description: "Fashion Mens Leather Jackets Casual Business Trendy Jacket",
+  price: 3000,
+  image_url: "https://images.unsplash.com/photo-1575862980254-f331e54623f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OHxZeU5JSmZVc28tOHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+  )
+  Product.create!(
+  product_name: "Women black Leather Jacket",
+  description: "Fashion Women Bike Coat PU Leather Outwear Short Female Jacket",
+  price: 2000,
+  image_url: "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhdGhlciUyMGphY2tldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+  category_id:3
+  )
 
 
 Product.create!(product_name: "ActiveMQ in Action", image_url: "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/snyder.jpg", description: "ActiveMQ is implemented in Java, but it supports client applications written in many other programming languages including C/C++, .NET, Ruby, Perl, PHP, Python, and more. It can be integrated with other open source frameworks including Tomcat, ServiceMix, JBoss, and can easily bridge to other JMS providers.", price: 546, category_id: 4)
@@ -159,23 +304,6 @@ Product.create!(product_name: " Infant Baby Boys Girls Clothes Sets-Cartoon",pri
 Product.create!(product_name: "3PCs Most Beautiful Turban Baby Girls Headband",price: 450,category_id: 8,description: "Make your baby the most beautiful princess that she is with the most gorgeous shinny headbands. Designed with Softest lace plus shinny stars deco. Has elastic fabric that is super comfortable on the baby's head and it stretches as the baby grows plus it designed with the softest elastic that is so gentle on her head in that it allows blood to circulate perfectly with No side effect. Your baby is going to love it and so are you. Try it and I promise it won't let you down ",image_url: "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/19/638354/1.jpg?9796")
 Product.create!(product_name: "Generic Comfortable Warm With a Hood Baby Carrier - Blue .",price: 1299,category_id: 8,description: "It adapts itself to your needs thanks to its many carrying positions ie,off centre,on your hip etc. The sliding pouch enables you to change baby's position without disturbing him.Shoulder strap for the wearer. Reinforced head support for and height adjustable for baby. It is lined with a 3D mesh fabric optimising comfort for all seasons. Recomended for infants from birth to 12Kg.Helps position the baby in a comfortable position and at the same time provide the proper support for the baby's spine and hips this is a must have for all moms out there feel free to choose your desired colour. ",image_url: "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/42/406691/1.jpg?3845")
 Product.create!(product_name: "Huggies Dry Comfort Diaper 60s Size 4",price: 1599,category_id: 8,description: "Enjoy Shopping Huggies Products at the best price in the kenyan market. Huggies Diapers and Wipes are made with natural ingredients and free of harmful chemicals. Learn about product features, ingredients, and diaper sizes. Shop from a Huge Collection - Enjoy Shopping Best Offers & Deals Online from Jumia Kenya - Receive at your doorstep - Fast Delivery  - Secure mode of Payment",image_url: "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/72/189685/1.jpg?6220")
-
-
-# Product.create!(product_name: "Renew Nourishing Cleanser",image_url: "https://cdn.shopify.com/s/files/1/0087/9021/2659/products/PRODUCTPHOTOTEMPLATES.psd_86_770x.jpg?v=1650004296",description: "Gently remove dirt and impurities without stripping your skin with this nourishing hypoallergenic cleanser. An abundance of antioxidants and aloe vera leave your skin feeling soft, clean and refreshed making this cleanser ideal for aging or dry skin. Naturally scented with grapefruit, lavender, vetiver and jasmine.",category_id: 5,price: 4900)
-# Product.create!(product_name: "Rejuvenating Overnight Facial Mask",image_url: "https://cdn.shopify.com/s/files/1/0087/9021/2659/products/NOT-OFM_ecomm_770x.jpg?v=1632264707",description: "Awake to a complexion more vibrant, healthy and radiant than the night before. This lightweight mask is designed to be applied before bed to allow its ingredients to penetrate more effectively overnight. ",category_id: 5,price: 9460)
-# Product.create!(product_name: "Quinoa Water Foundation",image_url: "https://cdn.shopify.com/s/files/1/0087/9021/2659/products/adc7657dd6a342969b3082ee9a748662_770x.jpg?v=1594062594",description: "Give skin the look of ethereal refinement in a feather-light formula with Ere Perez Quinoa Water Foundation. More than a simple cover-up, this blend is designed to reduce the appearance of redness and inflammation with quinoa water and blackcurrant.",category_id: 5,price: 3900)
-# Product.create!(product_name: "Cinnabar Green Soaps (100g)",image_url: "https://greenspoon.co.ke/wp-content/uploads/2020/08/Greenspoon-Kenya-Lavender-and-Citrus-Soap-Cinnabar-Green.jpg.webp",description: "All our soaps are handmade in small batches to maintain authenticity and the human touch in every bar. The ingredients are sourced locally, and the oils, waxes, butters as well as essential oils and hydrosols are plant-derived and natural. They are not tested on animals, are chemical-fragrance free with no preservative. The ingredients are sourced from eco-friendly suppliers and manufacturers, do not contain palm and the soap is totally biodegradable.",category_id: 5,price: 235)
-# Product.create!(product_name: "Eco Smiles Kids' Toothbrush",image_url: "https://greenspoon.co.ke/wp-content/uploads/2022/09/Greenspoon-Eco-Smiles-Bamboo-Toothbrush-Kids.jpg",description: "Encouraging good oral hygiene is important at an early stage. You can do this and still reduce plastic use in the household by getting your little humans a kids toothbrush.   It obviously looks like a regular toothbrush but is smaller so it can fit better in their cute little hands.   And it comes with softer bristles so they can get used to brushing without feeling uncomfortable.",category_id: 5,price: 349)
-# Product.create!(product_name: "Vaaji Organic Tampons Life 16 Regular",image_url: "https://greenspoon.co.ke/wp-content/uploads/2022/06/Greenspoon-7752.jpg.webp",description: "Made of 100% organic cotton, our super absorbent core is free of fragrances and dyes; and designed to work. It expands to fit your body for maximum leak-proof protection. Our BPA-free plastic applicator has a pull and click design that allows for easy application",category_id: 5,price: 880)
-# Product.create!(product_name: "Vagus Nerve Bath Oil",image_url: "https://cdn.shopify.com/s/files/1/0087/9021/2659/products/Oseavagusnervebathoil_770x.jpg?v=1664574656",description: "Soak away signs of stress and leave the day behind. This soothing bath oil helps promote a sense of serenity. Soften and moisturize your skin with this one-of-a- kind bath experience.",category_id: 5,price: 5200)
-# Product.create!(product_name: "Femelle Cotton Buds 200S",image_url: "https://www.goodlife.co.ke/wp-content/uploads/2021/09/FEMELLE-COTTON-BUDS-100S-scaled-1.jpg",description: "The femelle cotton buds are comprised of a small stick with a cotton-wool tip used for cleaning the ears, applying make-up. ",category_id: 5,price: 297)
-# Product.create!(product_name: "Optima Teatree toothpaste FRESH&WHITE 100ML",image_url: "https://www.healthyu.co.ke/wp-content/uploads/2019/11/OPTIMA-TEATREE-TOOTHPASTE-FRESHWHITE-100ML.jpg",description: "Regular brushing using Australian Tea Tree Toothpaste helps prevent the build of plaque and tartar. In addition to the benefits of tea tree this unique toothpaste also includes soothing aloe vera, calcium silica, with added Co-Q10 and Escin (from horse chestnut) known for helping to keep gums looking healthy, plus tooth-friendly xylitol. Minty-fresh with essential oil of peppermint.Ingredients Tea tree oil,Aloe vera,calcium, silica, Co-Q10,peppermint oil and horsequest nut SUGAR FREE Free From from artificial colours, flavours, , saccharin, triclosan, fluoride other unnecessary chemicals.",category_id: 5,price: 1245)
-# Product.create!(product_name: "Desert Essence Teatree dental floss",image_url: "https://www.healthyu.co.ke/wp-content/uploads/2019/11/DESERT-ESSENCE-TEATREE-DENTAL-FLOSS.jpg",description: "Naturally waxed with beeswax and saturated with pure Australian Tea Tree Oil.Ingredients Naturally waxed with beeswax and saturated with pure Australian Tea Tree Oil.Free From animal testing",category_id: 5,price: 899)
-# Product.create!(product_name: "Aqua Oleum Eucalyptus 10ml",image_url: "https://www.healthyu.co.ke/wp-content/uploads/2019/11/AQUA-OLEUM-EUCALYPTUS-10ML-768x768.jpg",description: "Used as a decongestant to facilitates breathing, used as a purifying air freshener and may be used as a stimulant for muscular aches and painsIngredients100% pure eucalyptus oil100% pure",category_id: 5,price: 1187)
-# Product.create!(product_name: "Dr. Organic Vitamin E cream 100ml",image_url: "https://www.healthyu.co.ke/wp-content/uploads/2019/11/DR-ORGANIC-VITAMIN-E-CREAM-50ML.png",description: "Super rich moisturising organic Vitamin E provides a natural mix of bioactive tocopherols which penetrate and moisturise the driest of skin. This bioactive organic Vitamin E cream is a rich absorbent moisturiser, formulated to penetrate deep into the skins epidermal layer, instantly hydrating and leaving the skin radiant and intensely moisturize.",category_id: 5,price: 2070)
-# Product.create!(product_name: "Marini Naturals curling butter",image_url: "https://www.healthyu.co.ke/wp-content/uploads/2019/11/MARINI-CURL-ME-PRETTY-CURLING-BUTTER-300GM-768x768.jpg",description: "Curl Me Pretty Curling Butteris a moisture-rich curl-defining and sealing butter! This nutritive curling butter will work wonders in defining and holding your style for days, giving you that salon-look definition! All this with zero-crunch and sealing in loads of moisture. Your twist-outs and braid-outs have never looked this good! Aside from the beautiful soft curls with regular use you will notice stronger, longer and fuller hair due to this butters amazing hair growth ingredients",category_id: 5,price: 1360)
-# Product.create!(product_name: "Dr Organic Aloe Vera hair shampoo 265ml",image_url: "https://www.healthyu.co.ke/wp-content/uploads/2019/11/DR-ORGANIC-ALOE-VERA-HAIR-SHAMPOO-265ML.jpg",description: "Using pure organic bioactive Aloe Vera ensures that the plants beneficial polysaccharide levels are maximised, and in combination with a select blend of bioactive natural extracts they coat and penetrate the fibres of the hair, soothing and nourishing the roots and scalp, leaving hair feeling silky soft, restored and totally manageable",category_id: 5,price: 1710)
-
 
 Product.create!(product_name: "Renew Nourishing Cleanser",image_url: "https://cdn.shopify.com/s/files/1/0087/9021/2659/products/PRODUCTPHOTOTEMPLATES.psd_86_770x.jpg?v=1650004296",description: "Gently remove dirt and impurities without stripping your skin with this nourishing hypoallergenic cleanser. An abundance of antioxidants and aloe vera leave your skin feeling soft, clean and refreshed making this cleanser ideal for aging or dry skin. Naturally scented with grapefruit, lavender, vetiver and jasmine.",category_id: 5,price: 4900)
 Product.create!(product_name: "Rejuvenating Overnight Facial Mask",image_url: "https://cdn.shopify.com/s/files/1/0087/9021/2659/products/NOT-OFM_ecomm_770x.jpg?v=1632264707",description: "Awake to a complexion more vibrant, healthy and radiant than the night before. This lightweight mask is designed to be applied before bed to allow its ingredients to penetrate more effectively overnight. ",category_id: 5,price: 9460)

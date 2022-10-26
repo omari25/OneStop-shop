@@ -1,0 +1,19 @@
+[33mf1636c7[m[33m ([m[1;36mHEAD -> [m[1;32mSalome[m[33m)[m HEAD@{0}: commit (amend): Modified files
+[33m6600c50[m[33m ([m[1;31morigin/Salome[m[33m)[m HEAD@{1}: checkout: moving from 099a40d995ce207ce8a00bc9352d84ce4a0ed65f to Salome
+[33m099a40d[m HEAD@{2}: commit: Modified files
+[33mb595a1b[m[33m ([m[1;31morigin/omar[m[33m, [m[1;32momar[m[33m)[m HEAD@{3}: pull origin omar (start): checkout b595a1b28dc02d18dd9d6813437bfa2447421aa4
+[33m6600c50[m[33m ([m[1;31morigin/Salome[m[33m)[m HEAD@{4}: checkout: moving from omar to Salome
+[33mb595a1b[m[33m ([m[1;31morigin/omar[m[33m, [m[1;32momar[m[33m)[m HEAD@{5}: checkout: moving from Salome to omar
+[33m6600c50[m[33m ([m[1;31morigin/Salome[m[33m)[m HEAD@{6}: commit: Modified files
+[33mae84033[m HEAD@{7}: commit (merge): Modified files
+[33m80d4e08[m HEAD@{8}: checkout: moving from main to Salome
+[33md93ebdb[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{9}: pull origin main: Fast-forward
+[33m965616e[m HEAD@{10}: checkout: moving from Salome to main
+[33m80d4e08[m HEAD@{11}: commit: Modified files
+[33md998f65[m HEAD@{12}: commit: Modified the seeds file
+[33ma5da8e9[m HEAD@{13}: commit: Modified files
+[33m965616e[m HEAD@{14}: pull origin main: Fast-forward
+[33ma3bc14a[m HEAD@{15}: checkout: moving from main to Salome
+[33m965616e[m HEAD@{16}: pull origin main: Fast-forward
+[33md864f0b[m HEAD@{17}: checkout: moving from Salome to main
+[33ma3bc14a[m HEAD@{18}: commit: Modified files

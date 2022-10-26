@@ -9,6 +9,14 @@
 
 #   Character.create(name: "Luke", movie: movies.first)
 
+Category.create!(name: "Electronics")
+Category.create!(name: "Food stuffs")
+Category.create!(name: "Fashion")
+Category.create!(name: "Books")
+Category.create!(name: "Health and Beauty")
+Category.create!(name: "Phones and tablets")
+Category.create!(name: "Sporting goods")
+Category.create!(name: "Baby products")
 
 Product.create!(
   product_name: "Bio whole milk",
@@ -430,5 +438,5 @@ Product.create!(product_name: "Wireless Headphone", description: "Ausdom Bluetoo
 Product.create!(product_name: "Hisense 200W Sound Bar", description: "With HDMI OUT (ARC), the Hisense HS218 Sound Bar is easy to install and connect to your TVs through one single HDMI cable, and also connect wirelessly via Bluetooth, you can control both with one remote.",  price:22100,image_url: "https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/73/702685/1.jpg?9093",category_id:1 )
 
 
-Product.create!(product_name: "Cute Rabbit Radio FM", description: "White &Green Cute Rabbit Radio FM,USB,TF-Portable",  price:2100,image: "https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/286734/1.jpg?2182",category_id:1 )
+Product.create!(product_name: "Cute Rabbit Radio FM", description: "White &Green Cute Rabbit Radio FM,USB,TF-Portable",  price:2100,image_url: "https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/286734/1.jpg?2182",category_id:1 )
 

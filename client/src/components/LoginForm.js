@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import pic from "./images/image2.png";
 
+
 function Login({ setUser }) {
   const navigate = useNavigate();
 

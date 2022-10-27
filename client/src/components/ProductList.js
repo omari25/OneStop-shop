@@ -8,7 +8,6 @@ function ProductList({ heading, data }) {
     <div className="xl:px-0 px-2">
       <div className="flex justify-between items-center py-5">
         <FeaturedTitle text={heading} />
-        <button className="text-red-600 font-semibold">View All</button>
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
         {data.map((product) => {

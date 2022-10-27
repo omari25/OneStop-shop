@@ -1,6 +1,4 @@
 import React from 'react';
-import { MdOutlineAddShoppingCart } from "react-icons/md";
-import { AiOutlineHeart } from "react-icons/ai";
 
 
 function ProductCard({ item }) {
@@ -15,19 +13,15 @@ function ProductCard({ item }) {
   };
 
   return (
-    <div className="flex flex-col justify-between cursor-pointer">
+    
+    <div className="flex flex-col justify-between cursor-pointer w-full">
       <div className="aspect-w-1 aspect-h-1">
         <img src={image_url} alt="product" />
       </div>
-      <h1 className="font-semibold">{renderProductName(product_name)}</h1>
-      <p className="text-xs text-gray-500">{renderDescription(description)}</p>
-      <p className="font-semibold text-gray-700">$ {price}</p>
-      <div className="flex justify-between items-center">
-        <MdOutlineAddShoppingCart className="bg-gray-800 rounded-full text-white p-1 w-8 h-8" />
-        <AiOutlineHeart className="bg-gray-800 rounded-full text-white p-1 w-8 h-8" />
-        <button className="bg-gray-800 text-white px-2 rounded py-1">
-          Buy Now
-        </button>
+        <h1 className="font-semibold">{renderProductName(product_name)}</h1>
+        <p className="text-m text-gray-500">{renderDescription(description)}</p>
+        <p className="font-semibold text-gray-700"> {price}</p>
+        <div className="flex justify-between items-center ">
       </div>
     </div>
   );

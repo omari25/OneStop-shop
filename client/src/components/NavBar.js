@@ -2,14 +2,21 @@ import { CiSearch } from "react-icons/ci";
 import { RiAccountPinBoxFill } from "react-icons/ri";
 import { IoMdHelpCircle } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa"
+import { CartContext } from "../CartContext";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import shopit from "./images/Shop-It (1) 1.png";
 
 
 
 function NavBar() {
+
+  const cart = useContext(CartContext);
+  const totalItems=cart.items.reduce((acc,c)=>acc+c.quantity,0)
+
   return (
     <div className=' sticky top-0 flex flex-col w-full h-32 max-md:h-full mb-10   font-serif z-10 shadow-lg '>
+
       <div className='w-full h-1/2 flex justify-between bg-[white]'>
 
         <Link to={"/"} className="w-[15%]">
@@ -33,10 +40,10 @@ function NavBar() {
             <h3 className=""> Help</h3>
           </div>
 
-          <div className="w-[30%] flex justify-center items-center cursor-pointer">
+          <Link to={"/cart"} className="w-[30%] flex justify-center items-center cursor-pointer">
             <FaShoppingCart className='text-3xl mr-2' />
-            <h3 className=""> Cart</h3>
-          </div>
+            <h3 className="">{totalItems===0?"Cart":totalItems}</h3>
+          </Link>
         </div>
       </div >
 
@@ -46,8 +53,8 @@ function NavBar() {
         <Link to={"/foodstuffs"} className="hover:underline">Food Stuffs</Link>
         <Link to={"/fashion"} className="hover:underline">Fashion</Link>
         <Link to={"/books"} className="hover:underline">Books</Link>
-        <Link to={"/beauty"} className="hover:underline">Health&Beauty</Link>
-        <Link to={"/phones"} className="hover:underline">Phones&Tablets</Link>
+        <Link to={"/beauty"} className="hover:underline">Health and Beauty</Link>
+        <Link to={"/phones"} className="hover:underline">Phones and Tablets</Link>
         <Link to={"/sporting-goods"} className="hover:underline">Sporting Goods</Link>
         <Link to={"/baby-products"} className="hover:underline">Baby Products</Link>
       </div>

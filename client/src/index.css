@@ -8,6 +8,7 @@
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #706965;
+    color: #00ffff;
 }
 
 .checkout-form input:focus, .signup-form input:focus{

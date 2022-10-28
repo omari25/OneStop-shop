@@ -27,6 +27,7 @@ function Home( {category, setCategory} ){
   //   })
   // }, [])
 
+  
   return (
     
     

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import pic from "./images/image2.png";
 
-function Signup({ setUser }) {
+function Signup({ user, setUser }) {
   const navigate = useNavigate();
 
   const [firstName, setfirstName] = useState("");
@@ -31,7 +31,8 @@ function Signup({ setUser }) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
-        navigate("/home");
+        navigate("/");
+        // console.log(user)
       } else {
         r.json().then((err) => setErrors(err.errors));
       }

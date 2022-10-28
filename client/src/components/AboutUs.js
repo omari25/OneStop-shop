@@ -18,10 +18,10 @@ function AboutUs() {
         text-center  bg-center  
     '> 
       <hr/>
-      <p class="text-black text-bold, center"></p>
+      <p className="text-black text-bold, center"></p>
       <br />
-      <p class="text-black">
       <h1 className='text-xl font-bold text-black'>Shop-It</h1>
+      <p className="text-black">
       We are the best online shopping center,<br /> 
       with all the good and amazing products <br />
       you need with just <br />
@@ -36,8 +36,8 @@ function AboutUs() {
       <div className=' bg-slate-200
         text-center  bg-center  
     '> 
-      <p class="text-black">
       <h1 className='text-xl font-bold text-black'>Mission</h1>
+      <p className="text-black">
       We help people achieve independence <br />by making it easier to start,<br/>
       run, and grow <br />a business by connecting clients to vendors online.
 
@@ -49,8 +49,8 @@ function AboutUs() {
       <div className=' bg-slate-200
         text-center  bg-center  
     '> 
-      <p class="text-black">
       <h1 className='text-xl font-bold text-black'>Vision</h1>
+      <p className="text-black">
       To be the leading online <br />shopping center <br />in Africa 
       and beyond
       </p>
@@ -60,9 +60,9 @@ function AboutUs() {
 
 
      <div className=' bg-slate-200 text-center  bg-center  '> 
-      <p class="text-black text-center">
-      
       <h1 className='text-xl font-bold text-black'>Our Values</h1>
+      <p className="text-black text-center">
+      
       Loyalty, Honesty, Trust<br />Ingenuity,Accountability<br />
       Simplicity Respect And Value-centricity
       </p>

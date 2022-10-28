@@ -1,76 +1,33 @@
-import NavBar from "./NavBar"
+import React from 'react'
 
+function Cart({ cart, c }) {
 
-function Cart() {
   return (
-<>
+    <div className='bg-slate-100 w-full mb-6 rounded-2xl shadow-2xl flex justify-around py-4'>
 
+      <div className='flex flex-col justify-between w-[25%]'>
+        <h1 className='text-center font-bold text-xl mb-4'>{c.product_name}</h1>
+        <img src={c.image_url} alt="" className='w-[100%]' />
+        <p className='text-center mt-4'>{`Price: Ksh ${c.price}`}</p>
+      </div>
 
-<div className='flex justify-between  mx-7  font-serif max-md:absolute max-md:flex-col-reverse ' >
-<div className='flex flex-col w-full h-fit '>
+      <div className='flex flex-col w-[15%] items-center '>
+        <h1 className='text-center font-bold text-xl mb-4'>Quantity</h1>
+        <button onClick={() => cart.addOneToCart(c.id)} className='bg-[black]  text-[white] font-bold rounded-md w-12 h-12 text-2xl cursor-pointer mt-8 mb-6'>+</button>
+        <p>{cart.getProductQuantity(c.id)}</p>
+        <button onClick={() => cart.removeOneFromCart(c.id)} className='bg-[black]  text-[white] font-bold rounded-md w-12 h-12 text-2xl cursor-pointer mt-6'>-</button>
+      </div>
 
-  <div  style={{width:'70%'}}   className='bg-slate-100  max-md:bg-white pl-4 h-96 mb-6 rounded-2xl shadow-2xl max-md:shadow-none flex '>
-
-   <div>
-     <img src="https://raw.githubusercontent.com/Elvis-Munene/Abojani-Academy-web-app/master/assets/images/Rectangle%2010.png"  
-     
-     width="250" height="150" 
-     alt=""  className='mt-8 ml-2 hover:scale-75'/>
-
-  <button className=' font-semibold p-2.5 border-none rounded-md w-48 h-12  ml-0 mt-10 text-sm cursor-pointer bg-[red]  hover:scale-75 hover:text-black'>
-    REMOVE
-  </button> 
-</div>
-
-  <div className="flex flex-col">
-    <div className="flex">
-    <p className=" ml-8 mr-4"><span className="font-semibold  ml-4 max-md:ml-1"> Product</span><br/><br/> Women long sleeve shirt</p> 
-    <p><span className="font-semibold ">Quantity</span><br/><br/> <span className="ml-4 "> 1</span></p> 
-    <p className=" ml-8 mr-4"><span className="font-semibold">Price</span><br/><br/> Ksh  3,000</p> 
-    <p className='mr-0'><span className="font-semibold">SubTotal</span><br/><br/>Ksh 3,000</p> 
-  </div> 
-
-<div className="ml-32 mt-44 max-md:mt-20 ">
-   <button className='bg-[color:black] text-[color:white] font-extrabold p-2.5 border-none rounded-md w-12 h-12 mr-4  text-sm cursor-pointer hover:scale-125 '>
-     +</button>
-      1
-  <button className='bg-[color:black]  font-extrabold text-[color:white] p-2.5 border-none  rounded-md w-12 h-12 ml-4  text-sm cursor-pointer hover:scale-125'>
- - </button>
-   </div>
-  </div>
- </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-<div className='fixed right-1 bg-black w-80 h-80 text-[color:white] rounded-xl shadow-2xl font-bold max-md:relative max-md:mb-10 max-md:ml-32'>
-<h5 className='ml-16 mt-16 text-base'> CART SUMMARY </h5>
-<h6 className='ml-20 mt-14 text-sm'>SubTotal  Ksh 3,000</h6>
-      
-<button className='bg-[color:#EA4335] font-semibold p-2.5 border-none rounded-md w-48 h-12  ml-10 mt-20 text-sm cursor-pointer hover:bg-red-700 hover:text-black'>
- CHECKOUT  Ksh 3,000  </button>
-</div>
-
+      <div className=''>
+        <div className='text-center'>
+          <p className='text-center font-bold text-xl mb-4'>SubTotal</p>
+          <p>{`Ksh ${cart.getProductQuantity(c.id) * c.price}`}</p>
+        </div>
+        
+        <button onClick={() => cart.deleteFromCart(c.id)} className=' font-semibold p-3 w-40 text-[white] rounded-md mt-20 text-sm cursor-pointer bg-[red] '>REMOVE</button>
+      </div>
 
     </div>
-
-    </>
   )
 }
 

@@ -3,6 +3,8 @@ import { CiSearch } from "react-icons/ci";
 import { RiAccountPinBoxFill } from "react-icons/ri";
 import { IoMdHelpCircle } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa"
+import { CartContext } from "../CartContext";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import shopit from "./images/Shop-It (1) 1.png";
 // import SearchBar from "./SearchBar";
@@ -10,43 +12,15 @@ import shopit from "./images/Shop-It (1) 1.png";
 
 
 
-function NavBar({setSearchInput, searchInput}) {
-  
+function NavBar({ user, setSearchInput, searchInput }) {
 
-  // const [searchInput, setSearchInput] = useState("")
-  // // const [result, setResult] = useState([])
-  // // const [searchKey, setSearchKey] = useState("")
-  
+  const cart = useContext(CartContext);
+  const totalItems=cart.items.reduce((acc,c)=>acc+c.quantity,0)
 
-  // const [data, setData] = useState([])
-  // // const searchKeyWords = props.match.params.keywords
-
-  // useEffect(() => {
-  //   fetch("/products")
-  //   .then(response => response.json())
-  //   .then((data) => {
-  //     setData(data)
-  //       console.log(data)
-  //       // console.log(items)
-  //   })
-  //   }, [])
-    
-    
-
-
-  //   // const clearInput = () => {
-  //   //   let searchInputValue = document.getElementsByClassName("searchInput")[0]
-  //   //   searchInputValue.value = ""
-  //   //   console.log(searchInputValue)
-  //   // }
-
-  //   // console.log(searchInput)
-  //   // console.log(data.filter(data=>data.product_name.includes("Tv")))
-  //   const results = data.filter(data=>data.product_name.toLowerCase().includes(searchInput))
-  //   console.log(results)
 
   return (
-    <div className=' sticky top-0 flex flex-col w-full h-32 max-md:h-full mb-10   font-serif z-10 shadow-lg '>
+    <div className='sticky top-0 flex flex-col w-full h-32 mb-10 z-10 shadow-lg '>
+
       <div className='w-full h-1/2 flex justify-between bg-[white]'>
 
         <Link to={"/"} className="w-[15%]">
@@ -83,20 +57,23 @@ function NavBar({setSearchInput, searchInput}) {
         </ul> */}
 
         <div className="w-[30%] flex justify-center items-center">
-          <div className='w-[30%] flex justify-center items-center cursor-pointer'>
+          <Link to={"/account"} className='w-[30%] flex justify-center items-center cursor-pointer'>
             <RiAccountPinBoxFill className="text-3xl mr-2"/>
-            <h3 className=""> Account</h3>
-          </div>
+            <h3 className="">{user ? (`${user.first_name} ${user.last_name}`) : "Account"}</h3>
+          </Link>
 
-          <div className="w-[30%] flex justify-center items-center cursor-pointer">
+          <Link to={"/aboutus"} className="w-[30%] flex justify-center items-center cursor-pointer">
             <IoMdHelpCircle className='text-3xl mr-2' />
             <h3 className=""> Help</h3>
-          </div>
+          </Link>
 
-          <div className="w-[30%] flex justify-center items-center cursor-pointer">
-            <FaShoppingCart className='text-3xl mr-2' />
-            <h3 className=""> Cart</h3>
-          </div>
+          <Link to={"/cart"} className="w-[30%] flex justify-center items-center cursor-pointer">
+            <div className="relative p-2">
+             <FaShoppingCart className='text-3xl mr-2' />
+              <div className="absolute w-7 h-7 bg-white rounded-full top-0 right-0 text-center border-2 border-black">{totalItems===0?"0":totalItems}</div>
+            </div>
+            <h3 className="">Cart</h3>
+          </Link>
         </div>
       </div >
 
@@ -106,8 +83,8 @@ function NavBar({setSearchInput, searchInput}) {
         <Link to={"/foodstuffs"} className="hover:underline">Food Stuffs</Link>
         <Link to={"/fashion"} className="hover:underline">Fashion</Link>
         <Link to={"/books"} className="hover:underline">Books</Link>
-        <Link to={"/beauty"} className="hover:underline">Health&Beauty</Link>
-        <Link to={"/phones"} className="hover:underline">Phones&Tablets</Link>
+        <Link to={"/beauty"} className="hover:underline">Health and Beauty</Link>
+        <Link to={"/phones"} className="hover:underline">Phones and Tablets</Link>
         <Link to={"/sporting-goods"} className="hover:underline">Sporting Goods</Link>
         <Link to={"/baby-products"} className="hover:underline">Baby Products</Link>
       </div>

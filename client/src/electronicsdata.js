@@ -37,4 +37,5 @@ const electronicsdata = [
   },
 ]
 
+
 export default electronicsdata

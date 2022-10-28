@@ -2,6 +2,7 @@ import React from 'react'
 import {BsFacebook,BsYoutube} from 'react-icons/bs'
 import {AiFillInstagram,AiFillTwitterCircle} from 'react-icons/ai'
 
+
 const Footer = () => {
   return (
     <footer className='w-full h-25 bg-black '>

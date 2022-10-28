@@ -5,7 +5,6 @@ function Cart() {
   return (
 <>
 
-{/* <NavBar/> */}
 
 <div className='flex justify-between  mx-7  font-serif max-md:absolute max-md:flex-col-reverse ' >
 <div className='flex flex-col w-full h-fit '>

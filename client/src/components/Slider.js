@@ -21,7 +21,6 @@ function Slider() {
 
   useEffect(() => {
     slideRef.current.addEventListener("animationend", removeAnimation);
-    //slideRef.current.addEventListener("mouseenter", pauseSlider);
     slideRef.current.addEventListener("mouseleave", startSlider);
 
     startSlider();

@@ -34,9 +34,9 @@ function SingleProduct(){
                         <h1 className="text-2xl font-bolded mt-4">Description</h1>
                         <p>{product.description}</p>
 
-                        <div className="flex flex-col w-full items-center mt-16">
-                            <button onClick={() => {cart.addOneToCart(product.id,product)}} className="bg-[black] text-[white] w-[50%] py-2 rounded-md">Add to cart</button>
-                            <button className="bg-[black] text-[white] w-[50%] py-2 rounded-md mt-8">Buy now</button>
+                        <div className="flex justify-between w-full items-center mt-16">
+                            <button onClick={() => {cart.addOneToCart(product.id,product)}} className="bg-[black] text-[white] w-[40%] py-2 rounded-md">Add to cart</button>
+                            <button className="bg-[black] text-[white] w-[40%] py-2 rounded-md">Buy now</button>
                         </div>
                     </div>
 

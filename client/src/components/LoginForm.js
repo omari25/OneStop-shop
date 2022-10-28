@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import pic from "./images/image2.png";
 
-function Login({ setUser }) {
+function Login({ user, setUser }) {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -20,7 +20,8 @@ function Login({ setUser }) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => {setUser(user)});
-        navigate("/home");
+        // console.log(user)
+        navigate("/");
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
@@ -60,7 +61,7 @@ function Login({ setUser }) {
                     />
                 </div>
                 <button className="w-full bg-[red] p-3 rounded-md text-white" type="submit">Login</button>
-                <p className="text-center mt-8">Already have an account? <NavLink to="/" className="text-[blue]">Signup</NavLink></p>
+                <p className="text-center mt-8">Already have an account? <NavLink to="/signup" className="text-[blue]">Signup</NavLink></p>
             </form>
         </div>
     </div>

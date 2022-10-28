@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-    skip_before_action :authorize, only: [:index]
+    skip_before_action :authorize, only: [:index, :show]
 
     def index
         product = Product.all
@@ -11,4 +11,5 @@ class ProductsController < ApplicationController
         render json: product
     end
     
+
 end

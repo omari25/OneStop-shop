@@ -82,9 +82,8 @@ export function CartProvider({children}) {
     }
 
     function getTotalCost() {
-        const totalPrice=cartProducts.reduce((acc,cart)=>acc+cart.price,0)
-        const totalQuantity=cartProducts.reduce((acc,cart)=>acc+cart.quantity,0)
-        return totalPrice*totalQuantity
+        const totalPrice=cartProducts.reduce((acc,cart)=>acc+cart.price*cart.quantity,0)
+        return totalPrice
     }
 
     const contextValue = {

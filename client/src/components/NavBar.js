@@ -9,13 +9,13 @@ import shopit from "./images/Shop-It (1) 1.png";
 
 
 
-function NavBar() {
+function NavBar({ user }) {
 
   const cart = useContext(CartContext);
   const totalItems=cart.items.reduce((acc,c)=>acc+c.quantity,0)
 
   return (
-    <div className=' sticky top-0 flex flex-col w-full h-32 max-md:h-full mb-10   font-serif z-10 shadow-lg '>
+    <div className='sticky top-0 flex flex-col w-full h-32 mb-10 z-10 shadow-lg '>
 
       <div className='w-full h-1/2 flex justify-between bg-[white]'>
 
@@ -30,19 +30,22 @@ function NavBar() {
         </form>
 
         <div className="w-[30%] flex justify-center items-center">
-          <div className='w-[30%] flex justify-center items-center cursor-pointer'>
+          <Link to={"/account"} className='w-[30%] flex justify-center items-center cursor-pointer'>
             <RiAccountPinBoxFill className="text-3xl mr-2"/>
-            <h3 className=""> Account</h3>
-          </div>
+            <h3 className="">{user ? (`${user.first_name} ${user.last_name}`) : "Account"}</h3>
+          </Link>
 
-          <div className="w-[30%] flex justify-center items-center cursor-pointer">
+          <Link to={"/aboutus"} className="w-[30%] flex justify-center items-center cursor-pointer">
             <IoMdHelpCircle className='text-3xl mr-2' />
             <h3 className=""> Help</h3>
-          </div>
+          </Link>
 
           <Link to={"/cart"} className="w-[30%] flex justify-center items-center cursor-pointer">
-            <FaShoppingCart className='text-3xl mr-2' />
-            <h3 className="">{totalItems===0?"Cart":totalItems}</h3>
+            <div className="relative p-2">
+             <FaShoppingCart className='text-3xl mr-2' />
+              <div className="absolute w-7 h-7 bg-white rounded-full top-0 right-0 text-center border-2 border-black">{totalItems===0?"0":totalItems}</div>
+            </div>
+            <h3 className="">Cart</h3>
           </Link>
         </div>
       </div >

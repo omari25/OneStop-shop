@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import AboutUs from "./AboutUs";
 import NavBar from "./NavBar";
 import Home from "./Home";
 import Electronics from "./Electronics";
@@ -14,9 +13,11 @@ import SportingGoods from "./SportingGoods";
 import SingleProduct from "./SingleProduct";
 import CartProvider from "../CartContext";
 import Carts from "./Carts";
-
-// import Login from "./LoginForm";
-// import Signup from "./SignupForm";
+import Login from "./LoginForm";
+import Signup from "./SignupForm";
+import AboutUs from "./AboutUs";
+import Profile from "./Profile";
+// import Footer from "./Footer";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -34,9 +35,10 @@ function App() {
       <CartProvider>
         <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route exact path="/" element={<Home/>} />
+            <Route exact path="/" element={<Home  />} />
             <Route exact path="/aboutus" element={<AboutUs/>} />
-            <Route exact path="/cart" element={<Carts/>} />
+            <Route exact path="/account" element={<Profile user={user} setUser={setUser} />} />
+            <Route exact path="/cart" element={<Carts user={user} setUser={setUser}/>} />
             <Route exact path="/electronics"  element={<Electronics/>} />
             <Route exact path="/foodstuffs"  element={<FoodStuffs/>} />
             <Route exact path="/fashion"  element={<Fashion/>} />
@@ -46,8 +48,11 @@ function App() {
             <Route exact path="/sporting-goods"  element={<SportingGoods/>} />
             <Route exact path="/baby-products"  element={<BabyProducts/>} />
             <Route exact path="/products/:id"  element={<SingleProduct/>}/>
+            <Route exact path="/login" element={<Login user={user} setUser={setUser}/>} />
+            <Route exact path="/signup" element={<Signup user={user} setUser={setUser} />} />
           </Routes>
-      </CartProvider>
+        {/* <Footer /> */}
+        </CartProvider>
       </div>
   );
 }

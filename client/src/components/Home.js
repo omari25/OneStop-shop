@@ -5,7 +5,6 @@ import fooddata from '../fooddata';
 import sportsdata from '../sportsdata';
 // import { useNavigate } from 'react-router-dom';
 
-
 function Home( {category, setCategory} ){
   // const [items, setItems] = useState([])
 

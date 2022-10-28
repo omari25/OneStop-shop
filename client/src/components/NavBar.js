@@ -12,7 +12,6 @@ function NavBar({ user, setSearchInput, searchInput }) {
   const cart = useContext(CartContext);
   const totalItems=cart.items.reduce((acc,c)=>acc+c.quantity,0)
 
-
   return (
     <div className='sticky top-0 flex flex-col w-full h-32 mb-10 z-10 shadow-lg '>
 
@@ -21,7 +20,6 @@ function NavBar({ user, setSearchInput, searchInput }) {
         <Link to={"/"} className="w-[15%]">
             <img src={shopit} alt="" className="h-full" />
         </Link>
-
 
         <form className='w-[50%] flex justify-center items-center realtive'>
           <button><CiSearch className='fixed text-3xl top-4 ml-2 hover:text-slate-600 cursor-pointer' /></button>
@@ -50,7 +48,7 @@ function NavBar({ user, setSearchInput, searchInput }) {
           <Link to={"/cart"} className="w-[30%] flex justify-center items-center cursor-pointer">
             <div className="relative p-2">
              <FaShoppingCart className='text-3xl mr-2' />
-              <div className="absolute w-7 h-7 bg-white rounded-full top-0 right-0 text-center border-2 border-black">{totalItems===0?"0":totalItems}</div>
+              <div className="absolute w-7 h-7 bg-[red] rounded-full text-white top-0 right-0 text-center border-2 border-white">{totalItems===0?"0":totalItems}</div>
             </div>
             <h3 className="">Cart</h3>
           </Link>

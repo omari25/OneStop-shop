@@ -11,7 +11,6 @@ import Beauty from "./Beauty";
 import BabyProducts from "./BabyProducts";
 import SportingGoods from "./SportingGoods";
 import SearchBar from "./SearchBar";
-
 import SingleProduct from "./SingleProduct";
 import CartProvider from "../CartContext";
 import Carts from "./Carts";
@@ -25,10 +24,7 @@ function App() {
 
   const [searchInput, setSearchInput] = useState("")
 
-  
-
   const [data, setData] = useState([])
-
 
   useEffect(() => {
     fetch("/products")
@@ -36,9 +32,9 @@ function App() {
     .then((data) => {
       setData(data)
     })
-    }, [])
+  }, [])
 
-    const results = data.filter(data=>data.product_name.toLowerCase().includes(searchInput))
+  const results = data.filter(data=>data.product_name.toLowerCase().includes(searchInput))
 
 
   useEffect(() => {
@@ -52,7 +48,7 @@ function App() {
   return (
      <div className="bg-white w-full">
       <CartProvider>
-      <NavBar user={user} setUser={setUser} setSearchInput={setSearchInput} searchInput={searchInput} />
+      <NavBar user={user} setUser={setUser} searchInput={searchInput} setSearchInput={setSearchInput}/>
           <Routes>
             <Route exact path="/" element={<Home  />} />
             <Route exact path="/aboutus" element={<AboutUs/>} />

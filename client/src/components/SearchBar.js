@@ -1,30 +1,21 @@
-import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function SearchBar({results}) {
-    console.log(results)
 
     return (
-        <div className="grid grid-cols-4 gap-4">
-        <div className="flex w-full flex-wrap gap-4 justify-center ">
-        <p>Search Results</p>
-        <ul>
+      <div className="px-10">
+        <p className="mb-4">Search Results</p>
+        <div className="flex w-full flex-wrap gap-4">
           {results&&results?.map((result) => (
-              <div key={result.id} className="w-[250px] border-2">
-                <img src={result.image_url} />
-                <p>{result.product_name}</p>
-                <p>{result.price}</p>
-                </div>
+              <Link to={`/products/${result.id}`} key={result.id} className="w-[250px] p-2 shadow-xl mb-4">
+                <img src={result.image_url} alt="" className="w-full"/>
+                <p className="font-bold mb-2">{result.product_name}</p>
+                <p>ksh: {result.price}</p>
+              </Link>
             ))}
-        </ul>
-        
-      </div>
+        </div>
       </div>
       );
    }
-   
-   
-   
-   
-   
-   
+
 export default SearchBar

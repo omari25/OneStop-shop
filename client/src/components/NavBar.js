@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import { CiSearch } from "react-icons/ci";
 import { RiAccountPinBoxFill } from "react-icons/ri";
 import { IoMdHelpCircle } from "react-icons/io";
@@ -7,10 +6,6 @@ import { CartContext } from "../CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import shopit from "./images/Shop-It (1) 1.png";
-// import SearchBar from "./SearchBar";
-
-
-
 
 function NavBar({ user, setSearchInput, searchInput }) {
 
@@ -37,9 +32,7 @@ function NavBar({ user, setSearchInput, searchInput }) {
           onChange={(e) => setSearchInput(e.target.value)}
           />
           <Link to={searchInput === "" ? "/" : "/search/" + searchInput} >
-              <button className='bg-black w-20 h-[40px] text-[color:white] rounded-md hover:underline'> 
-              Search
-              </button>
+              <button className='bg-black w-20 h-[40px] text-[color:white] rounded-md hover:underline'>Search</button>
           </Link>
         </form>
 
@@ -65,7 +58,7 @@ function NavBar({ user, setSearchInput, searchInput }) {
       </div >
 
 
-      <div className='w-full h-1/2 text-[color:white] bg-black flex  justify-around items-center  max-md:flex-col '>
+      <div className='w-full h-1/2 text-[white] bg-black flex  justify-around items-center'>
         <Link to={"/electronics"} className="hover:underline ">Electronics</Link>
         <Link to={"/foodstuffs"} className="hover:underline">Food Stuffs</Link>
         <Link to={"/fashion"} className="hover:underline">Fashion</Link>

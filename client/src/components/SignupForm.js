@@ -33,7 +33,6 @@ function Signup({ user, setUser }) {
       if (r.ok) {
         r.json().then((user) => setUser(user));
         navigate("/");
-        // console.log(user)
       } else {
         r.json().then((err) => setErrors(err.errors));
       }

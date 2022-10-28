@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import { CiSearch } from "react-icons/ci";
 import { RiAccountPinBoxFill } from "react-icons/ri";
 import { IoMdHelpCircle } from "react-icons/io";
@@ -6,13 +7,16 @@ import { CartContext } from "../CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import shopit from "./images/Shop-It (1) 1.png";
+// import SearchBar from "./SearchBar";
 
 
 
-function NavBar({ user }) {
+
+function NavBar({ user, setSearchInput, searchInput }) {
 
   const cart = useContext(CartContext);
   const totalItems=cart.items.reduce((acc,c)=>acc+c.quantity,0)
+
 
   return (
     <div className='sticky top-0 flex flex-col w-full h-32 mb-10 z-10 shadow-lg '>
@@ -23,10 +27,20 @@ function NavBar({ user }) {
             <img src={shopit} alt="" className="h-full" />
         </Link>
 
+
         <form className='w-[50%] flex justify-center items-center realtive'>
           <button><CiSearch className='fixed text-3xl top-4 ml-2 hover:text-slate-600 cursor-pointer' /></button>
-          <input className="outline-none pl-12 h-[40px] w-[70%] mr-4 border border-slate-500 rounded-lg" placeholder="Search products, brands, and categories" type="text" />
-          <button className='bg-black w-20 h-[40px] text-[color:white] rounded-md hover:underline'> Search</button>
+          <input 
+          className="outline-none pl-12 h-[40px] w-[70%] mr-4 border border-slate-500 rounded-lg" 
+          placeholder="Search products, brands, and categories" 
+          type="text" 
+          onChange={(e) => setSearchInput(e.target.value)}
+          />
+          <Link to={searchInput === "" ? "/" : "/search/" + searchInput} >
+              <button className='bg-black w-20 h-[40px] text-[color:white] rounded-md hover:underline'> 
+              Search
+              </button>
+          </Link>
         </form>
 
         <div className="w-[30%] flex justify-center items-center">

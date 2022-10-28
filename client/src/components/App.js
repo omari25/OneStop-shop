@@ -10,6 +10,8 @@ import Fashion from "./Fashion";
 import Beauty from "./Beauty";
 import BabyProducts from "./BabyProducts";
 import SportingGoods from "./SportingGoods";
+import SearchBar from "./SearchBar";
+
 import SingleProduct from "./SingleProduct";
 import CartProvider from "../CartContext";
 import Carts from "./Carts";
@@ -20,6 +22,25 @@ import Profile from "./Profile";
 
 function App() {
   const [user, setUser] = useState(null);
+
+  const [searchInput, setSearchInput] = useState("")
+
+  
+
+  const [data, setData] = useState([])
+
+
+  useEffect(() => {
+    fetch("/products")
+    .then(response => response.json())
+    .then((data) => {
+      setData(data)
+        console.log(data)
+    })
+    }, [])
+
+    const results = data.filter(data=>data.product_name.toLowerCase().includes(searchInput))
+
 
   useEffect(() => {
     fetch("/me").then((r) => {
@@ -32,7 +53,7 @@ function App() {
   return (
      <div className="bg-white w-full">
       <CartProvider>
-        <NavBar user={user} setUser={setUser} />
+      <NavBar user={user} setUser={setUser} setSearchInput={setSearchInput} searchInput={searchInput} />
           <Routes>
             <Route exact path="/" element={<Home  />} />
             <Route exact path="/aboutus" element={<AboutUs/>} />
@@ -49,8 +70,10 @@ function App() {
             <Route exact path="/products/:id"  element={<SingleProduct/>}/>
             <Route exact path="/login" element={<Login user={user} setUser={setUser}/>} />
             <Route exact path="/signup" element={<Signup user={user} setUser={setUser} />} />
+            <Route path="/search/:keywords" element={<SearchBar results={results}/>}/>
           </Routes>
         </CartProvider>
+
       </div>
   );
 }

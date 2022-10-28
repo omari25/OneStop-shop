@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Slider from './Slider';
-// import FeaturedTitle from './FeaturedTitle';
-// import ProductList from './ProductList';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 

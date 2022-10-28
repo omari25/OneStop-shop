@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Slider from "./Slider";
 
+
 function Shop() {
     const [shop, setShop] = useState([])
     useEffect(() => {

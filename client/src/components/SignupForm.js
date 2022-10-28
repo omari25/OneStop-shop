@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 import pic from "./images/image2.png";
 
 function Signup({ user, setUser }) {
@@ -40,7 +41,8 @@ function Signup({ user, setUser }) {
   }
 
   return (
-    <div className="h-full w-full flex max-md:flex-col	">
+    <>
+    <div className="h-full w-full flex max-md:flex-col	mb-10">
       <div className="w-2/4 max-md:w-full ">
         <img className="w-screen h-screen" src={pic} alt="" />
       </div>
@@ -131,6 +133,8 @@ function Signup({ user, setUser }) {
         </form>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

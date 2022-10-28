@@ -18,8 +18,9 @@ function Profile({ user, setUser }) {
         <div className="w-[500px] bg-[#e7e7e7] h-[450px] rounded-lg flex flex-col items-center">
             <img className="w-[160px] rounded-full my-6" src={pic3} alt="" />
             <div className="flex flex-col justify-center items-center">
-                <p className="mb-4 text-2xl font-bold">{user ? (`${user.first_name} ${user.last_name}`) : 'Please sign in'}</p>
-                <p className="mb-4">{user ? (user.email) : null }</p>
+                <p className="mb-2 text-2xl font-bold">{user ? (`${user.first_name} ${user.last_name}`) : 'Please sign in'}</p>
+                <p className="mb-2">{user ? (user.email) : null }</p>
+                <p className="mb-4">{user ? (user.phone_number) : null }</p>
                 { user ?
                 <button className="mt-12 px-6 py-3 border-2 border-[red] bg-[white] rounded-md text-[black]" onClick={handleLogoutClick}>Logout</button> 
                 : <Link to={"/login"} className="mt-12 px-6 py-3 border-2 border-black bg-[white] rounded-md text-[black]">Sign In</Link>}

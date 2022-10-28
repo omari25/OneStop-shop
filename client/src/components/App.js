@@ -17,7 +17,6 @@ import Login from "./LoginForm";
 import Signup from "./SignupForm";
 import AboutUs from "./AboutUs";
 import Profile from "./Profile";
-// import Footer from "./Footer";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -31,7 +30,7 @@ function App() {
   }, []);
   
   return (
-     <div className="bg-white w-full h-full">
+     <div className="bg-white w-full">
       <CartProvider>
         <NavBar user={user} setUser={setUser} />
           <Routes>
@@ -51,7 +50,6 @@ function App() {
             <Route exact path="/login" element={<Login user={user} setUser={setUser}/>} />
             <Route exact path="/signup" element={<Signup user={user} setUser={setUser} />} />
           </Routes>
-        {/* <Footer /> */}
         </CartProvider>
       </div>
   );

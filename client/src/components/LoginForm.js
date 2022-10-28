@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 import pic from "./images/image2.png";
 
 function Login({ user, setUser }) {
@@ -29,7 +30,8 @@ function Login({ user, setUser }) {
   }
 
   return (
-    <div className="h-full w-full flex max-md:flex-col	">
+    <>
+    <div className="h-full w-full flex max-md:flex-col mb-10">
         <div className="w-2/4 max-md:w-full">
             <img className="w-full h-screen" src={pic} alt="" />
         </div>
@@ -61,10 +63,12 @@ function Login({ user, setUser }) {
                     />
                 </div>
                 <button className="w-full bg-[red] p-3 rounded-md text-white" type="submit">Login</button>
-                <p className="text-center mt-8">Already have an account? <NavLink to="/signup" className="text-[blue]">Signup</NavLink></p>
+                <p className="text-center mt-8">Don't have an account? <NavLink to="/signup" className="text-[blue]">Signup</NavLink></p>
             </form>
         </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

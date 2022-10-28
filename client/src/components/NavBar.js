@@ -36,25 +36,12 @@ function NavBar({ user, setSearchInput, searchInput }) {
           type="text" 
           onChange={(e) => setSearchInput(e.target.value)}
           />
-          {/* <Link to={searchInput === "" ? "/" : "/search/" + searchInput}  >
-              <button className='bg-black w-20 h-[40px] text-[color:white] rounded-md hover:underline'> Search</button>
-          </Link> */}
           <Link to={searchInput === "" ? "/" : "/search/" + searchInput} >
               <button className='bg-black w-20 h-[40px] text-[color:white] rounded-md hover:underline'> 
               Search
               </button>
           </Link>
-          {/* <button className='bg-black w-20 h-[40px] text-[color:white] rounded-md hover:underline'> Search</button> */}
         </form>
-
-        {/* <ul>
-          {results.map((result) => (
-              <li key={result.product_id}>
-                {result.product_name}
-                <img src={result.image_url} alt="" className="w-full"/>
-              </li>
-            ))}
-        </ul> */}
 
         <div className="w-[30%] flex justify-center items-center">
           <Link to={"/account"} className='w-[30%] flex justify-center items-center cursor-pointer'>

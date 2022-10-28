@@ -17,7 +17,6 @@ function Shop() {
     }, [])
 
     
-    
     return (
       <div>
         <Slider/>

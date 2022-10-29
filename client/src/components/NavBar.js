@@ -37,7 +37,7 @@ function NavBar({ user, setSearchInput, searchInput }) {
         <div className="w-[30%] flex justify-center items-center">
           <Link to={"/account"} className='w-[30%] flex justify-center items-center cursor-pointer'>
             <RiAccountPinBoxFill className="text-3xl mr-2"/>
-            <h3 className="">{user ? (`${user.first_name} ${user.last_name}`) : "Account"}</h3>
+            <h3 className="">{user ? (`${user.first_name}`) : "Account"}</h3>
           </Link>
 
           <Link to={"/aboutus"} className="w-[30%] flex justify-center items-center cursor-pointer">

@@ -21,7 +21,12 @@
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 AdminUser.create!(email: 'admin2@example.com', password: 'qwertyuiop', password_confirmation: 'qwertyuiop')
     
-User.create( first_name: "Omar", last_name: "Mahat", email: "j@mail.com", phone_number: 23456789, password: "1234567", password_confirmation: "1234567")
+User.create( first_name: "Omar", last_name: "Mahat", email: "omar@mail.com", phone_number: 712345678, password: "1234567", password_confirmation: "1234567")
+User.create( first_name: "Innocent", last_name: "Ongeri", email: "innnocent@mail.com", phone_number: 712345679, password: "1234567", password_confirmation: "1234567")
+User.create( first_name: "Salome", last_name: "Mabonga", email: "salome@mail.com", phone_number: 722345678, password: "1234567", password_confirmation: "1234567")
+User.create( first_name: "George", last_name: "Kinyanjui", email: "george@mail.com", phone_number: 715345678, password: "1234567", password_confirmation: "1234567")
+User.create( first_name: "Esther", last_name: "Odhiambo", email: "esther@mail.com", phone_number: 712245678, password: "1234567", password_confirmation: "1234567")
+User.create( first_name: "Kenneth", last_name: "Gichuka", email: "kenneth@mail.com", phone_number: 712348678, password: "1234567", password_confirmation: "1234567")
 
 
 Category.create!(name: "Electronics")

@@ -66,7 +66,7 @@ function Home( ){
       <div className="w-full">
         <Slider />
         {/* <FeaturedTitle className=" py-10" text= "Shop by Category" /> */}
-
+        <h1>Electronics</h1>
         <div className='flex w-full flex-wrap gap-4 justify-center mb-8 '>
           {newElectronics.map((electronics)=>(
               <Link to={`/products/${electronics.id}`} key={electronics.id} className="w-[220px] p-2 shadow-xl mb-4">

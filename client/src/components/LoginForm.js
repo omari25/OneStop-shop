@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import Footer from "./Footer";
-import pic from "./images/image2.png";
+import pic from "./images/login1.jpg";
 
 function Login({ user, setUser }) {
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ function Login({ user, setUser }) {
     <>
     <div className="h-full w-full flex max-md:flex-col mb-10">
         <div className="w-2/4 max-md:w-full">
-            <img className="w-full h-screen" src={pic} alt="" />
+            <img className="w-full " src={pic} alt="" />
         </div>
         <div className="w-2/4 max-md:w-full flex justify-center items-center">
             <form onSubmit={handleSubmit} className="px-[6vw] signup-form w-full">

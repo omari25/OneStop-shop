@@ -1,4 +1,8 @@
 import React from 'react'
+import { PayPalButtons } from "@paypal/react-paypal-js";
+
+
+
 
 function Cart({cart,c}) {
 
@@ -31,6 +35,9 @@ function Cart({cart,c}) {
        {cart.getProductQuantity(c.id)}
    <button  onClick={() => cart.removeOneFromCart(c.id)} className='bg-[color:black]  font-extrabold text-[color:white] p-2.5 border-none  rounded-md w-12 h-12 ml-4  text-sm cursor-pointer hover:scale-125'>
   - </button>
+
+ 
+
     </div>
    </div>
    </div>

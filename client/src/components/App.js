@@ -10,6 +10,9 @@ import CartProvider from "../CartContext";
 import React, { useEffect, useState } from "react";
 import Login from "./LoginForm";
 import Signup from "./SignupForm";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -24,8 +27,10 @@ function App() {
   
   return (
    
-     
+   
       <CartProvider>
+        <PayPalScriptProvider
+    options={{ "client-id": process.env.REACT_APP_PAYPAL_CLIENT_ID }}>
        <NavBar />
           <Routes>
             <Route exact path="/" element={<Home/>} />
@@ -35,9 +40,10 @@ function App() {
             <Route exact path="/" element={<Signup user={user} setUser={setUser}/>}/>
             <Route exact path="/login" element={<Login user={user} setUser={setUser}/>}/>
           </Routes>
+          </PayPalScriptProvider>
         </CartProvider>
       
-   
+      
      
    
   );

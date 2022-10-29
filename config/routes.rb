@@ -1,5 +1,8 @@
 
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users, only: [:destroy, :index]
 
@@ -9,5 +12,6 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   resources :products, only: [:index, :show]
   resources :categories, only: [:index, :show]
+  patch "/billing", to: "bills#create"
 end
 

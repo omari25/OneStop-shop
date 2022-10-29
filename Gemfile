@@ -74,4 +74,9 @@ group :test do
   gem "webdrivers"
 end
 
+gem 'activeadmin'
+gem 'devise'
+gem 'sass-rails'
+
+
 gem "active_model_serializers", "~> 0.10.12"

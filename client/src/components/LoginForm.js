@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import pic from "./images/image2.png";
+import Footer from "./Footer";
+import pic from "./images/login1.jpg";
 
 function Login({ setUser }) {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ function Login({ setUser }) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => {setUser(user)});
-        navigate("/home");
+        navigate("/");
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
@@ -28,9 +29,10 @@ function Login({ setUser }) {
   }
 
   return (
-    <div className="h-full w-full flex max-md:flex-col	">
+    <>
+    <div className="h-full w-full flex max-md:flex-col mb-10">
         <div className="w-2/4 max-md:w-full">
-            <img className="w-full h-screen" src={pic} alt="" />
+            <img className="w-full " src={pic} alt="" />
         </div>
         <div className="w-2/4 max-md:w-full flex justify-center items-center">
             <form onSubmit={handleSubmit} className="px-[6vw] signup-form w-full">
@@ -60,10 +62,12 @@ function Login({ setUser }) {
                     />
                 </div>
                 <button className="w-full bg-[red] p-3 rounded-md text-white" type="submit">Login</button>
-                <p className="text-center mt-8">Already have an account? <NavLink to="/" className="text-[blue]">Signup</NavLink></p>
+                <p className="text-center mt-8">Don't have an account? <NavLink to="/signup" className="text-[blue]">Signup</NavLink></p>
             </form>
         </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

@@ -1,0 +1,27 @@
+.slider{
+    width: 100%;
+    padding: 0 2vw;
+    position: relative;
+    margin-bottom: 24px;
+}
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-icon-left, .slide-icon-right{
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    position: absolute;
+}
+
+.slide-icon-right{
+    right: 5vw;
+    top: 42%;
+}
+
+.slide-icon-left{
+    left: 5vw;
+    top: 42%;
+}

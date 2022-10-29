@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 import pic from "./images/login1.jpg";
 
-function Login({ user, setUser }) {
+function Login({ setUser }) {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");

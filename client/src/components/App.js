@@ -75,7 +75,6 @@ function App() {
           </PayPalScriptProvider>
 
         </CartProvider>
-
       </div>
   );
 }

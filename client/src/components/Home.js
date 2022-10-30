@@ -39,7 +39,7 @@ function Home( ){
     })
   }, [])
 
-  const newFashion = fashion.slice(0, 6)
+  const newFashion = fashion.slice(9,15)
 
   useEffect(() => {
     fetch('categories/4')
@@ -66,7 +66,7 @@ function Home( ){
       <div className="w-full">
         <Slider />
         {/* <FeaturedTitle className=" py-10" text= "Shop by Category" /> */}
-        <h1>Electronics</h1>
+        <h1 className='ml-10 text-2xl font-bold mb-2'>Electronics</h1>
         <div className='flex w-full flex-wrap gap-4 justify-center mb-8 '>
           {newElectronics.map((electronics)=>(
               <Link to={`/products/${electronics.id}`} key={electronics.id} className="w-[220px] p-2 shadow-xl mb-4">
@@ -77,7 +77,7 @@ function Home( ){
           ))}
         </div>
       
-          
+        <h1 className='ml-10 text-2xl font-bold mb-2'>Food stuffs</h1>
         <div className='flex w-full flex-wrap gap-4 justify-center mb-8'>
           {newFoodStuffs.map((foodStuffs)=>(
               <Link to={`/products/${foodStuffs.id}`} key={foodStuffs.id} className="w-[220px] shadow-xl mb-4">
@@ -89,7 +89,8 @@ function Home( ){
         </div>
 
         <img className="w-full h-80 px-6 mb-6" src="https://t3.ftcdn.net/jpg/04/45/16/96/360_F_445169635_V92LnhJXoMapMXuR4k9bVIu3lHZhDnWc.jpg" alt=""/> 
-
+        
+        <h1 className='ml-10 text-2xl font-bold mb-2'>Fashion</h1>
         <div className='flex w-full flex-wrap gap-4 justify-center mb-8'>
           {newFashion.map((fashion)=>(
               <Link to={`/products/${fashion.id}`} key={fashion.id} className="w-[220px] shadow-xl mb-4">
@@ -100,6 +101,7 @@ function Home( ){
           ))}
         </div>
 
+        <h1 className='ml-10 text-2xl font-bold mb-2'>Books</h1>
         <div className='flex w-full flex-wrap gap-4 justify-center mb-8'>
           {newBooks.map((books)=>(
               <Link to={`/products/${books.id}`} key={books.id} className="w-[220px] shadow-xl mb-4">
@@ -112,6 +114,7 @@ function Home( ){
 
         <img className="w-full h-80 px-6 mb-6" src="https://img.freepik.com/free-vector/black-friday-sale-with-realistic-3d-paper-page_1361-3675.jpg?w=1380&t=st=1666600766~exp=1666601366~hmac=fcde90b5347db30e1d9353087909bef7a1128fd62740b2ec6d2cdd3cf04ff6fb" alt=""/> 
         
+        <h1 className='ml-10 text-2xl font-bold mb-2'>Health and beauty</h1>
         <div className='flex w-full flex-wrap gap-4 justify-center mb-8'>
           {newHealth.map((health)=>(
               <Link to={`/products/${health.id}`} key={health.id} className="w-[220px] shadow-xl mb-4">

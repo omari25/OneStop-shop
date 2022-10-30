@@ -55,7 +55,7 @@ function App() {
               <Route exact path="/aboutus" element={<AboutUs/>} />
               <Route exact path="/account" element={<Profile user={user} setUser={setUser} />} />
               <Route exact path="/cart" element={<Carts user={user} setUser={setUser}/>} />
-              <Route exact path="/checkout" element={<Checkout />} />
+              <Route exact path="/checkout" element={<Checkout user={user} setUser={setUser}/>} />
               <Route exact path="/electronics"  element={<Electronics/>} />
               <Route exact path="/foodstuffs"  element={<FoodStuffs/>} />
               <Route exact path="/fashion"  element={<Fashion/>} />

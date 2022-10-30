@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className='w-full h-25 bg-black'>
 
-      <div className='w-full m-auto py-6 px-40 flex justify-between'>
+      <div className='w-full m-auto py-6 px-[6vw] flex justify-between'>
         <div className='flex flex-col space-y-1'>
           <h1 className='text-xl font-bold text-white'>Links</h1>
           <a className='text-white' href="/">Home</a>
@@ -23,7 +23,7 @@ const Footer = () => {
 
         <div className='flex flex-col space-y-1'>
           <h1 className='text-xl font-bold text-white'>Newsletters</h1>
-          <input className="required rounded border-red-500 focus:outline-none p-2" placeholder="Enter Your Email Address"  type="text"/>
+          <input className="required w-[100%] rounded border-red-500 focus:outline-none p-2" placeholder="Enter Your Email Address"  type="text"/>
           <a className='text-white' href="/">Subscribe</a>
         </div>
 

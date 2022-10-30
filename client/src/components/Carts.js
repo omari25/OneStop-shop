@@ -1,9 +1,11 @@
 import { CartContext } from "../CartContext";
 import { useContext } from "react";
 import Cart from "./Cart";
+import { useNavigate } from "react-router-dom";
 
 function Carts({ user }) {
   const cart = useContext(CartContext);
+  const navigate = useNavigate()
 
   const items = cart.items.map(c => {
     return <Cart key={c.id} cart={cart} c={c} />
@@ -11,10 +13,10 @@ function Carts({ user }) {
 
   function handleUser(){
     if (user){
-      console.log(user.first_name)
+      navigate("/checkout")
     }
     else{
-      console.log("no user");
+      navigate("/account")
     }
   }
 

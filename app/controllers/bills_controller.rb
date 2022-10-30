@@ -1,8 +1,8 @@
 class BillsController < ApplicationController
     # skip_before_action :authorize, only: [:create]
     
-    def create
-        bill = User.upodate!(user_params)
+    def update
+        bill = User.update!(user_params)
         render json: bill
     end
 

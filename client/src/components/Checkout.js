@@ -1,6 +1,20 @@
 import Footer from "./Footer"
+import PaypalCheckoutButton from "./PaypalCheckoutButton";
+import { useState } from "react";
+import { CartContext } from "../CartContext";
+import { useContext } from "react";
+
 
 function Checkout() {
+  const cart = useContext(CartContext);
+  const [enabled, setEnabled] = useState(false);
+  const[inCart,setIncart]=useState(cart.getTotalCost())
+
+
+
+
+
+
   return (
     <>
       <div className="h-full w-full flex max-md:flex-col font-serif mb-10">
@@ -55,7 +69,7 @@ function Checkout() {
 
             <div className="flex justify-between mb-2">
               <h1>Item price</h1>
-              <h1 className="">Ksh 2,000</h1>
+              <h1 className="">Ksh {cart.getTotalCost()}</h1>
             </div>
 
             <div className="flex justify-between mb-2">
@@ -65,7 +79,7 @@ function Checkout() {
 
             <div className="flex justify-between mb-2">
               <h1>Total</h1>
-              <h1 className=" text-2xl font-extrabold">Ksh 2,000</h1>
+              <h1 className=" text-2xl font-extrabold">Ksh {cart.getTotalCost()}</h1>
             </div>
 
           </div>
@@ -73,7 +87,12 @@ function Checkout() {
           <div className=" mt-4 w-fill">
             <p className="text-sm mb-2 mx-4">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
             <p className="text-sm mb-4 mx-4">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span className="font-black">privacy policy.</span> </p>
-            <button className="w-full bg-[red] p-3 rounded-md font-bold text-white" type="submit">Place Order</button>
+            <button onClick={() => {
+                            setEnabled(!enabled);
+                            setIncart(cart.getTotalCost())
+                        }} className={`${!enabled ?''  : 'hidden'} w-full bg-[red] p-3 rounded-md font-bold text-white" type="submit`}>Place Order</button>
+            <div  className={`${enabled ?''  : 'hidden'}
+            `}><PaypalCheckoutButton inCart={inCart}/></div>
           </div>
 
         </div>

@@ -1,6 +1,5 @@
 import { CartContext } from "../CartContext";
 import { useContext,useState,useEffect} from "react";
-import PaypalCheckoutButton from "./PaypalCheckoutButton";
 import Cart from "./Cart";
 import { useNavigate } from "react-router-dom";
 
@@ -47,7 +46,6 @@ console.log("carts",cart.getTotalCost())
           
           <button onClick={handleUser} className='bg-[red] px-8 py-2 rounded-md mb-4'>CHECKOUT {cart.getTotalCost()} </button>
         </div>
-   <PaypalCheckoutButton inCart={inCart}/>
       </div>
     </>
   )

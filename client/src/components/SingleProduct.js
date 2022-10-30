@@ -13,7 +13,6 @@ function SingleProduct({user}){
 
     const cart = useContext(CartContext);
     const[inCart,setIncart]=useState(0)
-    const[toggle,setToggle]=useState(false)
   
   
 
@@ -27,7 +26,6 @@ function SingleProduct({user}){
     }, [])
 
     function handleCheckOut(product) {
-        setToggle(true)
        if(cart.singleTotal(product.id)===undefined){
         console.log("product",product.price) 
         setIncart(product.price)
@@ -45,10 +43,10 @@ function SingleProduct({user}){
 
     function handleUser(){
         if (user){
-          navigate("/checkout")
+          navigate(`/checkout/${id}`)
         }
         else{
-          navigate("/account")
+            navigate(`/checkout/${id}`)
         }
     }
 
@@ -69,8 +67,6 @@ function SingleProduct({user}){
 
                         <div className="flex justify-between w-full items-center mt-16">
                             <button onClick={() => {cart.addOneToCart(product.id,product)}} className="bg-[black] text-[white] w-[40%] py-2 rounded-md">Add to cart</button>
-                            <button onClick={()=>handleCheckOut(product)} className="bg-[black] text-[white] w-[40%] py-2 rounded-md">Buy now</button>
-                        <PaypalSingleCheckout inCart={inCart} product={product} />
                             <button onClick={handleUser} className="bg-[black] text-[white] w-[40%] py-2 rounded-md" >Buy now</button>
                         </div>
                     </div>

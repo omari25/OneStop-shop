@@ -1,6 +1,8 @@
-import React from 'react'
+import { useState} from "react";
 
-function Cart({ cart, c }) {
+
+function Cart({ cart, c ,setBasket,inBascket}) {
+  console.log("cart",inBascket)
 
   return (
     <div className='bg-slate-100 w-full mb-6 rounded-2xl shadow-2xl flex justify-around py-4'>
@@ -13,9 +15,9 @@ function Cart({ cart, c }) {
 
       <div className='flex flex-col w-[15%] items-center '>
         <h1 className='text-center font-bold text-xl mb-4'>Quantity</h1>
-        <button onClick={() => cart.addOneToCart(c.id)} className='bg-[black]  text-[white] font-bold rounded-md w-12 h-12 text-2xl cursor-pointer mt-8 mb-6'>+</button>
+        <button onClick={() => {cart.addOneToCart(c.id);setBasket(cart.getTotalCost())}} className='bg-[black]  text-[white] font-bold rounded-md w-12 h-12 text-2xl cursor-pointer mt-8 mb-6'>+</button>
         <p>{cart.getProductQuantity(c.id)}</p>
-        <button onClick={() => cart.removeOneFromCart(c.id)} className='bg-[black]  text-[white] font-bold rounded-md w-12 h-12 text-2xl cursor-pointer mt-6'>-</button>
+        <button onClick={() => {cart.removeOneFromCart(c.id);setBasket(cart.getTotalCost())}} className='bg-[black]  text-[white] font-bold rounded-md w-12 h-12 text-2xl cursor-pointer mt-6'>-</button>
       </div>
 
       <div className=''>
@@ -24,7 +26,7 @@ function Cart({ cart, c }) {
           <p>{`Ksh ${cart.getProductQuantity(c.id) * c.price}`}</p>
         </div>
         
-        <button onClick={() => cart.deleteFromCart(c.id)} className=' font-semibold p-3 w-40 text-[white] rounded-md mt-20 text-sm cursor-pointer bg-[red] '>REMOVE</button>
+        <button onClick={() => {cart.deleteFromCart(c.id);setBasket(cart.getTotalCost())}} className=' font-semibold p-3 w-40 text-[white] rounded-md mt-20 text-sm cursor-pointer bg-[red] '>REMOVE</button>
       </div>
 
     </div>

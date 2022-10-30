@@ -2,11 +2,9 @@ import NavBar from "./NavBar"
 
 
 
-
 function Checkout() {
   return (
     <>
-<NavBar/>
 
 
     <div className="h-full w-full flex max-md:flex-col  max-md:absolute 	font-serif">

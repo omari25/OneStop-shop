@@ -18,6 +18,8 @@ import Login from "./LoginForm";
 import Signup from "./SignupForm";
 import AboutUs from "./AboutUs";
 import Profile from "./Profile";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -48,7 +50,10 @@ function App() {
   return (
      <div className="bg-white w-full">
       <CartProvider>
+      <PayPalScriptProvider
+    options={{ "client-id": process.env.REACT_APP_PAYPAL_CLIENT_ID }}>
       <NavBar user={user} setUser={setUser} searchInput={searchInput} setSearchInput={setSearchInput}/>
+         
           <Routes>
             <Route exact path="/" element={<Home  />} />
             <Route exact path="/aboutus" element={<AboutUs/>} />
@@ -67,6 +72,8 @@ function App() {
             <Route exact path="/signup" element={<Signup user={user} setUser={setUser} />} />
             <Route path="/search/:keywords" element={<SearchBar results={results}/>}/>
           </Routes>
+          </PayPalScriptProvider>
+
         </CartProvider>
 
       </div>
@@ -74,6 +81,3 @@ function App() {
 }
 
 export default App;
-
-
-     

@@ -1,5 +1,8 @@
 ActiveAdmin.register AdminUser do
   permit_params :email, :password, :password_confirmation
+  # controller do
+  #   skip_before_action :verify_authenticity_token
+  # end
 
   index do
     selectable_column

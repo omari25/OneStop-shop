@@ -6,7 +6,9 @@ export const CartContext = createContext({
     addOneToCart: () => {},
     removeOneFromCart: () => {},
     deleteFromCart: () => {},
-    getTotalCost: () => {}
+    getTotalCost: () => {},
+    clearCart:()=>{},
+    singleTotal:()=>{}
 });
 
 export function CartProvider({children}) {
@@ -76,7 +78,7 @@ export function CartProvider({children}) {
         setCartProducts(
             cartProducts =>
             cartProducts.filter(currentProduct => {
-                return currentProduct.id != id;
+                return currentProduct.id !==id;
             })  
         )
     }
@@ -86,13 +88,28 @@ export function CartProvider({children}) {
         return totalPrice
     }
 
+    function clearCart(){
+       return setCartProducts([])  
+    }
+
+   function singleTotal(id){
+   const singleProduct= cartProducts.find(product => product.id === id)
+
+    return singleProduct
+
+
+   }
+
+
     const contextValue = {
         items: cartProducts,
         getProductQuantity,
         addOneToCart,
         removeOneFromCart,
         deleteFromCart,
-        getTotalCost
+        getTotalCost,
+        clearCart,
+        singleTotal
     }
 
     return (

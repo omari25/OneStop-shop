@@ -1,12 +1,25 @@
 import { CartContext } from "../CartContext";
-import { useContext } from "react";
+import { useContext,useState,useEffect} from "react";
+import PaypalCheckoutButton from "./PaypalCheckoutButton";
 import Cart from "./Cart";
+
 
 function Carts({ user }) {
   const cart = useContext(CartContext);
+  const[inBascket,setBasket]=useState(cart.getTotalCost())
+  const[inCart,setIncart]=useState(cart.getTotalCost())
+
+useEffect(() => {
+  setIncart(cart.getTotalCost())
+}, [inBascket])
+
+
+console.log("incart",inCart)
+  
+console.log("carts",cart.getTotalCost())
 
   const items = cart.items.map(c => {
-    return <Cart key={c.id} cart={cart} c={c} />
+    return <Cart key={c.id} cart={cart} c={c} setBasket={setBasket} inBascket={inBascket} />
   })
 
   function handleUser(){
@@ -32,7 +45,7 @@ function Carts({ user }) {
           
           <button onClick={handleUser} className='bg-[red] px-8 py-2 rounded-md mb-4'>CHECKOUT {cart.getTotalCost()} </button>
         </div>
-
+   <PaypalCheckoutButton inCart={inCart}/>
       </div>
     </>
   )

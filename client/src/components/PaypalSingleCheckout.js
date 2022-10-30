@@ -5,14 +5,14 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const PaypalCheckoutButton = (props) => {
+const PaypalSingleCheckout = (props) => {
     const [paidFor, setPaidFor] = useState(false);
     const [error, setError] = useState(null);
     const navigate=useNavigate();
     const cart = useContext(CartContext); 
 
 
-    const { inCart} = props;
+    const { inCart,product} = props;
 
 console.log("inCart",inCart)
     
@@ -24,8 +24,8 @@ console.log("total",cart.getTotalCost() )
         // if response is success
         if (orderId){
           setPaidFor(true);
+          cart.deleteFromCart(product.id)
           navigate("/");
-          cart.clearCart()
         }
         // Refresh user's account or subscription status
     
@@ -67,7 +67,7 @@ createOrder={(data, actions) => {
     return actions.order.create({
       purchase_units: [
         {
-          description:"shop-it",
+          description:product.product_name,
           amount: {
             value:inCart
           }
@@ -98,4 +98,4 @@ createOrder={(data, actions) => {
     );
   }
   
-  export default PaypalCheckoutButton;
+  export default PaypalSingleCheckout;

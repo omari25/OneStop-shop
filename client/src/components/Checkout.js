@@ -3,11 +3,11 @@ import Footer from "./Footer"
 function Checkout() {
   return (
     <>
-      <div className="h-full w-full flex max-md:flex-col font-serif">
+      <div className="h-full w-full flex max-md:flex-col font-serif mb-10">
 
         <div className="w-2/4 max-md:w-full flex justify-center items-center max-md:mt-0">
           <form className="px-[6vw] checkout-form w-full">
-            <h1 className="text-2xl font-bold text-center mb-6">Billing Details</h1>
+            <h1 className="text-2xl font-bold text-center mb-4">Billing Details</h1>
 
             <div className="flex justify-between">
               <div className="w-[45%]">

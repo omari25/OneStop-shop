@@ -49,6 +49,8 @@ function SingleProduct({user}){
             navigate(`/checkout/${id}`)
         }
     }
+   
+
 
     return (
         <div>

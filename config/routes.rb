@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   resources :products, only: [:index, :show]
   resources :categories, only: [:index, :show]
-  patch "/billing", to: "bills#update"
+  patch "/billing/:id", to: "bills#update"
 end
 

@@ -66,7 +66,7 @@ function Home( ){
       <div className="w-full">
         <Slider />
         {/* <FeaturedTitle className=" py-10" text= "Shop by Category" /> */}
-
+        <h1>Electronics</h1>
         <div className='flex w-full flex-wrap gap-4 justify-center mb-8 '>
           {newElectronics.map((electronics)=>(
               <Link to={`/products/${electronics.id}`} key={electronics.id} className="w-[220px] p-2 shadow-xl mb-4">
@@ -88,7 +88,7 @@ function Home( ){
           ))}
         </div>
 
-        <img className="w-full h-72 px-6 mb-6" src="https://img.freepik.com/free-vector/black-friday-sale-with-realistic-3d-paper-page_1361-3675.jpg?w=1380&t=st=1666600766~exp=1666601366~hmac=fcde90b5347db30e1d9353087909bef7a1128fd62740b2ec6d2cdd3cf04ff6fb" alt=""/> 
+        <img className="w-full h-80 px-6 mb-6" src="https://t3.ftcdn.net/jpg/04/45/16/96/360_F_445169635_V92LnhJXoMapMXuR4k9bVIu3lHZhDnWc.jpg" alt=""/> 
 
         <div className='flex w-full flex-wrap gap-4 justify-center mb-8'>
           {newFashion.map((fashion)=>(
@@ -110,7 +110,7 @@ function Home( ){
           ))}
         </div>
 
-        <img className="w-full h-72 px-6 mb-6" src="https://img.freepik.com/free-vector/black-friday-sale-with-realistic-3d-paper-page_1361-3675.jpg?w=1380&t=st=1666600766~exp=1666601366~hmac=fcde90b5347db30e1d9353087909bef7a1128fd62740b2ec6d2cdd3cf04ff6fb" alt=""/> 
+        <img className="w-full h-80 px-6 mb-6" src="https://img.freepik.com/free-vector/black-friday-sale-with-realistic-3d-paper-page_1361-3675.jpg?w=1380&t=st=1666600766~exp=1666601366~hmac=fcde90b5347db30e1d9353087909bef7a1128fd62740b2ec6d2cdd3cf04ff6fb" alt=""/> 
         
         <div className='flex w-full flex-wrap gap-4 justify-center mb-8'>
           {newHealth.map((health)=>(

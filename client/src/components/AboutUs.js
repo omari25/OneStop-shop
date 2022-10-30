@@ -1,74 +1,37 @@
 import React from 'react'
+import Footer from './Footer';
+import image from "./images/imageabout.png"
 
 function AboutUs() {
   return (
-    <>
-    <div className=' bg-white
-        text-center  bg-center h-500 
-    '>
-    <div className=' bg-white
-        text-center  bg-center h-50 w-70 
-    '> 
-      <h1 className='text-2xl font-bold text-black bg-center'>About Us</h1>
-        <br/>
-        <img src={'./images/imageabout.png'}  alt={" loading"}/>  
+    <div>
+
+      <div className='w-full'>
+        <img src={image}  alt="" className='w-full'/> 
+      </div>
+
+      <div className='mt-8 bg-slate-200 flex flex-col items-center'>
+        <div className='w-[50%] my-8 px-10 py-4 rounded border border-black'>
+          <h1 className='text-2xl font-bold text-center mb-4'>Shop-It</h1>
+          <p>We are the best online shopping center, with all the good and amazing products you need with just a click of a button. Make sure to share and subscribe on all our social media pages Get  more Today!! </p>
+        </div>
+        <div className='w-[50%] mb-8 px-10 py-4 rounded border border-black'>
+          <h1 className='text-2xl font-bold text-center mb-4'>Mission</h1>
+          <p>We help people achieve independence by making it easier to start, run, and grow a business by connecting clients to vendors online.</p>
+        </div>
+        <div className='w-[50%] mb-8 px-10 py-4 rounded border border-black'>
+          <h1 className='text-2xl font-bold text-center mb-4'>Vision</h1>
+          <p className='text-center'>To be the leading online shopping center in Africa and beyond</p>
+        </div>
+        <div className='w-[50%] mb-8 px-10 py-4 rounded border border-black'>
+          <h1 className='text-2xl font-bold text-center mb-4'>Our Values</h1>
+          <p>Loyalty, Honesty, Trust Ingenuity,Accountability Simplicity Respect And Value-centricity </p>
+        </div>
+      </div>
+
+      <Footer />
+      
     </div>
-      <br/>
-      <div className=' bg-slate-200
-        text-center  bg-center  
-    '> 
-      <hr/>
-      <p className="text-black text-bold, center"></p>
-      <br />
-      <h1 className='text-xl font-bold text-black'>Shop-It</h1>
-      <p className="text-black">
-      We are the best online shopping center,<br /> 
-      with all the good and amazing products <br />
-      you need with just <br />
-       a click of a button. <br />
-       Make sure to share and subscribe <br /> on
-      all our social media pages
-      Get  more Today!!
-      </p>
-      
-      <br />
-      </div>
-      <div className=' bg-slate-200
-        text-center  bg-center  
-    '> 
-      <h1 className='text-xl font-bold text-black'>Mission</h1>
-      <p className="text-black">
-      We help people achieve independence <br />by making it easier to start,<br/>
-      run, and grow <br />a business by connecting clients to vendors online.
-
-
-      </p>
-      
-      <br />
-      </div>
-      <div className=' bg-slate-200
-        text-center  bg-center  
-    '> 
-      <h1 className='text-xl font-bold text-black'>Vision</h1>
-      <p className="text-black">
-      To be the leading online <br />shopping center <br />in Africa 
-      and beyond
-      </p>
-    
-      <br />
-     </div>
-
-
-     <div className=' bg-slate-200 text-center  bg-center  '> 
-      <h1 className='text-xl font-bold text-black'>Our Values</h1>
-      <p className="text-black text-center">
-      
-      Loyalty, Honesty, Trust<br />Ingenuity,Accountability<br />
-      Simplicity Respect And Value-centricity
-      </p>
-      </div>
-    </div>
-    </>
   )
 }
 

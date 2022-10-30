@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import { CiSearch } from "react-icons/ci";
 import { RiAccountPinBoxFill } from "react-icons/ri";
 import { IoMdHelpCircle } from "react-icons/io";
@@ -7,16 +6,11 @@ import { CartContext } from "../CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import shopit from "./images/Shop-It (1) 1.png";
-// import SearchBar from "./SearchBar";
-
-
-
 
 function NavBar({ user, setSearchInput, searchInput }) {
 
   const cart = useContext(CartContext);
   const totalItems=cart.items.reduce((acc,c)=>acc+c.quantity,0)
-
 
   return (
     <div className='sticky top-0 flex flex-col w-full h-32 mb-10 z-10 shadow-lg '>
@@ -27,7 +21,6 @@ function NavBar({ user, setSearchInput, searchInput }) {
             <img src={shopit} alt="" className="h-full" />
         </Link>
 
-
         <form className='w-[50%] flex justify-center items-center realtive'>
           <button><CiSearch className='fixed text-3xl top-4 ml-2 hover:text-slate-600 cursor-pointer' /></button>
           <input 
@@ -37,16 +30,14 @@ function NavBar({ user, setSearchInput, searchInput }) {
           onChange={(e) => setSearchInput(e.target.value)}
           />
           <Link to={searchInput === "" ? "/" : "/search/" + searchInput} >
-              <button className='bg-black w-20 h-[40px] text-[color:white] rounded-md hover:underline'> 
-              Search
-              </button>
+              <button className='bg-black w-20 h-[40px] text-[color:white] rounded-md hover:underline'>Search</button>
           </Link>
         </form>
 
         <div className="w-[30%] flex justify-center items-center">
           <Link to={"/account"} className='w-[30%] flex justify-center items-center cursor-pointer'>
             <RiAccountPinBoxFill className="text-3xl mr-2"/>
-            <h3 className="">{user ? (`${user.first_name} ${user.last_name}`) : "Account"}</h3>
+            <h3 className="">{user ? (`${user.first_name}`) : "Account"}</h3>
           </Link>
 
           <Link to={"/aboutus"} className="w-[30%] flex justify-center items-center cursor-pointer">
@@ -57,7 +48,7 @@ function NavBar({ user, setSearchInput, searchInput }) {
           <Link to={"/cart"} className="w-[30%] flex justify-center items-center cursor-pointer">
             <div className="relative p-2">
              <FaShoppingCart className='text-3xl mr-2' />
-              <div className="absolute w-7 h-7 bg-white rounded-full top-0 right-0 text-center border-2 border-black">{totalItems===0?"0":totalItems}</div>
+              <div className="absolute w-7 h-7 bg-[red] rounded-full text-white top-0 right-0 text-center border-2 border-white">{totalItems===0?"0":totalItems}</div>
             </div>
             <h3 className="">Cart</h3>
           </Link>
@@ -65,7 +56,7 @@ function NavBar({ user, setSearchInput, searchInput }) {
       </div >
 
 
-      <div className='w-full h-1/2 text-[color:white] bg-black flex  justify-around items-center  max-md:flex-col '>
+      <div className='w-full h-1/2 text-[white] bg-black flex  justify-around items-center'>
         <Link to={"/electronics"} className="hover:underline ">Electronics</Link>
         <Link to={"/foodstuffs"} className="hover:underline">Food Stuffs</Link>
         <Link to={"/fashion"} className="hover:underline">Fashion</Link>

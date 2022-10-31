@@ -63,8 +63,8 @@ function App() {
             <Route exact path="/aboutus" element={<AboutUs/>} />
             <Route exact path="/account" element={<Profile user={user} setUser={setUser} />} />
             <Route exact path="/cart" element={<Carts user={user} setUser={setUser}/>} />
-            <Route exact path="/checkout" element={<Checkout />} />
-            <Route exact path="/checkout/:id" element={<SingleItemCheckout />} />
+            <Route exact path="/checkout" element={<Checkout user={user} setUser={setUser} />} />
+            <Route exact path="/checkout/:id" element={<SingleItemCheckout user={user} setUser={setUser}/>} />
 
             <Route exact path="/electronics"  element={<Electronics/>} />
             <Route exact path="/foodstuffs"  element={<FoodStuffs/>} />
@@ -74,7 +74,7 @@ function App() {
             <Route exact path="/phones"  element={<Phones/>} />
             <Route exact path="/sporting-goods"  element={<SportingGoods/>} />
             <Route exact path="/baby-products"  element={<BabyProducts/>} />
-            <Route exact path="/products/:id"  element={<SingleProduct/>}/>
+            <Route exact path="/products/:id"  element={<SingleProduct user={user}/>}/>
             <Route exact path="/login" element={<Login user={user} setUser={setUser}/>} />
             <Route exact path="/signup" element={<Signup user={user} setUser={setUser} />} />
             <Route path="/search/:keywords" element={<SearchBar results={results}/>}/>

@@ -10,13 +10,24 @@ const PaypalCheckoutButton = (props) => {
     const [error, setError] = useState(null);
     const navigate=useNavigate();
     const cart = useContext(CartContext); 
+    const {  handleSubmitOrder,inCart,user} = props;
 
 
-    const { inCart} = props;
 
-console.log("inCart",inCart)
+//function handleSubmit(){
+ //return fetch(`/billing/${user.id}`, {
+ //  method: "PATCH",
+  // headers: {
+    //"Content-Type": "application/json",
+ // },
+   // body: JSON.stringify({
+     // county: county,
+      //city: city,
+     // address: address,
+  //  }),
+ // })
+//}
     
-console.log("total",cart.getTotalCost() )
 
     const handleApprove = (orderId) => {
         // Call backend function to fulfill order
@@ -24,8 +35,12 @@ console.log("total",cart.getTotalCost() )
         // if response is success
         if (orderId){
           setPaidFor(true);
+          cart.clearCart();
           navigate("/");
-          cart.clearCart()
+          handleSubmitOrder()
+
+
+          
         }
         // Refresh user's account or subscription status
     
@@ -36,6 +51,7 @@ console.log("total",cart.getTotalCost() )
 
       if (error) {
         // Display error message, modal or redirect user to error page
+        navigate("/");
         alert(error);
       }
 
@@ -67,7 +83,7 @@ createOrder={(data, actions) => {
     return actions.order.create({
       purchase_units: [
         {
-          description:"shop-it",
+          description:user.first_name,
           amount: {
             value:inCart
           }
@@ -89,8 +105,6 @@ createOrder={(data, actions) => {
   }}
 
   onError={(err) => {
-    setError(err);
-    console.error("PayPal Checkout onError", err);
   }}
 
 

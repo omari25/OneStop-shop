@@ -2,7 +2,6 @@ import { useState} from "react";
 
 
 function Cart({ cart, c ,setBasket,inBascket}) {
-  console.log("cart",inBascket)
 
   return (
     <div className='bg-slate-100 w-full mb-6 rounded-2xl shadow-2xl flex justify-around py-4'>

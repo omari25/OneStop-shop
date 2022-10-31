@@ -1,9 +1,9 @@
-import { useState } from "react";
 import Footer from "./Footer"
 import PaypalCheckoutButton from "./PaypalCheckoutButton";
 import { useState } from "react";
 import { CartContext } from "../CartContext";
 import { useContext } from "react";
+
 
 
 function Checkout({user, setUser}) {
@@ -17,8 +17,11 @@ function Checkout({user, setUser}) {
   const [address, setAddress] = useState("");
   const [errors, setErrors] = useState([]);
 
+ 
+
   function handleSubmitOrder(e){
     e.preventDefault();
+   
     fetch(`/billing/${user.id}`, {
       method: "PATCH",
       headers: {
@@ -35,7 +38,7 @@ function Checkout({user, setUser}) {
         .then((user) => setUser(user));
         // navigate("/");
       } else {
-        r.json().then((err) => setErrors(err.errors));
+        r.json().then((err) =>setErrors(err.errors));
       }
     });
   }
@@ -92,7 +95,7 @@ function Checkout({user, setUser}) {
                             setIncart(cart.getTotalCost())
                         }} className={`${!enabled ?''  : 'hidden'} w-full bg-[red] p-3 rounded-md font-bold text-white" type="submit`}>Place Order</button>
             <div  className={`${enabled ?''  : 'hidden'}
-            `}><PaypalCheckoutButton inCart={inCart}/></div>
+            `}><PaypalCheckoutButton  handleSubmitOrder={handleSubmitOrder} inCart={inCart} user={user} /></div>
         </div>
         {errors.map((err) => (
           <p className="text-[red]" key={err}>{err}</p> 

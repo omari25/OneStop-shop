@@ -12,7 +12,6 @@ function SingleProduct({user}){
     const navigate = useNavigate()
 
     const cart = useContext(CartContext);
-    const[inCart,setIncart]=useState(0)
   
   
 
@@ -25,29 +24,14 @@ function SingleProduct({user}){
         })
     }, [])
 
-    function handleCheckOut(product) {
-       if(cart.singleTotal(product.id)===undefined){
-        console.log("product",product.price) 
-        setIncart(product.price)
-          }
-        else{
-            const alternative=cart.singleTotal(product.id)
-            const totalPrice=alternative.price*alternative.quantity
-            console.log("alternative",totalPrice)
-            setIncart(totalPrice)
-        }
-    }
-
-    console.log("singleTotal",cart.singleTotal(product.id))
-    console.log("incart singleItem",inCart)
 
     function handleUser(){
         if (user){
           navigate(`/checkout/${id}`)
         }
         else{
-            navigate(`/checkout/${id}`)
-        }
+            navigate("/account")
+          }
     }
    
 

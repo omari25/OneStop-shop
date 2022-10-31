@@ -14,9 +14,7 @@ useEffect(() => {
 }, [inBascket])
 
 
-console.log("incart",inCart)
-  
-console.log("carts",cart.getTotalCost())
+
   const navigate = useNavigate()
 
   const items = cart.items.map(c => {

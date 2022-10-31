@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 function Foodstuffs(){
 
@@ -13,13 +14,13 @@ function Foodstuffs(){
     }, [])
 
     return (
-        <div className="flex w-full flex-wrap gap-4 justify-center">
+        <div className="flex w-full flex-wrap gap-4 justify-center mb-8">
             {items.map((item) =>(
-                <div key={item.id} className="w-[250px] border-2">
+                <Link to={`/products/${item.id}`} key={item.id} className="w-[250px] p-2 shadow-xl mb-4">
                     <img src={item.image_url} alt="" className="w-full"/>
-                    <p>{item.product_name}</p>
-                    <p>{item.price}</p>
-                </div>
+                    <p className="font-bold mb-2">{item.product_name}</p>
+                    <p>{`Ksh: ${item.price}`}</p>
+                </Link>
             ))}
         </div>
     )

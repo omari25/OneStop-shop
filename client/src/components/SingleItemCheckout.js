@@ -1,47 +1,81 @@
-import Footer from "./Footer"
-import PaypalCheckoutButton from "./PaypalCheckoutButton";
-import { useState } from "react";
+import { useState, useEffect } from "react"
 import { CartContext } from "../CartContext";
 import { useContext } from "react";
+import {  useParams } from "react-router-dom"
+
+import Footer from "./Footer"
+import PaypalSingleCheckout  from "./PaypalSingleCheckout";
 
 
 
-function Checkout({user, setUser}) {
-  const cart = useContext(CartContext);
-  const [enabled, setEnabled] = useState(false);
-  const[inCart,setIncart]=useState(cart.getTotalCost())
+
+function SingleItemCheckout({user, setUser}) {
+    const cart = useContext(CartContext);
+    const [enabled, setEnabled] = useState(false);
+    const { id } = useParams()
+    const [ product, setProduct ] = useState()
+    const[inCart,setIncart]=useState(0)
 
 
-  const [county, setCounty] = useState("");
+ const [county, setCounty] = useState("");
   const [city, setCity] = useState("");
   const [address, setAddress] = useState("");
   const [errors, setErrors] = useState([]);
 
- 
 
-  function handleSubmitOrder(e){
-    e.preventDefault();
-   
-    fetch(`/billing/${user.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        county: county,
-        city: city,
-        address: address,
-      }),
-    }).then((r) => {
-      if (r.ok) {
-        r.json()
-        .then((user) => setUser(user));
-        // navigate("/");
-      } else {
-        r.json().then((err) =>setErrors(err.errors));
-      }
-    });
-  }
+
+
+    useEffect(() => {
+        fetch(`/products/${id}`)
+        .then(response => response.json())
+        .then((data) => {
+        setProduct(data);
+        if(cart.singleTotal(data.id)===undefined){
+            setIncart(data.price)
+              }
+            else{
+                const alternative=cart.singleTotal(data.id)
+                const totalPrice=alternative.price*alternative.quantity
+                setIncart(totalPrice)
+            }
+        })
+    }, [])
+
+
+    function handleCheckOut(product) {
+   if(cart.singleTotal(product.id)===undefined){
+         setIncart(product.price)
+           }
+         else{
+             const alternative=cart.singleTotal(product.id)
+             const totalPrice=alternative.price*alternative.quantity
+             setIncart(totalPrice)
+         }
+     }
+
+     function handleSubmitOrder(e){
+      e.preventDefault();
+     
+      fetch(`/billing/${user.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          county: county,
+          city: city,
+          address: address,
+        }),
+      }).then((r) => {
+        if (r.ok) {
+          r.json()
+          .then((user) => setUser(user));
+          // navigate("/");
+        } else {
+          r.json().then((err) =>setErrors(err.errors));
+        }
+      });
+    }
 
   return (
     <>
@@ -74,7 +108,7 @@ function Checkout({user, setUser}) {
         <div className="border-b w-full border-black px-4">
         <div className="flex justify-between mb-2">
               <h1>Item price</h1>
-              <h1 className="">Ksh {cart.getTotalCost()}</h1>
+              <h1 className="">Ksh {inCart}</h1>
             </div>
 
           <div className="flex justify-between mb-2">
@@ -84,7 +118,7 @@ function Checkout({user, setUser}) {
 
           <div className="flex justify-between mb-2">
               <h1>Total</h1>
-              <h1 className=" text-2xl font-extrabold">Ksh {cart.getTotalCost()}</h1>
+              <h1 className=" text-2xl font-extrabold">Ksh {inCart}</h1>
             </div>
         </div>
         <div className=" mt-4 w-fill">
@@ -92,10 +126,10 @@ function Checkout({user, setUser}) {
           <p className="text-sm mb-8 mx-4">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span className="font-black">privacy policy.</span> </p>
           <button onClick={() => {
                             setEnabled(!enabled);
-                            setIncart(cart.getTotalCost())
+                            handleCheckOut(product)
                         }} className={`${!enabled ?''  : 'hidden'} w-full bg-[red] p-3 rounded-md font-bold text-white" type="submit`}>Place Order</button>
             <div  className={`${enabled ?''  : 'hidden'}
-            `}><PaypalCheckoutButton  handleSubmitOrder={handleSubmitOrder} inCart={inCart} user={user} /></div>
+            `}><PaypalSingleCheckout product={product}  handleSubmitOrder={handleSubmitOrder} inCart={inCart} user={user} /></div>
         </div>
         {errors.map((err) => (
           <p className="text-[red]" key={err}>{err}</p> 
@@ -109,4 +143,4 @@ function Checkout({user, setUser}) {
   )
 }
 
-export default Checkout
+export default SingleItemCheckout

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import pic from "./images/image2.png";
+import Footer from "./Footer";
+import pic from "./images/login.jpg";
 
-function Signup({ setUser }) {
+function Signup({ user, setUser }) {
   const navigate = useNavigate();
 
   const [firstName, setfirstName] = useState("");
@@ -31,7 +32,7 @@ function Signup({ setUser }) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
-        navigate("/home");
+        navigate("/");
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
@@ -39,9 +40,10 @@ function Signup({ setUser }) {
   }
 
   return (
-    <div className="h-full w-full flex max-md:flex-col	">
+    <>
+    <div className="h-full w-full flex max-md:flex-col	mb-10">
       <div className="w-2/4 max-md:w-full ">
-        <img className="w-screen h-screen" src={pic} alt="" />
+      <img className="w-full" src={pic} alt="" />
       </div>
 
       <div className="w-2/4 max-md:w-full flex justify-center items-center">
@@ -130,6 +132,8 @@ function Signup({ setUser }) {
         </form>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

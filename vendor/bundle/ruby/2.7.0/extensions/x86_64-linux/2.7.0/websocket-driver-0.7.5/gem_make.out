@@ -1,0 +1,15 @@
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/usr/share/rvm/rubies/ruby-2.7.4/bin/ruby -I /usr/share/rvm/rubies/ruby-2.7.4/lib/ruby/site_ruby/2.7.0 extconf.rb
+creating Makefile
+
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20221031-21509-u9tufn sitelibdir\=./.gem.20221031-21509-u9tufn clean
+
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20221031-21509-u9tufn sitelibdir\=./.gem.20221031-21509-u9tufn
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20221031-21509-u9tufn sitelibdir\=./.gem.20221031-21509-u9tufn install
+/usr/bin/install -m 0755 websocket_mask.so ./.gem.20221031-21509-u9tufn

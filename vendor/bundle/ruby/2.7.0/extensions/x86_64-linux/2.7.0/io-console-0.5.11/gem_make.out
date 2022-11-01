@@ -1,0 +1,20 @@
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/io-console-0.5.11/ext/io/console
+/usr/share/rvm/rubies/ruby-2.7.4/bin/ruby -I /usr/share/rvm/rubies/ruby-2.7.4/lib/ruby/site_ruby/2.7.0 extconf.rb
+checking for termios.h... yes
+checking for cfmakeraw() in termios.h... yes
+checking for sys/ioctl.h... yes
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... no
+checking for rb_scheduler_timeout()... no
+creating Makefile
+
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/io-console-0.5.11/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20221031-21509-1bl03y0 sitelibdir\=./.gem.20221031-21509-1bl03y0 clean
+
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/io-console-0.5.11/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20221031-21509-1bl03y0 sitelibdir\=./.gem.20221031-21509-1bl03y0
+compiling console.c
+linking shared-object io/console.so
+
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/io-console-0.5.11/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20221031-21509-1bl03y0 sitelibdir\=./.gem.20221031-21509-1bl03y0 install
+/usr/bin/install -m 0755 console.so ./.gem.20221031-21509-1bl03y0/io

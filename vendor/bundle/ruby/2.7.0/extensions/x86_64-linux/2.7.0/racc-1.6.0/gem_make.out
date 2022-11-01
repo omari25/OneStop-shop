@@ -1,0 +1,17 @@
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+/usr/share/rvm/rubies/ruby-2.7.4/bin/ruby -I /usr/share/rvm/rubies/ruby-2.7.4/lib/ruby/site_ruby/2.7.0 extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20221031-21509-x94p29 sitelibdir\=./.gem.20221031-21509-x94p29 clean
+
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20221031-21509-x94p29 sitelibdir\=./.gem.20221031-21509-x94p29
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20221031-21509-x94p29 sitelibdir\=./.gem.20221031-21509-x94p29 install
+/usr/bin/install -m 0755 cparse.so ./.gem.20221031-21509-x94p29/racc

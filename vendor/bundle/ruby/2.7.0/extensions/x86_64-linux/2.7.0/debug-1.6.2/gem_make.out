@@ -1,0 +1,16 @@
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/debug-1.6.2/ext/debug
+/usr/share/rvm/rubies/ruby-2.7.4/bin/ruby -I /usr/share/rvm/rubies/ruby-2.7.4/lib/ruby/site_ruby/2.7.0 extconf.rb
+creating Makefile
+
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/debug-1.6.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20221031-21509-12bl8qc sitelibdir\=./.gem.20221031-21509-12bl8qc clean
+
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/debug-1.6.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20221031-21509-12bl8qc sitelibdir\=./.gem.20221031-21509-12bl8qc
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/inno/Development/code/phase-5/OneStop-shop/vendor/bundle/ruby/2.7.0/gems/debug-1.6.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20221031-21509-12bl8qc sitelibdir\=./.gem.20221031-21509-12bl8qc install
+/usr/bin/install -m 0755 debug.so ./.gem.20221031-21509-12bl8qc/debug

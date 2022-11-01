@@ -1,9 +1,14 @@
 import Login from '../Login';
 import userEvent from '@testing-library/user-event'
 import {render, screen} from "@testing-library/react"
+import {BrowserRouter as Router} from 'react-router-dom';
 
 it ('should have an email and a password field, also a submit button', () => {
-  render(<Login/>)
+  render(
+    <Router>
+      <Login/>
+    </Router>
+  );
 
   const emailField = screen.getByLabelText(/email/i);
   const passwordField = screen.getByLabelText(/password/i);
@@ -16,7 +21,11 @@ it ('should have an email and a password field, also a submit button', () => {
 
 it ('should allow the user to submit their credentials', () => {
   const submit = jest.fn();
-  render(<Login submit={submit}/>)
+  render(
+    <Router>
+      <Login submit={submit}/>
+    </Router>
+  )
 
   const emailField = screen.getByLabelText(/email/i);
   const passwordField = screen.getByLabelText(/password/i);

@@ -14,7 +14,7 @@ import SearchBar from "./SearchBar";
 import SingleProduct from "./SingleProduct";
 import CartProvider from "../CartContext";
 import Carts from "./Carts";
-import Login from "./LoginForm";
+import Login from "./Login";
 import Signup from "./SignupForm";
 import AboutUs from "./AboutUs";
 import Profile from "./Profile";

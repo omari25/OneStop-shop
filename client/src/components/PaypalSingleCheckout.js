@@ -1,6 +1,6 @@
 import { PayPalButtons } from "@paypal/react-paypal-js";
 import { CartContext } from "../CartContext";
-import { useContext,useRef,useState,useEffect } from "react";
+import { useContext,useState} from "react";
 import { useNavigate } from "react-router-dom";
 
 
@@ -12,11 +12,9 @@ const PaypalSingleCheckout = (props) => {
     const cart = useContext(CartContext); 
 
 
-    const { inCart,product} = props;
+ const { inCart,product,handleSubmitOrder,user} = props;
 
-console.log("inCart",inCart)
-    
-console.log("total",cart.getTotalCost() )
+
 
     const handleApprove = (orderId) => {
         // Call backend function to fulfill order
@@ -24,8 +22,9 @@ console.log("total",cart.getTotalCost() )
         // if response is success
         if (orderId){
           setPaidFor(true);
-          cart.deleteFromCart(product.id)
+          cart.deleteFromCart(product.id);
           navigate("/");
+          handleSubmitOrder()
         }
         // Refresh user's account or subscription status
     
@@ -36,7 +35,7 @@ console.log("total",cart.getTotalCost() )
 
       if (error) {
         // Display error message, modal or redirect user to error page
-        alert(error);
+        navigate("/")
       }
 
   
@@ -67,7 +66,7 @@ createOrder={(data, actions) => {
     return actions.order.create({
       purchase_units: [
         {
-          description:product.product_name,
+          description:user.first_name,
           amount: {
             value:inCart
           }
@@ -89,8 +88,7 @@ createOrder={(data, actions) => {
   }}
 
   onError={(err) => {
-    setError(err);
-    console.error("PayPal Checkout onError", err);
+    
   }}
 
 

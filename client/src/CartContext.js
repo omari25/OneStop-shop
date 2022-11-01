@@ -94,9 +94,7 @@ export function CartProvider({children}) {
 
    function singleTotal(id){
    const singleProduct= cartProducts.find(product => product.id === id)
-
     return singleProduct
-
 
    }
 

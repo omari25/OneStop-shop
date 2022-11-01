@@ -1,7 +1,7 @@
 import { CartContext } from "../CartContext";
 import { useContext,useState,useEffect} from "react";
-import PaypalCheckoutButton from "./PaypalCheckoutButton";
 import Cart from "./Cart";
+import { useNavigate } from "react-router-dom";
 
 
 function Carts({ user }) {
@@ -14,9 +14,8 @@ useEffect(() => {
 }, [inBascket])
 
 
-console.log("incart",inCart)
-  
-console.log("carts",cart.getTotalCost())
+
+  const navigate = useNavigate()
 
   const items = cart.items.map(c => {
     return <Cart key={c.id} cart={cart} c={c} setBasket={setBasket} inBascket={inBascket} />
@@ -24,10 +23,10 @@ console.log("carts",cart.getTotalCost())
 
   function handleUser(){
     if (user){
-      console.log(user.first_name)
+      navigate("/checkout")
     }
     else{
-      console.log("no user");
+      navigate("/account")
     }
   }
 
@@ -45,7 +44,6 @@ console.log("carts",cart.getTotalCost())
           
           <button onClick={handleUser} className='bg-[red] px-8 py-2 rounded-md mb-4'>CHECKOUT {cart.getTotalCost()} </button>
         </div>
-   <PaypalCheckoutButton inCart={inCart}/>
       </div>
     </>
   )

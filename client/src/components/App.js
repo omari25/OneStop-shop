@@ -19,6 +19,8 @@ import Signup from "./SignupForm";
 import AboutUs from "./AboutUs";
 import Profile from "./Profile";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import Checkout from "./Checkout";
+import SingleItemCheckout from "./SingleItemCheckout";
 
 
 function App() {
@@ -46,6 +48,8 @@ function App() {
       }
     });
   }, []);
+
+  
   
   return (
      <div className="bg-white w-full">
@@ -59,6 +63,9 @@ function App() {
             <Route exact path="/aboutus" element={<AboutUs/>} />
             <Route exact path="/account" element={<Profile user={user} setUser={setUser} />} />
             <Route exact path="/cart" element={<Carts user={user} setUser={setUser}/>} />
+            <Route exact path="/checkout" element={<Checkout user={user} setUser={setUser} />} />
+            <Route exact path="/checkout/:id" element={<SingleItemCheckout user={user} setUser={setUser}/>} />
+
             <Route exact path="/electronics"  element={<Electronics/>} />
             <Route exact path="/foodstuffs"  element={<FoodStuffs/>} />
             <Route exact path="/fashion"  element={<Fashion/>} />
@@ -67,7 +74,7 @@ function App() {
             <Route exact path="/phones"  element={<Phones/>} />
             <Route exact path="/sporting-goods"  element={<SportingGoods/>} />
             <Route exact path="/baby-products"  element={<BabyProducts/>} />
-            <Route exact path="/products/:id"  element={<SingleProduct/>}/>
+            <Route exact path="/products/:id"  element={<SingleProduct user={user}/>}/>
             <Route exact path="/login" element={<Login user={user} setUser={setUser}/>} />
             <Route exact path="/signup" element={<Signup user={user} setUser={setUser} />} />
             <Route path="/search/:keywords" element={<SearchBar results={results}/>}/>
@@ -75,7 +82,6 @@ function App() {
           </PayPalScriptProvider>
 
         </CartProvider>
-
       </div>
   );
 }

@@ -1,9 +1,10 @@
 class BillsController < ApplicationController
     # skip_before_action :authorize, only: [:create]
     
-    def create
-        bill = User.update!(user_params)
-        render json: bill
+    def update
+        user = User.find_by(id: params[:id])
+        user.update!(user_params)
+        render json: user
     end
 
     private

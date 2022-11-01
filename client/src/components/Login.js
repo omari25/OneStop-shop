@@ -45,6 +45,7 @@ function Login({ setUser }) {
                 <div>
                     <label htmlFor="Email">Email</label>
                     <input
+                    id="email"
                     placeholder="johndoe@info.com"
                     type="text" 
                     value={email}
@@ -54,6 +55,7 @@ function Login({ setUser }) {
                 <div>
                     <label htmlFor="password">Password</label>
                     <input
+                    id="password"
                     placeholder="Your password"
                     type="password"
                     value={password}

@@ -5,29 +5,17 @@ import { useNavigate } from "react-router-dom";
 
 
 
+
 const PaypalCheckoutButton = (props) => {
+    const {inCart,user} = props;
     const [paidFor, setPaidFor] = useState(false);
     const [error, setError] = useState(null);
     const navigate=useNavigate();
+
     const cart = useContext(CartContext); 
-    const {  handleSubmitOrder,inCart,user} = props;
 
+   
 
-
-//function handleSubmit(){
- //return fetch(`/billing/${user.id}`, {
- //  method: "PATCH",
-  // headers: {
-    //"Content-Type": "application/json",
- // },
-   // body: JSON.stringify({
-     // county: county,
-      //city: city,
-     // address: address,
-  //  }),
- // })
-//}
-    
 
     const handleApprove = (orderId) => {
         // Call backend function to fulfill order
@@ -37,7 +25,6 @@ const PaypalCheckoutButton = (props) => {
           setPaidFor(true);
           cart.clearCart();
           navigate("/");
-          handleSubmitOrder()
 
 
           

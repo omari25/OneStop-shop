@@ -29,6 +29,16 @@ useEffect(() => {
       navigate("/account")
     }
   }
+  if(cart.items.length===0){
+  return( <div className="mb-4 text-center italic font-extrabold text-4xl">
+    <p> No Items in Cart! Add some....🙃🤩</p>
+   </div>)
+
+
+  }
+
+
+
 
   return (
     <>

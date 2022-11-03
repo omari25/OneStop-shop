@@ -13,7 +13,6 @@ function SingleProduct({user}){
 
     const cart = useContext(CartContext);
   
-  
 
     
     useEffect(() => {
@@ -28,6 +27,15 @@ function SingleProduct({user}){
     function handleUser(){
         if (user){
           navigate(`/checkout/${id}`)
+        }
+        else{
+            navigate("/account")
+          }
+    }
+
+    function handleWhishListUser(){
+        if (user){
+          navigate("/whishlist")
         }
         else{
             navigate("/account")
@@ -52,8 +60,14 @@ function SingleProduct({user}){
                         <p>{product.description}</p>
 
                         <div className="flex justify-between w-full items-center mt-16">
-                            <button onClick={() => {cart.addOneToCart(product.id,product)}} className="bg-[black] text-[white] w-[40%] py-2 rounded-md">Add to cart</button>
-                            <button onClick={handleUser} className="bg-[black] text-[white] w-[40%] py-2 rounded-md" >Buy now</button>
+
+                        <button  onClick={() => {cart.getWhistList(product.id)?cart.deleteFromWishList(product.id):
+                        cart.addOneToWishList(product.id,product)}} 
+
+                         className="bg-[black] text-[white] w-[30%] py-2 rounded-md" >{cart.getWhistList(product.id)?"Remove WishList":"Add to WishList"}</button>
+
+                            <button onClick={() => {cart.addOneToCart(product.id,product)}} className="bg-[black] text-[white] w-[30%] py-2 rounded-md">Add to cart</button>
+                            <button onClick={handleUser} className="bg-[black] text-[white] w-[30%] py-2 rounded-md" >Buy now</button>
                         </div>
                     </div>
 

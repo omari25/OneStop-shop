@@ -12,9 +12,9 @@ const PaypalSingleCheckout = (props) => {
     const cart = useContext(CartContext); 
 
 
- const { inCart,product,handleSubmitOrder,user} = props;
+ const { inCart,product,handleSubmitOrder,user,rates} = props;
 
-
+const PaypalIncart=(inCart/rates).toFixed(2);
 
     const handleApprove = (orderId) => {
         // Call backend function to fulfill order
@@ -68,7 +68,7 @@ createOrder={(data, actions) => {
         {
           description:user.first_name,
           amount: {
-            value:inCart
+            value:PaypalIncart
           }
         }
       ]

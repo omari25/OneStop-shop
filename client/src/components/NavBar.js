@@ -1,7 +1,9 @@
 import { CiSearch } from "react-icons/ci";
 import { RiAccountPinBoxFill } from "react-icons/ri";
 import { IoMdHelpCircle } from "react-icons/io";
-import { FaShoppingCart } from "react-icons/fa"
+import { FaShoppingCart } from "react-icons/fa";
+import { AiTwotoneHeart} from "react-icons/ai"
+
 import { CartContext } from "../CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
@@ -10,7 +12,8 @@ import shopit from "./images/Shop-It (1) 1.png";
 function NavBar({ user, setSearchInput, searchInput }) {
 
   const cart = useContext(CartContext);
-  const totalItems=cart.items.reduce((acc,c)=>acc+c.quantity,0)
+  const totalItems=cart.items.reduce((acc,c)=>acc+c.quantity,0);
+  const wishLength=cart.wishList.length
 
   return (
     <div className='sticky top-0 flex flex-col w-full h-32 mb-10 z-10 shadow-lg '>
@@ -43,6 +46,12 @@ function NavBar({ user, setSearchInput, searchInput }) {
           <Link to={"/aboutus"} className="w-[30%] flex justify-center items-center cursor-pointer">
             <IoMdHelpCircle className='text-3xl mr-2' />
             <h3 className=""> Help</h3>
+          </Link>
+
+          <Link to={"/whishlist"} className="w-[30%] flex justify-center items-center cursor-pointer">
+            <AiTwotoneHeart size={28} className={`${ cart.wishList.length===0?'':'text-[red]'} text-3xl mr-2 `} />
+            <div className="absolute w-7 h-7 bg-[red] rounded-full text-white top-1.5 right-[168px] text-center border-2 border-white">{wishLength}</div>
+            <h3 className="">Wish List</h3>
           </Link>
 
           <Link to={"/cart"} className="w-[30%] flex justify-center items-center cursor-pointer">

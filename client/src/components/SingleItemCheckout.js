@@ -9,7 +9,7 @@ import PaypalSingleCheckout  from "./PaypalSingleCheckout";
 
 
 
-function SingleItemCheckout({user, setUser}) {
+function SingleItemCheckout({user, setUser,rates}) {
     const cart = useContext(CartContext);
     const [enabled, setEnabled] = useState(false);
     const { id } = useParams()
@@ -120,16 +120,22 @@ function SingleItemCheckout({user, setUser}) {
               <h1>Total</h1>
               <h1 className=" text-2xl font-extrabold">Ksh {inCart}</h1>
             </div>
+
+            <div className="flex justify-between mb-2">
+              <h1>Total in US Dollars</h1>
+              <h1 className=" text-2xl font-extrabold">$ {(inCart/rates).toFixed(2)}</h1>
+            </div>
         </div>
         <div className=" mt-4 w-fill">
           <p className="text-sm mb-2 mx-4">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
           <p className="text-sm mb-8 mx-4">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span className="font-black">privacy policy.</span> </p>
           <button onClick={() => {
                             setEnabled(!enabled);
+                            setIncart((inCart/rates).toFixed(2));
                             handleCheckOut(product)
                         }} className={`${!enabled ?''  : 'hidden'} w-full bg-[red] p-3 rounded-md font-bold text-white" type="submit`}>Place Order</button>
             <div  className={`${enabled ?''  : 'hidden'}
-            `}><PaypalSingleCheckout product={product}  handleSubmitOrder={handleSubmitOrder} inCart={inCart} user={user} /></div>
+            `}><PaypalSingleCheckout rates={rates} product={product}  handleSubmitOrder={handleSubmitOrder} inCart={inCart} user={user} /></div>
         </div>
         {errors.map((err) => (
           <p className="text-[red]" key={err}>{err}</p> 

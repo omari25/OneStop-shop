@@ -21,14 +21,29 @@ import Profile from "./Profile";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import Checkout from "./Checkout";
 import SingleItemCheckout from "./SingleItemCheckout";
-
+import WhishList from "./WhishList";
 
 function App() {
   const [user, setUser] = useState(null);
+  const [rates,setRates]=useState(120)
+
 
   const [searchInput, setSearchInput] = useState("")
 
   const [data, setData] = useState([])
+
+
+
+
+  useEffect(() => {
+    fetch("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json")
+     .then(res=>res.json())
+      .then(response => {
+        //setRates(response.rates.KES);
+        setRates(response.usd.kes.toFixed(2))
+      })
+  }, []);
+
 
   useEffect(() => {
     fetch("/products")
@@ -63,8 +78,9 @@ function App() {
             <Route exact path="/aboutus" element={<AboutUs/>} />
             <Route exact path="/account" element={<Profile user={user} setUser={setUser} />} />
             <Route exact path="/cart" element={<Carts user={user} setUser={setUser}/>} />
-            <Route exact path="/checkout" element={<Checkout user={user} setUser={setUser} />} />
-            <Route exact path="/checkout/:id" element={<SingleItemCheckout user={user} setUser={setUser}/>} />
+            <Route exact path="/checkout" element={<Checkout user={user} setUser={setUser} rates={rates} />} />
+            <Route exact path="/checkout/:id" element={<SingleItemCheckout user={user} setUser={setUser} rates={rates} />} />
+            <Route exact path="/whishlist" element={<WhishList/>} />
 
             <Route exact path="/electronics"  element={<Electronics/>} />
             <Route exact path="/foodstuffs"  element={<FoodStuffs/>} />

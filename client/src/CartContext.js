@@ -2,24 +2,36 @@ import { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext({
     items: [],
+    wishList:[],
     getProductQuantity: () => {},
     addOneToCart: () => {},
     removeOneFromCart: () => {},
     deleteFromCart: () => {},
     getTotalCost: () => {},
     clearCart:()=>{},
-    singleTotal:()=>{}
+    singleTotal:()=>{},
+    getWhistList:()=>{},
+    addOneToWishList:()=>{},
+    deleteFromWishList:()=>{}
 });
 
 export function CartProvider({children}) {
 
     const inCart=JSON.parse(localStorage.getItem("cart")|| '[]')
+    const inWhishList=JSON.parse(localStorage.getItem("wishList")|| '[]')
 
     const [cartProducts, setCartProducts] = useState(inCart);
+    const [wishListProducts, setwishListProducts] = useState(inWhishList);
 
     useEffect(() => {
       localStorage.setItem("cart",JSON.stringify(cartProducts))
     }, [cartProducts])
+
+    
+    useEffect(() => {
+        localStorage.setItem("wishList",JSON.stringify(wishListProducts))
+      }, [wishListProducts])
+
 
 
     function getProductQuantity(id) {
@@ -99,15 +111,64 @@ export function CartProvider({children}) {
    }
 
 
+
+   //WhishList
+
+   function getWhistList(id) {
+    const whishList = wishListProducts.some(product => product.id === id)
+    
+    return whishList
+}
+
+function addOneToWishList(id,item) {
+    const whishList = getWhistList(id);
+    if (whishList===false) { 
+        setwishListProducts(
+            [...wishListProducts,
+                {
+                    id: id,
+                    price:item.price,
+                    image_url:item.image_url,
+                    product_name:item.product_name
+                   
+                }
+                
+            ]
+ 
+        )
+
+
+    } 
+}
+
+
+function deleteFromWishList(id) {
+    setwishListProducts(
+        wishListProducts =>
+        wishListProducts.filter(currentProduct => {
+            return currentProduct.id !==id;
+        })  
+    )
+}
+
+
+
+
+
     const contextValue = {
         items: cartProducts,
+        wishList:wishListProducts,
         getProductQuantity,
         addOneToCart,
         removeOneFromCart,
         deleteFromCart,
         getTotalCost,
         clearCart,
-        singleTotal
+        singleTotal,
+        getWhistList,
+        addOneToCart,
+        addOneToWishList,
+        deleteFromWishList
     }
 
     return (
